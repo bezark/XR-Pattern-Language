@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dcwjg8x1lxj82"]
+
+[node name="MAIN" type="Node3D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This is the main scene"
