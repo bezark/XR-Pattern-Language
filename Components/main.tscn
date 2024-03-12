@@ -1,28 +1,39 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcwjg8x1lxj82"]
 
 [ext_resource type="Script" path="res://Components/main.gd" id="1_t1bne"]
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://Template- PATTERN NAME - YOUR NAME/poetic_expression.tscn" id="2_q2c7p"]
-[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://Template- PATTERN NAME - YOUR NAME/technical_expression.tscn" id="3_iw33p"]
-=======
-[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERN NAME - Jocelyn Garcia/Jocelynpoetic_expression.tscn" id="2_q2c7p"]
-[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERN NAME - Jocelyn Garcia/technical_expression.tscn" id="3_iw33p"]
->>>>>>> Stashed changes
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERN NAME - Don Park copy/don_example_pattern_ Cubes_are_Cool.tscn" id="2_ubm6c"]
+
+[sub_resource type="Environment" id="Environment_11ggv"]
+background_mode = 1
+background_color = Color(0, 0.65098, 0.533333, 0)
 
 [node name="MAIN" type="Node3D"]
 script = ExtResource("1_t1bne")
 
-[node name="Poetic Expression" parent="." instance=ExtResource("2_q2c7p")]
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "This is the main scene"
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Technical Expression" parent="." instance=ExtResource("3_iw33p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49042, 0, 0)
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74007, 2.93072, 0)
-radial_segments = 50
-rings = 30
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
+radius = 0.05
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_11ggv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("2_ubm6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27262, -2.08542)

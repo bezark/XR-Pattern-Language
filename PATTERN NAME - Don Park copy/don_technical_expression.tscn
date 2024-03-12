@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://r3x6nvux515n"]
 
-[ext_resource type="PackedScene" uid="uid://wcpgiwy5dldi" path="res://Components/PatternDocumentation.tscn" id="1_s6mw7"]
+[ext_resource type="PackedScene" uid="uid://wcpgiwy5dldi" path="res://PATTERN NAME - Zhuojing/Components/PatternDocumentation.tscn" id="1_s6mw7"]
 [ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://Template- PATTERN NAME - YOUR NAME/example_pattern_ Cubes_are_Cool.tscn" id="2_4pw02"]
 
 [node name="Technical Expression" type="Node3D"]
