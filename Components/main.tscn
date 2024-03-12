@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://dcwjg8x1lxj82"]
+[gd_scene load_steps=2 format=3 uid="uid://dcwjg8x1lxj82"]
+
+[ext_resource type="Script" path="res://Components/main.gd" id="1_t1bne"]
 
 [node name="MAIN" type="Node3D"]
+script = ExtResource("1_t1bne")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
