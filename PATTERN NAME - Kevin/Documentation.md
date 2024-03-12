@@ -1,4 +1,4 @@
-# Pattern Name - Cubes are cool
+# Pattern Name - Rectangles are cool
 
 by John Bezark
 
