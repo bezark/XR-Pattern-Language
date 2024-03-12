@@ -1,8 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcwjg8x1lxj82"]
 
 [ext_resource type="Script" path="res://Components/main.gd" id="1_t1bne"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://Template- PATTERN NAME - YOUR NAME/poetic_expression.tscn" id="2_q2c7p"]
 [ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://Template- PATTERN NAME - YOUR NAME/technical_expression.tscn" id="3_iw33p"]
+=======
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERN NAME - Jocelyn Garcia/Jocelynpoetic_expression.tscn" id="2_q2c7p"]
+[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERN NAME - Jocelyn Garcia/technical_expression.tscn" id="3_iw33p"]
+>>>>>>> Stashed changes
 
 [node name="MAIN" type="Node3D"]
 script = ExtResource("1_t1bne")
