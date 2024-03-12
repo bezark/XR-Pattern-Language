@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcwjg8x1lxj82"]
+
+[ext_resource type="Script" path="res://Components/main.gd" id="1_t1bne"]
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERN NAME - Kevin/poetic_expression.tscn" id="2_bmsn3"]
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://Template- PATTERN NAME - YOUR NAME/poetic_expression.tscn" id="3_npfrn"]
+[ext_resource type="PackedScene" uid="uid://wcpgiwy5dldi" path="res://Components/PatternDocumentation.tscn" id="4_w4gmh"]
+
+[node name="MAIN" type="Node3D"]
+script = ExtResource("1_t1bne")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This is the main scene"
+
+[node name="Poetic Expression" parent="." instance=ExtResource("2_bmsn3")]
+transform = Transform3D(0.985642, 0, -0.168851, 0, 1, 0, 0.168851, 0, 0.985642, 1.11958, 0, -1.06212)
+
+[node name="Poetic Expression2" parent="." instance=ExtResource("3_npfrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53114, 0, 1.11032)
+
+[node name="Poetic Expression3" parent="." instance=ExtResource("2_bmsn3")]
+transform = Transform3D(0.775364, 0.631515, 0, -0.631515, 0.775363, 0, 0, 0, 1, -1.53987, 0, 0.339986)
+
+[node name="Poetic Expression4" parent="." instance=ExtResource("2_bmsn3")]
+transform = Transform3D(1, 0, 0, 0, 0.817356, 0.576133, 0, -0.576133, 0.817356, -0.619727, 0, 2.71956)
+
+[node name="Poetic Expression" parent="Poetic Expression4" instance=ExtResource("2_bmsn3")]
+transform = Transform3D(0.985642, 0, -0.168851, -2.52406e-09, 1, -1.59656e-09, 0.168851, -1.12886e-08, 0.985642, 1.11958, 9.82226, 5.86133)
+
+[node name="Poetic Expression2" parent="Poetic Expression4" instance=ExtResource("3_npfrn")]
+transform = Transform3D(1, 0, 0, 0, 1, -1.12886e-08, 0, -1.12886e-08, 1, 2.53114, 9.82226, 8.03378)
+
+[node name="Poetic Expression3" parent="Poetic Expression4" instance=ExtResource("2_bmsn3")]
+transform = Transform3D(0.775364, 0.631515, 0, -0.631515, 0.775363, -1.12886e-08, -2.0533e-09, 1.79078e-08, 1, -1.53987, 7.06421, 5.31936)
+
+[node name="Poetic Expression4" parent="Poetic Expression4" instance=ExtResource("2_bmsn3")]
+transform = Transform3D(1, 0, 0, 0, 0.817356, 0.576133, 0, -0.576133, 0.817356, -0.619727, 9.82226, 9.64302)
+
+[node name="Poetic Expression5" parent="Poetic Expression4" instance=ExtResource("2_bmsn3")]
+transform = Transform3D(1, 0, 0, 0, 1, -1.12886e-08, 0, -1.12886e-08, 1, -4.3345, 9.82227, 7.71475)
+
+[node name="Poetic Expression5" parent="." instance=ExtResource("2_bmsn3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3345, 1.14903, 0.791291)
+
+[node name="PatternDocumentation" parent="." instance=ExtResource("4_w4gmh")]
