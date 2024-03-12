@@ -1,109 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://wcpgiwy5dldi"]
+[gd_scene load_steps=2 format=3 uid="uid://wcpgiwy5dldi"]
 
 [ext_resource type="Script" path="res://Components/PatternDocumentation.gd" id="1_p5vl5"]
-[ext_resource type="Script" path="res://addons/markdownlabel/markdownlabel.gd" id="2_pcndi"]
-[ext_resource type="Script" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="3_warun"]
-[ext_resource type="Script" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="4_krqau"]
-[ext_resource type="Script" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="5_bkffa"]
-[ext_resource type="Script" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="6_e1yrq"]
-[ext_resource type="Script" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="7_58n4f"]
-[ext_resource type="Script" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="8_vm1u4"]
-
-[sub_resource type="Resource" id="Resource_umqqg"]
-resource_local_to_scene = true
-script = ExtResource("3_warun")
-font_size = 2.285
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_ylu70"]
-resource_local_to_scene = true
-script = ExtResource("4_krqau")
-font_size = 1.714
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_gdgew"]
-resource_local_to_scene = true
-script = ExtResource("5_bkffa")
-font_size = 1.428
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_y677p"]
-resource_local_to_scene = true
-script = ExtResource("6_e1yrq")
-font_size = 1.142
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_nkbix"]
-resource_local_to_scene = true
-script = ExtResource("7_58n4f")
-font_size = 1.0
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_iuf8s"]
-resource_local_to_scene = true
-script = ExtResource("8_vm1u4")
-font_size = 0.857
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_pvgxe"]
-resource_local_to_scene = true
-script = ExtResource("3_warun")
-font_size = 2.285
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_ymmvy"]
-resource_local_to_scene = true
-script = ExtResource("4_krqau")
-font_size = 1.714
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_4rxoj"]
-resource_local_to_scene = true
-script = ExtResource("5_bkffa")
-font_size = 1.428
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_1rdbx"]
-resource_local_to_scene = true
-script = ExtResource("6_e1yrq")
-font_size = 1.142
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_c6byb"]
-resource_local_to_scene = true
-script = ExtResource("7_58n4f")
-font_size = 1.0
-is_bold = false
-is_italic = false
-is_underlined = false
-
-[sub_resource type="Resource" id="Resource_ycuie"]
-resource_local_to_scene = true
-script = ExtResource("8_vm1u4")
-font_size = 0.857
-is_bold = false
-is_italic = false
-is_underlined = false
 
 [node name="PatternDocumentation" type="Control"]
 layout_mode = 3
@@ -123,72 +20,22 @@ anchor_bottom = 1.0
 offset_right = 225.0
 grow_vertical = 2
 
-[node name="Name" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Name" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-bbcode_enabled = true
-text = "Sample Name"
-script = ExtResource("2_pcndi")
-markdown_text = "Sample Name"
-h1 = SubResource("Resource_umqqg")
-h2 = SubResource("Resource_ylu70")
-h3 = SubResource("Resource_gdgew")
-h4 = SubResource("Resource_y677p")
-h5 = SubResource("Resource_nkbix")
-h6 = SubResource("Resource_iuf8s")
+text = "Pattern Name"
 
-[node name="Author" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Author" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-bbcode_enabled = true
 text = "Sample Name"
-script = ExtResource("2_pcndi")
-markdown_text = "Sample Name"
-h1 = SubResource("Resource_umqqg")
-h2 = SubResource("Resource_ylu70")
-h3 = SubResource("Resource_gdgew")
-h4 = SubResource("Resource_y677p")
-h5 = SubResource("Resource_nkbix")
-h6 = SubResource("Resource_iuf8s")
 
-[node name="Context" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Problem" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-bbcode_enabled = true
+text = "Sample Name"
+
+[node name="Context" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 text = "This is the Context"
-script = ExtResource("2_pcndi")
-markdown_text = "This is the Context"
-h1 = SubResource("Resource_pvgxe")
-h2 = SubResource("Resource_ymmvy")
-h3 = SubResource("Resource_4rxoj")
-h4 = SubResource("Resource_1rdbx")
-h5 = SubResource("Resource_c6byb")
-h6 = SubResource("Resource_ycuie")
 
-[node name="Problem" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Solution" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-bbcode_enabled = true
-text = "This is the Problem"
-script = ExtResource("2_pcndi")
-markdown_text = "This is the Problem"
-h1 = SubResource("Resource_pvgxe")
-h2 = SubResource("Resource_ymmvy")
-h3 = SubResource("Resource_4rxoj")
-h4 = SubResource("Resource_1rdbx")
-h5 = SubResource("Resource_c6byb")
-h6 = SubResource("Resource_ycuie")
-
-[node name="Solution" type="RichTextLabel" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-bbcode_enabled = true
-text = "This is the solution"
-script = ExtResource("2_pcndi")
-markdown_text = "This is the solution"
-h1 = SubResource("Resource_pvgxe")
-h2 = SubResource("Resource_ymmvy")
-h3 = SubResource("Resource_4rxoj")
-h4 = SubResource("Resource_1rdbx")
-h5 = SubResource("Resource_c6byb")
-h6 = SubResource("Resource_ycuie")
+text = "This is the Solution"
