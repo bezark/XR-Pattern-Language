@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1snysx43fw6k"]
+
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://Template- PATTERN NAME - YOUR NAME/example_pattern_ Cubes_are_Cool.tscn" id="1_khsxp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va806"]
+albedo_color = Color(0, 0.329412, 0.329412, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_viwr5"]
+
+[node name="Poetic Expression" type="Node3D"]
+
+[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("1_khsxp")]
+
+[node name="Example Pattern Cubes are Cool2" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(0.57279, -0.819702, 0, 0.819702, 0.57279, 0, 0, 0, 1, 0.202121, 1.61764, -1.4115)
+
+[node name="Example Pattern Cubes are Cool3" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(0.171809, 0, -0.98513, 0, 1, 0, 0.98513, 0, 0.171809, 0.143127, 1.7486, -0.694978)
+
+[node name="Example Pattern Cubes are Cool4" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(1, 0, 0, 0, 0.208714, 0.977977, 0, -0.977977, 0.208714, 0.202121, 0.195613, 0.956623)
+
+[node name="Example Pattern Cubes are Cool5" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(1, 0, 0, 0, 0.656586, 0.754251, 0, -0.754251, 0.656586, 0.24942, 0.681138, -0.0559114)
+
+[node name="Example Pattern Cubes are Cool6" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.897891, 0.265913, 0.225831)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48449, 2.33587, -5.54814)
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
+transform = Transform3D(0.990619, 0.136649, 0, -0.136649, 0.990619, 0, 0, 0, 1, 3.07148, 2.11063, -3.90462)
+radius = 0.951
+radial_segments = 34
+rings = 35
+material = SubResource("StandardMaterial3D_va806")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="XROrigin3D/Right/CSGSphere3D2"]
+transform = Transform3D(0.992072, 0.12568, 0, -0.12568, 0.992072, 0, 0, 0, 1, 0.0606039, -0.0152681, 0.0362377)
+material_override = SubResource("StandardMaterial3D_viwr5")
+radius = 1.725
+height = 0.015
+sides = 50
