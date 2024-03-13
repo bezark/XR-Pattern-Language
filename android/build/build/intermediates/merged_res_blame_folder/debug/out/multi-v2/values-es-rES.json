@@ -4,7 +4,7 @@
             "outputFile": "com.godot.game-mergeDebugResources-9:/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jbezark\\Desktop\\XR-Pattern-Language\\android\\build\\res\\values-es-rES\\godot_project_name_string.xml",
+                    "source": "C:\\Users\\johnb\\Nextcloud2\\2Work\\Teaching\\SVA\\DesignMedia\\XR-Pattern-Language\\android\\build\\res\\values-es-rES\\godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",

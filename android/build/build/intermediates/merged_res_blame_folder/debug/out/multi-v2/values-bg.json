@@ -4,24 +4,7 @@
             "outputFile": "com.godot.game-mergeDebugResources-9:/values-bg/values-bg.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jbezark\\Desktop\\XR-Pattern-Language\\android\\build\\res\\values-bg\\godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "70",
-                        "endOffsets": "181"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "73",
-                        "endOffsets": "124"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jbezark\\.gradle\\caches\\transforms-3\\9bcb1a65f5938aad264f4d73e9a06f28\\transformed\\core-1.2.0\\res\\values-bg\\values-bg.xml",
+                    "source": "C:\\Users\\johnb\\.gradle\\caches\\transforms-3\\9bcb1a65f5938aad264f4d73e9a06f28\\transformed\\core-1.2.0\\res\\values-bg\\values-bg.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,6 +18,23 @@
                         "startOffsets": "129",
                         "endColumns": "100",
                         "endOffsets": "225"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\johnb\\Nextcloud2\\2Work\\Teaching\\SVA\\DesignMedia\\XR-Pattern-Language\\android\\build\\res\\values-bg\\godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "70",
+                        "endOffsets": "181"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "73",
+                        "endOffsets": "124"
                     }
                 }
             ]

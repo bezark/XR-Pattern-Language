@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcwjg8x1lxj82"]
 
 [ext_resource type="Script" path="res://Components/main.gd" id="1_t1bne"]
-[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERN NAME - Don Park copy/don_example_pattern_ Cubes_are_Cool.tscn" id="2_ubm6c"]
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://Template- PATTERN NAME - YOUR NAME/example_pattern_ Cubes_are_Cool.tscn" id="2_ubm6c"]
 
 [sub_resource type="Environment" id="Environment_11ggv"]
 background_mode = 1
