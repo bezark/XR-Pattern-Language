@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://wkxwo7cgrljd"]
+
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Don Park/DONSBOX.gd" id="1_hx5sp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jpvre"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+backlight = Color(0.411765, 0.411765, 0.411765, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gw8n6"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+backlight = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Don Pattern" type="Node3D"]
+
+[node name="DONSBOX" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_jpvre")
+script = ExtResource("1_hx5sp")
+
+[node name="DONSBOX2" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_gw8n6")
+script = ExtResource("1_hx5sp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.03598)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+visible = false

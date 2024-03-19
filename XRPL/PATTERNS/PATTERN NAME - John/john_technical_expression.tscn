@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://r3x6nvux515n"]
+
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics.tscn" id="2_v1tsm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_74an5"]
+sky_top_color = Color(0.619608, 0.156863, 0.870588, 1)
+sky_horizon_color = Color(0.663725, 0.591176, 0.754902, 1)
+sky_energy_multiplier = 4.5
+ground_bottom_color = Color(0.0352941, 0.207843, 0.14902, 1)
+ground_horizon_color = Color(0.663725, 0.591176, 0.754902, 1)
+
+[sub_resource type="Sky" id="Sky_064nd"]
+sky_material = SubResource("ProceduralSkyMaterial_74an5")
+
+[sub_resource type="Environment" id="Environment_jkmet"]
+background_mode = 2
+sky = SubResource("Sky_064nd")
+tonemap_mode = 2
+
+[node name="Technical Expression" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jkmet")
+
+[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("1_jmkaj")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_v1tsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.609619, 1.9269)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b1snysx43fw6k"]
+
+[node name="Poetic Expression" type="Node3D"]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
+radius = 0.05

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1snysx43fw6k"]
+
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_khsxp"]
+
+[node name="Poetic Expression" type="Node3D"]
+
+[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("1_khsxp")]
+
+[node name="Example Pattern Cubes are Cool2" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(0.57279, -0.819702, 0, 0.819702, 0.57279, 0, 0, 0, 1, 0.202121, 1.19209e-07, -3.2321)
+
+[node name="Example Pattern Cubes are Cool3" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(0.171809, 0, -0.98513, 0, 1, 0, 0.98513, 0, 0.171809, 0.202121, 1.7486, -3.2321)
+
+[node name="Example Pattern Cubes are Cool4" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(1, 0, 0, 0, 0.208714, 0.977977, 0, -0.977977, 0.208714, 0.202121, 1.64499, 0.504037)
+
+[node name="Example Pattern Cubes are Cool5" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(1, 0, 0, 0, 0.656586, 0.754251, 0, -0.754251, 0.656586, 2.22794, 1.53551, -1.14585)
+
+[node name="Example Pattern Cubes are Cool6" parent="." instance=ExtResource("1_khsxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69872, -0.224502, -1.74801)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
+radius = 0.05

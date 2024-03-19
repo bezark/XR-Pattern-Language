@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=2 format=3 uid="uid://b6oc5mmk24hul"]
+
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_o3cla"]
+
+[resource]
+script = ExtResource("1_o3cla")
+PatternName = ""
+Author = ""
+Context = ""
+OutsidePatterns = Array[PackedScene]([])
+Problem = ""
+Solution = ""
+InsidePatterns = Array[PackedScene]([])

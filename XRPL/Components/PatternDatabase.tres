@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PatternDatabase" load_steps=13 format=3 uid="uid://e6ls4o51xfnu"]
+
+[ext_resource type="Resource" uid="uid://c6laxmd168ssn" path="res://PATTERNS/PATTERN NAME - Bella/Bella_Documentation.tres" id="1_5vruy"]
+[ext_resource type="Script" path="res://Components/Pattern_Database.gd" id="1_e813d"]
+[ext_resource type="Resource" uid="uid://btfr0r68c6051" path="res://PATTERNS/PATTERN NAME - CLARA/Clara_Documentation.tres" id="2_vmjtt"]
+[ext_resource type="Resource" uid="uid://cylapgd183veu" path="res://PATTERNS/PATTERN NAME - Dishti/Dishti_Documentation.tres" id="3_f05ha"]
+[ext_resource type="Resource" uid="uid://b6oc5mmk24hul" path="res://PATTERNS/PATTERN NAME - Don Park/Don_Documentation.tres" id="4_y2gar"]
+[ext_resource type="Resource" uid="uid://b25pi1udp1enp" path="res://PATTERNS/PATTERN NAME - Jennifer/Jennifer_Documentation.tres" id="5_dqayx"]
+[ext_resource type="Resource" uid="uid://oo7yshj8epnc" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Jocelyn_Documentation.tres" id="6_irwxo"]
+[ext_resource type="Resource" uid="uid://bnisqtlp74f8a" path="res://PATTERNS/PATTERN NAME - John/John_Documentation.tres" id="7_c3xdp"]
+[ext_resource type="Resource" uid="uid://b0lhcru5oahvh" path="res://PATTERNS/PATTERN NAME - Kevin/Kevin_Documentation.tres" id="8_jeflr"]
+[ext_resource type="Resource" uid="uid://bfoeobknopgq6" path="res://PATTERNS/PATTERN NAME - Ritu/Ritu_Documentation.tres" id="9_dorn1"]
+[ext_resource type="Resource" uid="uid://bygby2x7pkog5" path="res://PATTERNS/PATTERN NAME - Yoon/Yoon_Documentation.tres" id="10_45an4"]
+[ext_resource type="Resource" uid="uid://xyu6cnqmc805" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing_Documentation.tres" id="11_t773o"]
+
+[resource]
+script = ExtResource("1_e813d")
+patterns = Array[Resource("res://Components/PatternInfo.gd")]([ExtResource("1_5vruy"), ExtResource("2_vmjtt"), ExtResource("3_f05ha"), ExtResource("4_y2gar"), ExtResource("5_dqayx"), ExtResource("6_irwxo"), ExtResource("7_c3xdp"), ExtResource("8_jeflr"), ExtResource("9_dorn1"), ExtResource("10_45an4"), ExtResource("11_t773o")])

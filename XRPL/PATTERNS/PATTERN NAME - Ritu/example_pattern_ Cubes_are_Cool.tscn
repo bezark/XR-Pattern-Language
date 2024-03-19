@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://wkxwo7cgrljd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1xdxk"]
+sky_top_color = Color(0.258824, 0.470588, 0.635294, 1)
+sky_horizon_color = Color(0.614706, 0.659897, 0.692074, 1)
+ground_horizon_color = Color(0.614706, 0.659897, 0.692074, 1)
+
+[sub_resource type="Sky" id="Sky_6xybi"]
+sky_material = SubResource("ProceduralSkyMaterial_1xdxk")
+
+[sub_resource type="Environment" id="Environment_i6p32"]
+background_mode = 2
+sky = SubResource("Sky_6xybi")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hsmg"]
+albedo_color = Color(0.184314, 0.368627, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ue3e"]
+
+[sub_resource type="Animation" id="Animation_u5ah0"]
+resource_name = "Cube falling"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("white box:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.0001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.744875, 2.85117, 0), Vector3(0.744875, 1.57451, 0), Vector3(0.744875, 0.251697, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y17v8"]
+_data = {
+"Cube falling": SubResource("Animation_u5ah0")
+}
+
+[node name="Example Pattern Cubes are Cool" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0.124929, 0.296748, 0.946749, -0.484145, 0.851139, -0.202894, -1.09074, 2.09252, 0)
+light_color = Color(0.839216, 0.811765, 0, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i6p32")
+
+[node name="blue box" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_8hsmg")
+
+[node name="white box" type="CSGBox3D" parent="."]
+transform = Transform3D(0.949305, 0.314357, 0, -0.314357, 0.949305, 0, 0, 0, 1, 0.744875, 1.57451, 0)
+material = SubResource("StandardMaterial3D_8ue3e")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.987441, 0.157986, 0, -0.157986, 0.987441, 0, 1.49876, 3.4951)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y17v8")
+}
