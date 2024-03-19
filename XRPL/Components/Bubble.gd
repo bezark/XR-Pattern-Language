@@ -45,12 +45,12 @@ func _process(delta):
 	
 	
 	move_and_slide()
-	print(velocity)
+	#print(velocity)
 
 
 func new_target_velocity(component):
 	target_velocity[component] = randf_range(velocity[component]-wander_speed,velocity[component]+wander_speed)
-	print(target_velocity)
+	#print(target_velocity)
 
 @onready var wander_timer = $WanderTimer
 func _on_timer_timeout():

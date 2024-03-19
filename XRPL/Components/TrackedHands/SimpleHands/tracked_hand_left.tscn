@@ -437,7 +437,6 @@ transform = Transform3D(0.19221, 0.717076, -0.669964, 0.977075, -0.0761527, 0.19
 shape = SubResource("CapsuleShape3D_t8i8x")
 
 [node name="Index_touch" type="Area3D" parent="Physical Bone Index_Distal_L/Bone8/CollisionShape3D8" groups=["finger"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Physical Bone Index_Distal_L/Bone8/CollisionShape3D8/Index_touch"]
 transform = Transform3D(1, 0, 7.45058e-09, 1.49012e-08, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0)
