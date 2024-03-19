@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bmhh2inijfef1"
-path="res://.godot/imported/ABCFavorit-Book-Trial copy.otf-e5f24dc4f62f94ba579b99b6ecbc39b1.fontdata"
+path="res://.godot/imported/ABCFavorit-Book-Trial copy.otf-f1209a7aa5db76b8f87440f500c2436e.fontdata"
 
 [deps]
 
-source_file="res://ABCFavorit-Book-Trial copy.otf"
-dest_files=["res://.godot/imported/ABCFavorit-Book-Trial copy.otf-e5f24dc4f62f94ba579b99b6ecbc39b1.fontdata"]
+source_file="res://PATTERNS/PATTERN NAME - CLARA/ABCFavorit-Book-Trial copy.otf"
+dest_files=["res://.godot/imported/ABCFavorit-Book-Trial copy.otf-f1209a7aa5db76b8f87440f500c2436e.fontdata"]
 
 [params]
 

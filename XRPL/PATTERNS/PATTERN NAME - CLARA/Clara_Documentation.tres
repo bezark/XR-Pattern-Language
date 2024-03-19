@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=2 format=3 uid="uid://btfr0r68c6051"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://btfr0r68c6051"]
 
+[ext_resource type="PackedScene" uid="uid://cik3rq8ft70qd" path="res://PATTERNS/PATTERN NAME - CLARA/test_xr_pattern.tscn" id="1_4dxa2"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gim4n"]
 
 [resource]
 script = ExtResource("1_gim4n")
-PatternName = ""
+PatternName = "Clara"
 Author = ""
 Context = ""
 Problem = ""
 Solution = ""
+Technical_Expression = ExtResource("1_4dxa2")
 OutsidePatterns = Array[PackedScene]([])
 InsidePatterns = Array[PackedScene]([])
