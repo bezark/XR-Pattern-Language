@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dm5heg3sohhir"]
+[gd_scene load_steps=12 format=3 uid="uid://dm5heg3sohhir"]
 
 [ext_resource type="Script" path="res://Components/Bubble.gd" id="1_wwmb2"]
 [ext_resource type="Resource" uid="uid://bnisqtlp74f8a" path="res://PATTERNS/PATTERN NAME - John/John_Documentation.tres" id="2_3a5yo"]
@@ -12,10 +12,6 @@ material = ExtResource("2_i3eem")
 radius = 0.25
 height = 0.5
 
-[sub_resource type="SystemFont" id="SystemFont_iixy3"]
-font_names = PackedStringArray("Futura")
-multichannel_signed_distance_field = true
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgw7k"]
 
 [sub_resource type="TextMesh" id="TextMesh_gcah2"]
@@ -24,6 +20,21 @@ text = "HELLO"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_02ak2"]
 radius = 0.25
+
+[sub_resource type="Animation" id="Animation_1w6w2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_k1bch"]
 resource_name = "grow"
@@ -56,21 +67,6 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_1w6w2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bubble:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tsc55"]
 _data = {
 "RESET": SubResource("Animation_1w6w2"),
@@ -91,7 +87,6 @@ mesh = SubResource("SphereMesh_p0fha")
 [node name="PatternName" type="Label3D" parent="."]
 billboard = 2
 text = "NAME"
-font = SubResource("SystemFont_iixy3")
 outline_size = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
