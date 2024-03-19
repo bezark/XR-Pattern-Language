@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddopjjn068ifm"]
+
+[ext_resource type="VideoStream" path="res://PATTERNS/PATTERN NAME - John/Screen Recording 2024-03-19 at 4.15.35 PM.ogv" id="1_puhvk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avi6u"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.552941)
+
+[sub_resource type="QuadMesh" id="QuadMesh_gofsd"]
+material = SubResource("StandardMaterial3D_avi6u")
+
+[node name="Scratch" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.58849)
+visible = false
+layers = 2
+mesh = SubResource("QuadMesh_gofsd")
+skeleton = NodePath("../../XROrigin3D/XRCamera3D")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+anchors_preset = -1
+anchor_right = 2.775
+anchor_bottom = 2.778
+offset_left = -3.0
+offset_top = -8.0
+offset_right = 0.199951
+offset_bottom = -0.144043
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_puhvk")
+autoplay = true
+loop = true

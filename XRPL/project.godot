@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 XrSimulator="*res://addons/xr-simulator/XRSimulator.tscn"
 GlobalNavigation="*res://Components/global_navigation.tscn"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/floatable_body/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
