@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://r3x6nvux515n"]
+[gd_scene load_steps=7 format=3 uid="uid://r3x6nvux515n"]
 
 [ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
+[ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="2_f0gpx"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_2wttd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmy4c"]
+albedo_texture = ExtResource("2_f0gpx")
+
+[sub_resource type="QuadMesh" id="QuadMesh_u0ugv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3ohj"]
+albedo_texture = ExtResource("2_f0gpx")
 
 [node name="Technical Expression" type="Node3D"]
 
@@ -12,3 +22,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
+
+[node name="BigImmmersiveWebsite" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigImmmersiveWebsite"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 2.16772, -2.3606)
+visible = false
+material_override = SubResource("StandardMaterial3D_lmy4c")
+mesh = SubResource("QuadMesh_u0ugv")
+
+[node name="XROrigin3D" parent="BigImmmersiveWebsite" instance=ExtResource("3_2wttd")]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="BigImmmersiveWebsite"]
+material_override = SubResource("StandardMaterial3D_b3ohj")
+flip_faces = true
+radius = 4.06162
+height = 6.90946
+sides = 64
