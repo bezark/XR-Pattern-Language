@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1snysx43fw6k"]
+
+[ext_resource type="Texture2D" uid="uid://cmw515fskx3ap" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse_2024_03_01_221409.jpg" id="2_cnbio"]
+[ext_resource type="ArrayMesh" uid="uid://cl4s7ojt5vw5" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse_2024_03_01_221409.obj" id="3_kmcey"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va806"]
+albedo_color = Color(0.215686, 0.290196, 0.384314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_viwr5"]
+albedo_color = Color(0.0941176, 0, 0.788235, 1)
+metallic = 0.74
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t485y"]
+albedo_texture = ExtResource("2_cnbio")
+
+[node name="Poetic Expression" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0150568, 0, 0)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96896, 3.64801, -5.54814)
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
+transform = Transform3D(0.990619, 0.136649, 0, -0.136649, 0.990619, 0, 0, 0, 1, 3.07148, 2.11063, -3.90462)
+radius = 0.951
+radial_segments = 34
+rings = 35
+material = SubResource("StandardMaterial3D_va806")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="XROrigin3D/Right/CSGSphere3D2"]
+transform = Transform3D(0.992072, 0.12568, 0, -0.12568, 0.992072, 0, 0, 0, 1, 0.0606039, -0.0152681, 0.0362377)
+material_override = SubResource("StandardMaterial3D_viwr5")
+radius = 1.725
+height = 0.015
+sides = 50
+
+[node name="Scaniverse20240301221409" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84909, 3.42941, -2.58454)
+material_override = SubResource("StandardMaterial3D_t485y")
+mesh = ExtResource("3_kmcey")

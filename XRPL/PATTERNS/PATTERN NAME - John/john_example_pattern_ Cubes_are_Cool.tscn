@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dwhawfy82dxoi"]
+
+[node name="Example Pattern Cubes are Cool" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50024, 0)
+size = Vector3(1, 4.00049, 1)

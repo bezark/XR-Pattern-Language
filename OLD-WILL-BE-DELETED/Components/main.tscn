@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcwjg8x1lxj82"]
+
+[ext_resource type="Script" path="res://Components/main.gd" id="1_t1bne"]
+
+[sub_resource type="Environment" id="Environment_11ggv"]
+background_mode = 1
+background_color = Color(0, 0.65098, 0.533333, 0)
+
+[node name="MAIN" type="Node3D"]
+script = ExtResource("1_t1bne")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
+radius = 0.05
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_11ggv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=6 format=3 uid="uid://bnisqtlp74f8a"]
+
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Don Park/don_poetic_expression.tscn" id="1_r06he"]
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_sisuk"]
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_utacj"]
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Zhuojing/poetic_expression.tscn" id="2_qcsvo"]
+[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Zhuojing/technical_expression.tscn" id="3_cgt7p"]
+
+[resource]
+script = ExtResource("1_utacj")
+PatternName = "My Fun Pattern!"
+Author = "John"
+Context = "Im making cookies"
+Problem = ""
+Solution = ""
+Pattern_Scene = ExtResource("1_sisuk")
+Technical_Expression = ExtResource("3_cgt7p")
+Poetic_Expression = ExtResource("2_qcsvo")
+OutsidePatterns = Array[PackedScene]([ExtResource("1_r06he")])
+InsidePatterns = Array[PackedScene]([])

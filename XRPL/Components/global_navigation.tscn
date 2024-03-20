@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://6qm4r41lg1wh"]
+
+[ext_resource type="Script" path="res://Components/GlobalNavigation.gd" id="1_0nirx"]
+[ext_resource type="PackedScene" uid="uid://dm5heg3sohhir" path="res://Components/bubble.tscn" id="2_pnvba"]
+[ext_resource type="PackedScene" uid="uid://4sfk4gv6lmtm" path="res://Components/main.tscn" id="3_gigeh"]
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="4_e2sn4"]
+
+[sub_resource type="Resource" id="Resource_2khrn"]
+script = ExtResource("4_e2sn4")
+PatternName = "HOME"
+Author = ""
+Context = ""
+Problem = ""
+Solution = ""
+Technical_Expression = ExtResource("3_gigeh")
+OutsidePatterns = Array[PackedScene]([])
+InsidePatterns = Array[PackedScene]([])
+
+[node name="GlobalNavigation" type="Node3D"]
+script = ExtResource("1_0nirx")
+
+[node name="LocalBubbles" type="Node3D" parent="."]
+
+[node name="Bubble" parent="." instance=ExtResource("2_pnvba")]
+documentation = SubResource("Resource_2khrn")
