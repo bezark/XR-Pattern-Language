@@ -52,7 +52,7 @@ height = 3.861
 sides = 38
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6435, -0.985345, 5.11029)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6435, -0.789242, 5.11029)
 material_override = SubResource("StandardMaterial3D_ous2w")
 size = Vector3(70, 0.068, 70)
 
