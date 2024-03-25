@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=4 format=3 uid="uid://tm7yayvxrwsw"]
+
+[ext_resource type="PackedScene" uid="uid://jrb38m1010xs" path="res://PATTERNS/PATTERN NAME - Douglas/Douglas P scene.tscn" id="1_7bgth"]
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_ahpnm"]
+[ext_resource type="PackedScene" uid="uid://dnhc34xk42d0t" path="res://PATTERNS/PATTERN NAME - Douglas/Douglas T scene.tscn" id="2_o0sf8"]
+
+[resource]
+script = ExtResource("1_ahpnm")
+PatternName = ""
+Author = ""
+Context = ""
+Problem = ""
+Solution = ""
+Technical_Expression = ExtResource("2_o0sf8")
+Poetic_Expression = ExtResource("1_7bgth")
+OutsidePatterns = Array[PackedScene]([])
+InsidePatterns = Array[PackedScene]([])
