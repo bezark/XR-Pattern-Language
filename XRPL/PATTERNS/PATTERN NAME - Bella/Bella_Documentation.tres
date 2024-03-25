@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_cumog")
-PatternName = ""
-Author = ""
-Context = ""
+PatternName = "Responsive VR Menu for Children"
+Author = "Bella Hwang"
+Context = "The Responsive VR Menu for children is designed specifically for young users, filled with content they love. It features a user-friendly interface that makes it easy to navigate and select desired options. Kids can interact by asking questions to animal characters like dogs using voice commands. The background teems with animals, adding fun. Additionally, it adjusts its size based on the child's stature for an optimal experience."
 Problem = ""
 Solution = ""
 OutsidePatterns = Array[PackedScene]([])
