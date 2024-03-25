@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://r3x6nvux515n"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pd5j5"]
+sky_top_color = Color(0.333333, 0.705882, 0.976471, 1)
+sky_horizon_color = Color(0.612745, 0.813725, 0.967647, 1)
+sky_energy_multiplier = 2.1
+ground_bottom_color = Color(0.117647, 0.54902, 0.894118, 1)
+ground_horizon_color = Color(0.612745, 0.813725, 0.967647, 1)
+
+[sub_resource type="Sky" id="Sky_42sm6"]
+sky_material = SubResource("ProceduralSkyMaterial_pd5j5")
+
+[sub_resource type="Environment" id="Environment_p4ydv"]
+background_mode = 2
+sky = SubResource("Sky_42sm6")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8cls"]
+albedo_color = Color(0.0588235, 0.494118, 0.160784, 1)
+metallic = 0.75
+
+[sub_resource type="BoxMesh" id="BoxMesh_xkqd4"]
+material = SubResource("StandardMaterial3D_v8cls")
+uv2_padding = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ont1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k7cgm"]
+radius = 0.963738
+height = 3.87463
+
+[sub_resource type="BoxMesh" id="BoxMesh_y7qhc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jpq8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ulbpg"]
+
+[node name="Technical Expression" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.81532, -0.576236, -0.0566122, -0.291975, 0.324736, 0.89961, -0.500003, 0.749999, -0.43301, 0, 4.94921, 0)
+light_color = Color(0.992157, 0.992157, 0, 1)
+light_energy = 2.754
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p4ydv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(31.695, 0, 0, 0, 0.965, 0, 0, 0, 30.15, 5.76251, 1.05687, 8.97278)
+mesh = SubResource("BoxMesh_xkqd4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0.0340827, -0.457141, 0)
+shape = SubResource("BoxShape3D_5ont1")
+
+[node name="POV CHARACTER" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96342, 2.35163, 7.72407)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="POV CHARACTER"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62932, 5.81909, 6.74376)
+shape = SubResource("CapsuleShape3D_k7cgm")
+disabled = true
+
+[node name="Camera3D" type="Camera3D" parent="POV CHARACTER/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0970135, -0.652231)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="POV CHARACTER/CollisionShape3D/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.656678, -0.0319195, 0)
+
+[node name="MEDITATION ISLAND" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="MEDITATION ISLAND"]
+transform = Transform3D(10.605, 0, 0, 0, 0.49, 0, 0, 0, 16.58, 11.4503, 8.03973, 9.38099)
+mesh = SubResource("BoxMesh_y7qhc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MEDITATION ISLAND/Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MEDITATION ISLAND/Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_0jpq8")
+
+[node name="PORTAL 1" type="Node3D" parent="."]
+
+[node name="SubViewport" type="SubViewport" parent="PORTAL 1"]
+
+[node name="Camera3D" type="Camera3D" parent="PORTAL 1/SubViewport"]
+transform = Transform3D(-0.999728, 0, 0.0233331, 0, 1, 0, -0.0233331, 0, -0.999728, 11.8584, 9.82441, 6.86067)
+fov = 70.2637
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PORTAL 1"]
+transform = Transform3D(4.96, 0, 0, 0, 5.035, 0, 0, 0, 0.36, 12.0325, 10.6487, 6.00016)
+mesh = SubResource("BoxMesh_ulbpg")
+skeleton = NodePath("../..")
