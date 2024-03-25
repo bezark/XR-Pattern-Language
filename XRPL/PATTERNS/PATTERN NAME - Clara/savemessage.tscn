@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://7nmqomy3hekl"]
 
-[ext_resource type="FontFile" uid="uid://bmhh2inijfef1" path="res://ABCFavorit-Book-Trial copy.otf" id="1_a7ytk"]
-[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://detail_2.tscn" id="2_48nvi"]
+[ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - Clara/ABCFavorit-Book-Trial.otf" id="1_a7ytk"]
+[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - Clara/details.tscn" id="2_48nvi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5vwy5"]
 sky_top_color = Color(0.278431, 0.415686, 0.823529, 1)

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bmhh2inijfef1"
-path="res://.godot/imported/ABCFavorit-Book-Trial copy.otf-e5f24dc4f62f94ba579b99b6ecbc39b1.fontdata"
+uid="uid://bapqg08hbfwbr"
+path="res://.godot/imported/ABCFavorit-Book-Trial.otf-01e154732c57c8bfcff179dd54bfd067.fontdata"
 
 [deps]
 
-source_file="res://ABCFavorit-Book-Trial copy.otf"
-dest_files=["res://.godot/imported/ABCFavorit-Book-Trial copy.otf-e5f24dc4f62f94ba579b99b6ecbc39b1.fontdata"]
+source_file="res://PATTERNS/PATTERN NAME - Clara/ABCFavorit-Book-Trial.otf"
+dest_files=["res://.godot/imported/ABCFavorit-Book-Trial.otf-01e154732c57c8bfcff179dd54bfd067.fontdata"]
 
 [params]
 

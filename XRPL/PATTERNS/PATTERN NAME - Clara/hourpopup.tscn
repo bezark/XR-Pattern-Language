@@ -1,9 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://cik3rq8ft70qd"]
+[gd_scene load_steps=23 format=3 uid="uid://cik3rq8ft70qd"]
 
-[ext_resource type="FontFile" uid="uid://bmhh2inijfef1" path="res://PATTERNS/PATTERN NAME - Clara/ABCFavorit-Book-Trial copy.otf" id="1_rufw7"]
+[ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - Clara/ABCFavorit-Book-Trial.otf" id="1_rufw7"]
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Clara/Hour Pop Up.gd" id="1_yld6q"]
-[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - Clara/detail_2.tscn" id="2_xr8xn"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="4_40so7"]
+[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - Clara/details.tscn" id="2_xr8xn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o2io0"]
 sky_top_color = Color(0.278431, 0.415686, 0.823529, 1)
@@ -146,7 +145,6 @@ depth = 0.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.0234205, 0, 0.999726, 0, 1, 0, -0.999726, 0, -0.0234205, 3.95326, 1.28993, -0.141213)
-visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aaxye")
@@ -164,6 +162,7 @@ libraries = {
 
 [node name="Hour Pop Up" type="Node3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 3.60402, 1.27333, -0.0664722)
+visible = false
 script = ExtResource("1_yld6q")
 
 [node name="X" type="MeshInstance3D" parent="Hour Pop Up"]
@@ -213,6 +212,3 @@ transform = Transform3D(2.055, 0.000108564, 1.14417e-05, -0.000596272, 0.373999,
 transform = Transform3D(0.0536605, 0, 0.998559, 0, 1, 0, -0.998559, 0, 0.0536605, 1.18825, 0, 0)
 text = "hi"
 font = ExtResource("1_rufw7")
-
-[node name="XROrigin3D" parent="." instance=ExtResource("4_40so7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69662, -0.00529623, 1.05)
