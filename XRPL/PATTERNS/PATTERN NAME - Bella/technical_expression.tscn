@@ -1,27 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://r3x6nvux515n"]
+[gd_scene load_steps=10 format=3 uid="uid://r3x6nvux515n"]
 
-[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
 [ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="2_f0gpx"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_2wttd"]
+[ext_resource type="Texture2D" uid="uid://b67my3qqufbjr" path="res://PATTERNS/PATTERN NAME - Bella/Group 8.jpg" id="3_gjf68"]
+[ext_resource type="Texture2D" uid="uid://cgx2fpvoxa33p" path="res://PATTERNS/PATTERN NAME - Bella/grass-texture-background_64049-124 (1).jpg" id="4_f68r1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmy4c"]
 albedo_texture = ExtResource("2_f0gpx")
 
 [sub_resource type="QuadMesh" id="QuadMesh_u0ugv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3ohj"]
-albedo_texture = ExtResource("2_f0gpx")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orshe"]
+albedo_texture = ExtResource("3_gjf68")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ous2w"]
+albedo_texture = ExtResource("4_f68r1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oe6r1"]
+albedo_color = Color(0.968627, 0.403922, 0, 1)
 
 [node name="Technical Expression" type="Node3D"]
-
-[node name="Bella Pattern" parent="." instance=ExtResource("1_jmkaj")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 1.4363, 0)
+light_energy = 2.212
+light_angular_distance = 74.09
 shadow_enabled = true
+directional_shadow_split_2 = 0.296
 
 [node name="BigImmmersiveWebsite" type="Node3D" parent="."]
 
@@ -33,9 +41,36 @@ mesh = SubResource("QuadMesh_u0ugv")
 
 [node name="XROrigin3D" parent="BigImmmersiveWebsite" instance=ExtResource("3_2wttd")]
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="BigImmmersiveWebsite"]
-material_override = SubResource("StandardMaterial3D_b3ohj")
+[node name="XRCamera3D2" type="XRCamera3D" parent="BigImmmersiveWebsite/XROrigin3D"]
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="BigImmmersiveWebsite/XROrigin3D/XRCamera3D2"]
+transform = Transform3D(1, -3.48787e-16, -3.48787e-16, -3.48787e-16, -1, 8.74228e-08, -3.48787e-16, -8.74228e-08, -1, 0, 1.08202, 0)
+material_override = SubResource("StandardMaterial3D_orshe")
 flip_faces = true
-radius = 4.06162
-height = 6.90946
-sides = 64
+radius = 2.00544
+height = 3.861
+sides = 38
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6435, -0.985345, 5.11029)
+material_override = SubResource("StandardMaterial3D_ous2w")
+size = Vector3(70, 0.068, 70)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(0.139661, -0.00295944, 0.127503, 0.0547242, 0.00755277, -0.325399, -6.36702e-18, 0.209693, 0.0264988, 0.892225, 0.0431828, 0.511017)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D"]
+transform = Transform3D(3.10358, 1.21609, -1.0183e-08, -0.0657654, 0.167839, 3.32845, 0.52042, -1.32816, 0.077256, -1.35403, -0.158771, -0.155355)
+radius = 0.455121
+rings = 30
+material = SubResource("StandardMaterial3D_oe6r1")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Node3D"]
+transform = Transform3D(-1.2045, 0.883263, 1.18796, 1.10868, 0.335002, 1.00211, 0.139391, 0.370134, -0.849536, -2.01205, -1.11932, -0.330359)
+radius = 0.430798
+rings = 30
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="Node3D"]
+transform = Transform3D(1, 2.52342e-09, -1.23279e-07, -9.82592e-10, 1, -1.25812e-08, 1.39111e-08, -1.48849e-09, 1, 0, 0, 0)
+radius = 0.430798
+rings = 30
