@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://7nmqomy3hekl"]
+[gd_scene load_steps=14 format=3 uid="uid://7nmqomy3hekl"]
 
 [ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - Clara/ABCFavorit-Book-Trial.otf" id="1_a7ytk"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Clara/savemessage.gd" id="1_wceim"]
 [ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - Clara/details.tscn" id="2_48nvi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5vwy5"]
@@ -32,6 +33,9 @@ text = "X"
 font = ExtResource("1_a7ytk")
 font_size = 20
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_a5kwg"]
+size = Vector3(0.171997, 0.158813, 0.131134)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kr1bv"]
 albedo_color = Color(0.407843, 0.737255, 1, 1)
 
@@ -47,6 +51,7 @@ horizontal_alignment = 0
 depth = 0.0
 
 [node name="message" type="Node3D"]
+script = ExtResource("1_wceim")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_poa25")
@@ -66,6 +71,13 @@ transform = Transform3D(-0.999358, -0.00730256, -0.035073, -0.00645899, 0.999689
 mesh = SubResource("TextMesh_aj5ne")
 skeleton = NodePath("../pop-up base")
 
+[node name="Area3D" type="Area3D" parent="X"]
+transform = Transform3D(1, 1.58738e-09, -3.38467e-10, -1.74282e-09, 1, -1.83618e-10, -2.6084e-10, 7.24165e-09, 1, -0.0409392, -0.0104575, -0.00119415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="X/Area3D"]
+transform = Transform3D(1, 4.05357e-07, 3.35223e-07, -4.05357e-07, 1, -1.14187e-06, -3.35223e-07, 1.14187e-06, 1, 0.0271741, 0.019338, -0.00304826)
+shape = SubResource("BoxShape3D_a5kwg")
+
 [node name="face1_1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 3.48787e-16, 8.74228e-08, 3.48787e-16, 1, -3.48787e-16, -8.74228e-08, -3.48787e-16, -1, 0.423717, 0.723687, -0.0703593)
 mesh = SubResource("TextMesh_m8t61")
@@ -75,3 +87,5 @@ transform = Transform3D(2.05494, 0.000108512, 3.1089e-05, -0.000596255, 0.373817
 
 [node name="detail3" parent="." instance=ExtResource("2_48nvi")]
 transform = Transform3D(2.05494, 0.000108512, 3.1089e-05, -0.000596255, 0.373817, -0.0011568, -0.000118909, 0.000794834, 0.544047, -0.375936, 1.06127, 0.0119673)
+
+[connection signal="area_entered" from="X/Area3D" to="." method="_on_area_3d_area_entered"]

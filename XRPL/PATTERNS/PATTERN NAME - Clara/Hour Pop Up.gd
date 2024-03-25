@@ -21,3 +21,12 @@ extends Node3D
 	#
 #func ui_left():
 	#$"../AnimationPlayer".play("spin")
+
+
+func _on_area_3d_area_entered(area):
+	hide()
+
+
+func _on_breakarea_area_entered(area):
+	hide()
+	$message.show()
