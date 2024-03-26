@@ -20,6 +20,7 @@ albedo_texture = ExtResource("4_f0knw")
 [sub_resource type="Animation" id="Animation_u3qab"]
 resource_name = "new_animation"
 length = 10.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -47,6 +48,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_xinww"]
 length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -81,6 +83,7 @@ _data = {
 [sub_resource type="Animation" id="Animation_pd2k6"]
 resource_name = "new_animation"
 length = 10.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -108,6 +111,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_tybby"]
 length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -157,6 +161,7 @@ albedo_color = Color(1, 1, 0.137255, 1)
 [sub_resource type="Animation" id="Animation_1ya6k"]
 resource_name = "new_animation"
 length = 10.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -184,6 +189,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_iomth"]
 length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -269,6 +275,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.366084, -0.69924, 0)
 libraries = {
 "": SubResource("AnimationLibrary_thwjm")
 }
+autoplay = "new_animation"
 
 [node name="Duck" parent="." instance=ExtResource("5_25q68")]
 transform = Transform3D(-0.322949, 0, -0.381712, 0, 0.5, 0, 0.381712, 0, -0.322949, -1.34872, -0.759504, -0.0285528)
@@ -277,6 +284,7 @@ transform = Transform3D(-0.322949, 0, -0.381712, 0, 0.5, 0, 0.381712, 0, -0.3229
 libraries = {
 "": SubResource("AnimationLibrary_pp0o6")
 }
+autoplay = "new_animation"
 
 [node name="Node3D" type="Node3D" parent="."]
 
@@ -315,6 +323,7 @@ root_node = NodePath("../Flower")
 libraries = {
 "": SubResource("AnimationLibrary_abl4g")
 }
+autoplay = "new_animation"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(0.996697, 0, -0.0812079, 0, 1, 0, 0.0812079, 0, 0.996697, -1.41747, 0.84975, -0.688842)
