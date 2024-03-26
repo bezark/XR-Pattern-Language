@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgejo472wkhyh"]
+[gd_scene load_steps=14 format=3 uid="uid://dgejo472wkhyh"]
 
+[ext_resource type="Texture2D" uid="uid://btgc6l7y2tgpj" path="res://PATTERNS/PATTERN NAME - Ritu/Screenshot 2024-03-26 032337.png" id="1_17eoa"]
 [ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="1_xomkg"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_na2nf"]
@@ -22,15 +23,43 @@ background_mode = 2
 sky = SubResource("Sky_gk2pu")
 tonemap_mode = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6blbj"]
-albedo_color = Color(0.0117647, 0.341176, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x28s7"]
+albedo_texture = ExtResource("1_17eoa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xso1h"]
+albedo_color = Color(1, 0.623529, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylhey"]
+albedo_color = Color(0.992157, 0.278431, 0.580392, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0rce"]
+albedo_color = Color(0.992157, 0.278431, 0.580392, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bop8"]
+albedo_color = Color(0.992157, 0.278431, 0.580392, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yokl8"]
+albedo_color = Color(0.992157, 0.278431, 0.580392, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gy6l4"]
+albedo_color = Color(0.992157, 0.278431, 0.580392, 1)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D"]
-transform = Transform3D(0.503379, 0.20565, 0.839236, -0.0819291, 0.978248, -0.190573, -0.860173, 0.0271724, 0.509278, 0.0586085, -0.721153, 5.43334)
 navigation_mesh = SubResource("NavigationMesh_na2nf")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_al67y")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 817.0
+offset_bottom = 50.0
+text = "Look at these lovebirds! See how many times they get together and break up by clicking the space bar!"
+editable = false
+deselect_on_focus_loss_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.832882, -0.27945, 0.477719, 0.237284, 0.599507, 0.764387, -0.500003, 0.749999, -0.43301, 2.24647, 6.97479, -0.652274)
@@ -38,41 +67,47 @@ light_color = Color(0.94902, 0.909804, 0.478431, 1)
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, -1.86265e-09, 0, -1.86265e-09, 1, -2.79397e-09, 0, 8.3819e-09, 1, -1.90735e-06, -0.5, 9.53674e-07)
+material_override = SubResource("StandardMaterial3D_x28s7")
 use_collision = true
 size = Vector3(10, 1, 10)
-material = SubResource("StandardMaterial3D_6blbj")
+material = SubResource("StandardMaterial3D_xso1h")
 
 [node name="soulmate1" parent="." instance=ExtResource("1_xomkg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21893, 1.1064, 0)
+transform = Transform3D(1, 0, 0, -1.86265e-09, 1, -2.79397e-09, 0, -9.31323e-10, 1, -1.21893, 1.1064, 2.38419e-07)
 
 [node name="soulmate2" parent="." instance=ExtResource("1_xomkg")]
-transform = Transform3D(1, 3.72529e-09, 0, -1.86265e-09, 1, -2.79397e-09, 0, 1.39698e-08, 1, 1.0888, 0.67583, -3.20232)
+transform = Transform3D(1, 1.86265e-09, 0, -1.86265e-09, 1, -2.79397e-09, 0, 1.58325e-08, 1, 1.0888, 0.67583, -3.20232)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.982561, 0.0752628, 0.170025, -0.183248, 0.546954, 0.816861, -0.0315167, -0.833772, 0.551208, 1.38614, 6.05377, 6.05489)
+transform = Transform3D(1, 0, 0, 0, 0.477849, 0.878442, 0, -0.878442, 0.477849, 0, 7.31873, 4.11513)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.616486, 0, -0.787366, 0, 1, 0, 0.787366, 0, 0.616486, -2.16247, 0.5, 2.7288)
+transform = Transform3D(0.616486, 1.86265e-09, -0.787366, -1.49012e-07, 1, 5.58794e-08, 0.787366, 5.86733e-08, 0.616486, -2.16247, 0.500001, 2.7288)
 use_collision = true
 size = Vector3(2, 1, 1)
+material = SubResource("StandardMaterial3D_ylhey")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(0.0662042, 0, 0.997806, 0, 1, 0, -0.997806, 0, 0.0662042, 0.197304, 0.5, 0.709031)
+transform = Transform3D(0.0662042, -1.86265e-09, 0.997806, 3.72529e-08, 1, 1.86265e-09, -0.997806, 8.3819e-09, 0.0662042, 0.197302, 0.5, 0.709032)
 use_collision = true
 size = Vector3(2, 1, 1)
+material = SubResource("StandardMaterial3D_x0rce")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(0.0498435, 0, -0.998757, 0, 1, 0, 0.998757, 0, 0.0498435, 2.64523, 0.5, -2.1374)
 use_collision = true
 size = Vector3(2, 1, 1)
+material = SubResource("StandardMaterial3D_3bop8")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.903769, 0, -0.428021, 0, 1, 0, 0.428021, 0, -0.903769, 2.67566, 0.5, 2.63283)
 use_collision = true
 size = Vector3(2, 1, 1)
+material = SubResource("StandardMaterial3D_yokl8")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.927216, 0, -0.374526, 0, 1, 0, 0.374526, 0, -0.927216, -1.93225, 0.410017, -2.11025)
+transform = Transform3D(-0.927216, 3.72529e-09, -0.374526, -1.86265e-09, 1, -1.02445e-08, 0.374526, 1.58325e-08, -0.927216, -1.93225, 0.410017, -2.11025)
 use_collision = true
 size = Vector3(2, 1, 1)
+material = SubResource("StandardMaterial3D_gy6l4")
