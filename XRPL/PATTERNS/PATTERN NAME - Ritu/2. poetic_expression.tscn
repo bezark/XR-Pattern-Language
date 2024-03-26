@@ -93,10 +93,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21893, 3.43412, 2.38419e-0
 [node name="LOVEBIRD 2" parent="." instance=ExtResource("1_xomkg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.089, 3.077, -3.202)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.398477, 0.917178, 0, -0.917178, 0.398477, 0.917222, 7.38667, 3.30692)
-visible = false
-
 [node name="OBSTACLES" type="Node" parent="."]
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="OBSTACLES"]

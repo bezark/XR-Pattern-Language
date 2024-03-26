@@ -62,10 +62,6 @@ material = SubResource("StandardMaterial3D_6blbj")
 [node name="NavigationNPC" parent="." instance=ExtResource("1_3usrg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21893, 1.1064, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 8, 0)
-visible = false
-
 [node name="OBSTACLES" type="Node3D" parent="."]
 transform = Transform3D(0.616486, 0, -0.787366, 0, 1, 0, 0.787366, 0, 0.616486, -2.16247, 0.5, 2.7288)
 
