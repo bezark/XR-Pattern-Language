@@ -1,7 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1snysx43fw6k"]
+[gd_scene load_steps=13 format=3 uid="uid://b1snysx43fw6k"]
 
 [ext_resource type="Texture2D" uid="uid://cmw515fskx3ap" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse_2024_03_01_221409.jpg" id="2_cnbio"]
 [ext_resource type="ArrayMesh" uid="uid://cl4s7ojt5vw5" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse_2024_03_01_221409.obj" id="3_kmcey"]
+[ext_resource type="Texture2D" uid="uid://gv7fj3xb0nw4" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/Scaniverse_2024_03_17_184626.jpg" id="3_sr2ns"]
+[ext_resource type="ArrayMesh" uid="uid://bp2kyw3xcouki" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse_2024_03_17_184626.obj" id="4_fe306"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_edll3"]
+sky_top_color = Color(0.411765, 0.619608, 0.662745, 1)
+sky_horizon_color = Color(0.652941, 0.697152, 0.698936, 1)
+ground_horizon_color = Color(0.652941, 0.697152, 0.698936, 1)
+
+[sub_resource type="Sky" id="Sky_r513s"]
+sky_material = SubResource("ProceduralSkyMaterial_edll3")
+
+[sub_resource type="Environment" id="Environment_xhsim"]
+background_mode = 2
+sky = SubResource("Sky_r513s")
+tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va806"]
 albedo_color = Color(0.215686, 0.290196, 0.384314, 1)
@@ -13,8 +28,23 @@ metallic = 0.74
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t485y"]
 albedo_texture = ExtResource("2_cnbio")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byiog"]
+albedo_texture = ExtResource("3_sr2ns")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0o6cn"]
+
 [node name="Poetic Expression" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0150568, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.392929, 0.309204, 0, 0.618408, 0.785857, -0.5, 0.680572, -0.535557, 0, 0, 0)
+light_color = Color(1, 0.843137, 0.701961, 1)
+light_energy = 0.3
+shadow_enabled = true
+directional_shadow_max_distance = 98.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xhsim")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86207)
@@ -35,7 +65,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
 tracker = &"right_hand"
 
 [node name="CSGSphere3D2" type="CSGSphere3D" parent="XROrigin3D/Right"]
-transform = Transform3D(0.990619, 0.136649, 0, -0.136649, 0.990619, 0, 0, 0, 1, 3.07148, 2.11063, -3.90462)
+transform = Transform3D(0.990619, 0.136649, 0, -0.136649, 0.990619, 0, 0, 0, 1, 7.32346, 3.21245, -2.9251)
 radius = 0.951
 radial_segments = 34
 rings = 35
@@ -49,6 +79,19 @@ height = 0.015
 sides = 50
 
 [node name="Scaniverse20240301221409" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84909, 3.42941, -2.58454)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39278, 0.045022, -2.38028)
 material_override = SubResource("StandardMaterial3D_t485y")
 mesh = ExtResource("3_kmcey")
+
+[node name="Scaniverse20240317184626" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.390756, 0.0490654, -2.11238)
+material_override = SubResource("StandardMaterial3D_byiog")
+mesh = ExtResource("4_fe306")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(50, 0.1, 50)
+material = SubResource("StandardMaterial3D_0o6cn")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]

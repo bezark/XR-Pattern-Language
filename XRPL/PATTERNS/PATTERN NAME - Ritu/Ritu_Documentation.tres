@@ -15,5 +15,5 @@ Solution = "Tracking Trails assist users in navigating safely throughout the vir
 Pattern_Scene = ExtResource("2_23jp7")
 Technical_Expression = ExtResource("2_23jp7")
 Poetic_Expression = ExtResource("3_fvu0s")
-OutsidePatterns = Array[PackedScene]([ExtResource("1_c0qig")])
-InsidePatterns = Array[PackedScene]([])
+OutsidePatterns = Array[PackedScene]([])
+InsidePatterns = Array[PackedScene]([ExtResource("1_c0qig")])

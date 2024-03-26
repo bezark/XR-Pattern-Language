@@ -1,14 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://r3x6nvux515n"]
+[gd_scene load_steps=10 format=3 uid="uid://r3x6nvux515n"]
 
-[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.gd" id="1_kua77"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_wcy5t"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_10h1g"]
+[ext_resource type="ArrayMesh" uid="uid://dergcffr5btm" path="res://PATTERNS/PATTERN NAME - Yoon/excrement.obj" id="3_fsfcw"]
+[ext_resource type="Texture2D" uid="uid://cmistuob5iwe8" path="res://PATTERNS/PATTERN NAME - Yoon/teture2.jpg" id="3_qf1m1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nsuox"]
+sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_1yakq"]
+sky_material = SubResource("ProceduralSkyMaterial_nsuox")
+
+[sub_resource type="Environment" id="Environment_p3obx"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+sky = SubResource("Sky_1yakq")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iayrp"]
+albedo_texture = ExtResource("3_qf1m1")
 
 [node name="Technical Expression" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.189109)
+script = ExtResource("1_kua77")
 
-[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("1_jmkaj")]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p3obx")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="LeftHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+hand_skeleton = NodePath("Lefty")
+
+[node name="Lefty" parent="XROrigin3D/LeftHandTracker" instance=ExtResource("2_wcy5t")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="RightHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+hand = 1
+hand_skeleton = NodePath("Righty")
+
+[node name="Righty" parent="XROrigin3D/RightHandTracker" instance=ExtResource("3_10h1g")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="XROrigin3D/Left"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="XROrigin3D/Right"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Poop" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23868, 0, 0, 0, 0.23868, 0, 0, 0, 0.23868, 0.0061872, 0.293276, -0.216037)
+material_override = SubResource("StandardMaterial3D_iayrp")
+mesh = ExtResource("3_fsfcw")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

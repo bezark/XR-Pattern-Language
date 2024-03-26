@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://r3x6nvux515n"]
 
-[ext_resource type="PackedScene" uid="uid://wcpgiwy5dldi" path="res://Components/PatternDocumentation.tscn" id="1_c1yfd"]
-[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://Template- PATTERN NAME - YOUR NAME/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
+[ext_resource type="PackedScene" uid="uid://wcpgiwy5dldi" path="res://Components/PatternDocumentation.tscn" id="1_4pjah"]
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://Template- PATTERN NAME - YOUR NAME/example_pattern_ Cubes_are_Cool.tscn" id="2_r4jcs"]
 
 [node name="Technical Expression" type="Node3D"]
 
-[node name="PatternDocumentation" parent="." instance=ExtResource("1_c1yfd")]
+[node name="PatternDocumentation" parent="." instance=ExtResource("1_4pjah")]
 size_flags_vertical = 3
 PatternName = "Cubes are cool"
 Author = "John"
@@ -13,7 +13,7 @@ Context = "Often times you need to pick a shape, but you don't know which shape 
 Problem = "What is the main problem this pattern solves? (250 Words)"
 Solution = "2-3 sentences describing the solution."
 
-[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("1_jmkaj")]
+[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("2_r4jcs")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
