@@ -1,9 +1,9 @@
 [gd_scene load_steps=34 format=3 uid="uid://cdu1nyicwas8v"]
 
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Clara/Hour Pop Up.gd" id="1_hqrpd"]
-[ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - Clara/ABCFavorit-Book-Trial.otf" id="2_rf7y2"]
-[ext_resource type="PackedScene" path="res://PATTERNS/PATTERN NAME - Clara/details.tscn" id="3_ci7ty"]
-[ext_resource type="PackedScene" uid="uid://7nmqomy3hekl" path="res://PATTERNS/PATTERN NAME - Clara/savemessage.tscn" id="5_p2fx2"]
+[ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - CLARA/ABCFavorit-Book-Trial.otf" id="2_rf7y2"]
+[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - Clara/details.tscn" id="3_ci7ty"]
+[ext_resource type="PackedScene" uid="uid://7nmqomy3hekl" path="res://PATTERNS/PATTERN NAME - CLARA/savemessage.tscn" id="5_p2fx2"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="5_wgkkq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o2io0"]
