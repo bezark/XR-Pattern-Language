@@ -87,12 +87,12 @@ _data = {
 environment = SubResource("Environment_kwwwk")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 0, 0)
+transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 0.913905, 0)
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669804, 0.0659072, -2.93823)
-size = Vector3(1, 0.647473, 6.87646)
+size = Vector3(49.0147, 0.239752, 86.4091)
 material = SubResource("StandardMaterial3D_niks4")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("1_dpxh6")]

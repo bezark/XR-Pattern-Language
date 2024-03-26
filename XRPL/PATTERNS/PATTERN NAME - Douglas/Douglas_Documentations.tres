@@ -6,8 +6,8 @@
 
 [resource]
 script = ExtResource("1_ahpnm")
-PatternName = ""
-Author = ""
+PatternName = "Where do I go"
+Author = "Douglas Xie"
 Context = ""
 Problem = ""
 Solution = ""
