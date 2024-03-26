@@ -1,15 +1,17 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://bx88n5raa2bh"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=4 format=3 uid="uid://bx88n5raa2bh"]
 
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_3orw5"]
 [ext_resource type="PackedScene" uid="uid://bqabjhnl2np3x" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/Pattern language Poetic.tscn" id="1_a428c"]
+[ext_resource type="PackedScene" uid="uid://cewrnset1usxx" path="res://PATTERNS/PATTERN NAME - Zhuojing/XR Pattern.tscn" id="2_8l1ke"]
 
 [resource]
 script = ExtResource("1_3orw5")
 PatternName = "Customize UI"
-Author = ""
-Context = ""
-Problem = ""
-Solution = ""
-Technical_Expression = ExtResource("1_a428c")
+Author = "Zhuojing Li"
+Context = "In the XR space, user demand for personalized experiences is increasing every day. As XR technology involves the convergence of the virtual and real worlds, the user's need for a personalized interface becomes more complex. For example, different users may require different interface layouts, font sizes, color contrasts, and interaction styles due to visual, motor, or other barriers. To provide an accessible and highly personalized user experience, XR applications need to be able to flexibly adapt and respond to different user needs and scenarios."
+Problem = "The main problem is that current XR applications typically use a generic interface design and interaction model that does not meet the individual needs of all users . This \"one-size-fits-all\" design model limits the accessibility of XR technology and the quality of the user experience. For example, for visually impaired users, the current XR interface may require simpler visual aids."
+Solution = "Develop and implement flexible user interface interactions in XR scenarios that allow users to personalize them according to their needs and preferences. In this way, XR applications can better meet the individual needs of all users."
+Technical_Expression = ExtResource("2_8l1ke")
+Poetic_Expression = ExtResource("1_a428c")
 OutsidePatterns = Array[PackedScene]([])
 InsidePatterns = Array[PackedScene]([])

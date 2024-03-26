@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cewrnset1usxx"]
 
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/XR Pattern.gd" id="1_4rmky"]
-[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/art_studio/scene.gltf" id="3_3t2wi"]
+[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/art_studio/scene.gltf" id="3_3t2wi"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_d3rei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_750al"]
@@ -107,7 +107,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76823, 0.0511513)
 shape = SubResource("SphereShape3D_5wf40")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228622, 1.14603, 9.25909)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155309, 1.14603, 9.25909)
 size = Vector3(0.218811, 0.187744, 0.344238)
 
 [node name="Area3D" type="Area3D" parent="CSGBox3D"]

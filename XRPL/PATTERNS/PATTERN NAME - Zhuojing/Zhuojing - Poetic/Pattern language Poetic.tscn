@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://bqabjhnl2np3x"]
 
-[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/XR Pattern.gd" id="1_c0qwc"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/poetic XR Pattern.gd" id="1_1qqjr"]
 [ext_resource type="AudioStream" uid="uid://bd2qnjusutdfp" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/beethoven-moonlight-sonata-1-movement-op-27-nr-2-180627.mp3" id="2_7yvdk"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_xatlt"]
 [ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/art_studio/scene.gltf" id="4_hsdkv"]
@@ -113,7 +113,7 @@ radius = 0.628431
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.998561, 0.0149903, 0)
-script = ExtResource("1_c0qwc")
+script = ExtResource("1_1qqjr")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.944019, 2.82055, 8.37708)
@@ -180,7 +180,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76823, 0.0511513)
 shape = SubResource("SphereShape3D_5wf40")
 
 [node name="Prism" type="CSGMesh3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435346, 1.10365, 9.08095)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435346, 1.10365, 9.08069)
 mesh = SubResource("PrismMesh_ef4gd")
 material = SubResource("StandardMaterial3D_xn3y2")
 
@@ -212,8 +212,7 @@ mesh = SubResource("TextMesh_xd4m3")
 material = SubResource("StandardMaterial3D_niumq")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41406, 0.811461, 9.27746)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07794, 1.06861, 9.10814)
 size = Vector3(0.218811, 0.187744, 0.344238)
 
 [node name="Area3D" type="Area3D" parent="CSGBox3D"]
