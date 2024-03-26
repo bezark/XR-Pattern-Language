@@ -16,3 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = direction * 10.0
 	move_and_slide()
+
+
+func _on_world_environment_child_entered_tree(node):
+	pass # Replace with function body.
