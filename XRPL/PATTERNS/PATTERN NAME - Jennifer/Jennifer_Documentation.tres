@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_yrn0x")
-PatternName = ""
-Author = ""
-Context = ""
+PatternName = "Fluid Visualization for Motion Sickness"
+Author = "Jennifer Cai"
+Context = "Virtual Reality headsets and Virtual reality gaming experiences are incredibly immersive. Virtual reality allows users to experience climbing to the highest heights, falling from the highest heights, jumping, and or flying. Virtual reality expands the possibilities without physically demanding the user to perform such laborious tasks. However, just seeing these experiences through a headset is enough to trick the brain, inducing motion sickness. Becoming too immersed in a Virtual reality environment makes it difficult for the brain to distinguish what the brain sees on the screen and what the body is doing. While an immersive Virtual Reality experience can be thrilling, it is crucial to accommodate every user. Any motion-heavy virtual reality experience will benefit from an accessibility setting that helps reduce motion sickness so the user can comfortably enjoy the experience."
+Problem = "Virtual Reality headsets bring a new immersive digital experience to users from the comfort of the user’s own space. However, the immersive factors of Virtual Reality headsets present an issue regarding motion sickness. Imbalanced fluid in the ear is what causes motion sickness. Suppose the user makes intense movements in a Virtual Reality environment. In that case, it may confuse the brain into thinking the user is performing intense physical motions in actuality, therefore inducing motion sickness. Motion sickness is a genetic trait about one in three individuals struggle with. It is a hindrance to not only elements of daily lives but also hugely restricts the ability to experience Virtual Reality healthily. Therefore, there is a need for a digital solution that helps users manage and regulate their motion sickness as an accessibility precaution. "
+Solution = "Create a feature that allows the user to visualize the fluid (in their ear) responding to gravity, which will regulate and reduce motion sickness. Motion sickness glasses inspired this concept."
 OutsidePatterns = Array[PackedScene]([])
-Problem = ""
-Solution = ""
 InsidePatterns = Array[PackedScene]([])
