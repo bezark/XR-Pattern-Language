@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://4sfk4gv6lmtm"]
+
+[ext_resource type="Script" path="res://Components/Main.gd" id="1_2fkat"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_5cfqa"]
+[ext_resource type="Script" path="res://Components/Patterns.gd" id="2_51axs"]
+[ext_resource type="Resource" uid="uid://e6ls4o51xfnu" path="res://Components/PatternDatabase.tres" id="3_wo6jm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hsklc"]
+sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_1yakq"]
+sky_material = SubResource("ProceduralSkyMaterial_hsklc")
+
+[sub_resource type="Environment" id="Environment_fm7e2"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+sky = SubResource("Sky_1yakq")
+tonemap_mode = 2
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_2fkat")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fm7e2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_5cfqa")]
+
+[node name="Patterns" type="Node3D" parent="."]
+script = ExtResource("2_51axs")
+PD = ExtResource("3_wo6jm")
