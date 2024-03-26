@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_cumog"]
 [ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_o128s"]
 [ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Zhuojing/poetic_expression.tscn" id="2_wbi64"]
-[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Ritu/Ritu 1 technical_expression.tscn" id="3_31xpr"]
+[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Zhuojing/technical_expression.tscn" id="3_31xpr"]
 
 [resource]
 script = ExtResource("1_cumog")

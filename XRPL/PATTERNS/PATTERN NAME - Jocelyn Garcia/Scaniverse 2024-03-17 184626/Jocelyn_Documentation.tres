@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=4 format=3 uid="uid://oo7yshj8epnc"]
+
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Zhuojing/poetic_expression.tscn" id="1_fpkiq"]
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gigdt"]
+[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Zhuojing/technical_expression.tscn" id="2_w3odq"]
+
+[resource]
+script = ExtResource("1_gigdt")
+PatternName = "Door-a the Explore-a"
+Author = "Jocelyn Garcia"
+Context = "Exploring door models"
+Problem = ""
+Solution = ""
+Technical_Expression = ExtResource("2_w3odq")
+Poetic_Expression = ExtResource("1_fpkiq")
+OutsidePatterns = Array[PackedScene]([])
+InsidePatterns = Array[PackedScene]([])

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://bx88n5raa2bh"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://xyu6cnqmc805"]
 
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_3orw5"]
 [ext_resource type="PackedScene" uid="uid://bqabjhnl2np3x" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/Pattern language Poetic.tscn" id="1_a428c"]
