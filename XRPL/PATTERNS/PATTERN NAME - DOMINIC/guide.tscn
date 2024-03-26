@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://doccdt2aw1q4l"]
+
+[ext_resource type="Script" path="res://guide.gd" id="1_o1kne"]
+[ext_resource type="Texture2D" uid="uid://cgovecyqcyqjs" path="res://ui buttons/Artboard 21guide.png" id="1_usurb"]
+[ext_resource type="Texture2D" uid="uid://tvhqitxqyjrg" path="res://images/mechamecha02.png" id="2_ejua3"]
+[ext_resource type="Texture2D" uid="uid://dlsxvkt1hnhsn" path="res://ui buttons/Artboard 9guide2.png" id="3_eojaq"]
+[ext_resource type="Texture2D" uid="uid://lshib1juoe5i" path="res://ui buttons/back_button__HOVER.png" id="5_ab7bj"]
+[ext_resource type="Texture2D" uid="uid://blixdhb5pac3" path="res://ui buttons/back_button.png" id="6_3pj56"]
+[ext_resource type="Texture2D" uid="uid://bquwwse0iinib" path="res://ui buttons/back_button_PRESSED.png" id="7_2lb2w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ha3v"]
+texture = ExtResource("5_ab7bj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knyik"]
+texture = ExtResource("6_3pj56")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7aghm"]
+texture = ExtResource("7_2lb2w")
+
+[sub_resource type="Theme" id="Theme_acova"]
+Button/styles/hover = SubResource("StyleBoxTexture_5ha3v")
+Button/styles/normal = SubResource("StyleBoxTexture_knyik")
+Button/styles/pressed = SubResource("StyleBoxTexture_7aghm")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1kne")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 654.0
+color = Color(0.827451, 0.827451, 0.827451, 1)
+metadata/_edit_lock_ = true
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 38.0
+offset_right = 717.0
+offset_bottom = 623.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 126.0
+offset_right = 796.0
+offset_bottom = 475.0
+texture = ExtResource("1_usurb")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 789.0
+offset_top = -75.0
+offset_right = 1266.0
+offset_bottom = 773.0
+texture = ExtResource("2_ejua3")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 24.0
+offset_right = 342.0
+offset_bottom = 138.0
+texture = ExtResource("3_eojaq")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 527.0
+offset_right = 313.0
+offset_bottom = 636.0
+
+[node name="back" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_acova")
+
+[connection signal="pressed" from="MarginContainer/back" to="." method="_on_back_pressed"]

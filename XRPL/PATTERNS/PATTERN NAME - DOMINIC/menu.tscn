@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://cda5ga5yg3muh"]
+
+[ext_resource type="Texture2D" uid="uid://cpk4laue47ypr" path="res://images/0042.png" id="1_55bpb"]
+[ext_resource type="Script" path="res://menu.gd" id="1_ib5ux"]
+[ext_resource type="Texture2D" uid="uid://cll4f07ih836u" path="res://images/HNI_0098.JPG" id="2_0tpmb"]
+[ext_resource type="Theme" uid="uid://cggnk3vdy07ox" path="res://start_button.tres" id="3_g0k8k"]
+[ext_resource type="Theme" uid="uid://c4yubuefo1j6j" path="res://guide_button.tres" id="4_miehe"]
+[ext_resource type="Theme" uid="uid://dgdskl1wyrtw" path="res://quit_button.tres" id="5_vhqve"]
+
+[sub_resource type="Theme" id="Theme_3s76c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ib5ux")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1162.0
+offset_bottom = 655.0
+color = Color(0.980392, 0.980392, 0.980392, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 178.0
+offset_right = 641.0
+offset_bottom = 658.0
+texture = ExtResource("2_0tpmb")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 467.0
+offset_top = -77.0
+offset_right = 1177.0
+offset_bottom = 1008.0
+texture = ExtResource("1_55bpb")
+expand_mode = 1
+
+[node name="MarginContainer_mouse" type="MarginContainer" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 0.968
+offset_left = 58.0
+offset_top = 327.0
+offset_right = -700.0
+offset_bottom = -0.264035
+mouse_default_cursor_shape = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 394.0
+offset_bottom = 142.0
+mouse_default_cursor_shape = 3
+theme = SubResource("Theme_3s76c")
+
+[node name="start" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_g0k8k")
+alignment = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_right = 750.0
+offset_bottom = 140.0
+mouse_default_cursor_shape = 3
+theme = SubResource("Theme_3s76c")
+
+[node name="guide" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+theme = ExtResource("4_miehe")
+alignment = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 753.0
+offset_right = 1147.0
+offset_bottom = 140.0
+mouse_default_cursor_shape = 3
+theme = SubResource("Theme_3s76c")
+
+[node name="quit" type="Button" parent="MarginContainer3"]
+layout_mode = 2
+theme = ExtResource("5_vhqve")
+alignment = 0
+
+[connection signal="pressed" from="MarginContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer2/guide" to="." method="_on_guide_pressed"]
+[connection signal="pressed" from="MarginContainer3/quit" to="." method="_on_quit_pressed"]
