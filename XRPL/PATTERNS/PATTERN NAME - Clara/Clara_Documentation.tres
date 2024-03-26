@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gim4n"]
 [ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="1_nadgl"]
 [ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="2_60qak"]
-[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - Clara/details.tscn" id="3_54fl7"]
-[ext_resource type="PackedScene" uid="uid://7nmqomy3hekl" path="res://PATTERNS/PATTERN NAME - Clara/savemessage.tscn" id="4_etxqa"]
-[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Clara/Clara poetic_expression.tscn" id="5_cqg66"]
-[ext_resource type="PackedScene" uid="uid://cdu1nyicwas8v" path="res://PATTERNS/PATTERN NAME - Clara/Clara technical_expression.tscn" id="6_2fv6r"]
+[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - CLARA/details.tscn" id="3_54fl7"]
+[ext_resource type="PackedScene" uid="uid://7nmqomy3hekl" path="res://PATTERNS/PATTERN NAME - CLARA/savemessage.tscn" id="4_etxqa"]
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Jennifer/poetic_expression.tscn" id="5_cqg66"]
+[ext_resource type="PackedScene" uid="uid://cdu1nyicwas8v" path="res://PATTERNS/PATTERN NAME - CLARA/Clara technical_expression.tscn" id="6_2fv6r"]
 
 [resource]
 script = ExtResource("1_gim4n")

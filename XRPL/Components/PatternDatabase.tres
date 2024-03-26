@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://c6laxmd168ssn" path="res://PATTERNS/PATTERN NAME - Bella/Bella_Documentation.tres" id="1_5vruy"]
 [ext_resource type="Script" path="res://Components/Pattern_Database.gd" id="1_e813d"]
-[ext_resource type="Resource" uid="uid://btfr0r68c6051" path="res://PATTERNS/PATTERN NAME - Clara/Clara_Documentation.tres" id="2_vmjtt"]
+[ext_resource type="Resource" uid="uid://btfr0r68c6051" path="res://PATTERNS/PATTERN NAME - CLARA/Clara_Documentation.tres" id="2_vmjtt"]
 [ext_resource type="Resource" uid="uid://cylapgd183veu" path="res://PATTERNS/PATTERN NAME - Dishti/Dishti_Documentation.tres" id="3_f05ha"]
 [ext_resource type="Resource" uid="uid://b6oc5mmk24hul" path="res://PATTERNS/PATTERN NAME - Don Park/Don_Documentation.tres" id="4_y2gar"]
 [ext_resource type="Resource" uid="uid://b25pi1udp1enp" path="res://PATTERNS/PATTERN NAME - Jennifer/Jennifer_Documentation.tres" id="5_dqayx"]
