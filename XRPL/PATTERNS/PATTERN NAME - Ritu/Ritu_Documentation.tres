@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=5 format=3 uid="uid://bfoeobknopgq6"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=6 format=3 uid="uid://bfoeobknopgq6"]
 
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_0pqnu"]
 [ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="1_c0qig"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_2laxr"]
 [ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Ritu/1. technical_expression.tscn" id="2_xytkg"]
 [ext_resource type="PackedScene" uid="uid://dgejo472wkhyh" path="res://PATTERNS/PATTERN NAME - Ritu/2. poetic_expression.tscn" id="3_ajbpl"]
 
@@ -9,11 +10,11 @@
 script = ExtResource("1_0pqnu")
 PatternName = "Tracking Trails"
 Author = "Ritu Sathwara"
-Context = ""
-Problem = ""
-Solution = ""
+Context = "When traveling in a new world, users may struggle to navigate around virtual obstacles or hazards if they are not properly signaled or if there's a lack of feedback regarding their proximity. Tracking Trails is a visible indicator that can help users navigate safely within the virtual environment. These trails use visual cues such as navigation markers and a home guide (where you started from), which can provide users with information about the proximity of obstacles. This helps users gauge how close they are to obstacles and adjust their movements accordingly. This is used in the technical design, where the player is on an obstacle course. Pressing the space bar allows the user to see the trails and move along the course to prevent crashing into a block. Tracking Trails can also do more than navigation as shown in the poetic expression design. There are two lovebirds who are an on-again, off-again couple. By clicking on the space bar, you can activate the visual trails and see how many times the lovebirds go back to each other, and separate. Reference #1: https://www.youtube.com/watch?v=v4IEPi1c0eE&list=PLRAIqYcJ24D0K1zzqlwA_AdBTKs9tcb34&index=11  Reference #2: https://www.youtube.com/watch?v=2W4JP48oZ8U&list=PLRAIqYcJ24D0K1zzqlwA_AdBTKs9tcb34&index=20"
+Problem = "XR navigation can be challenging for new users, leading to confusion and frustration. For one, VR applications occasionally feature complicated control systems with multiple buttons and gestures just to navigate from point A to point B. Learning and memorizing how these controls work, especially if you’re in the middle of an immersive experience, can confuse users. Additionally, virtual environments are huge and immersive, making it easy for users to get disoriented or lost. If there’s a lack of spatial cues or directional indicators, it can confuse users and the experience won’t be fun. Lastly, certain navigation methods in VR, such as rapid movements can induce motion sickness in sensitive users. Nausea and dizziness can make it more difficult for users to orient themselves within the virtual environment."
+Solution = "Tracking Trails assist users in navigating safely throughout the virtual environment. Trails can provide users with information about obstacles' proximity through visual cues such as navigation markers and home guides. A user can then adjust their movements accordingly based on how close they are to obstacles."
 Pattern_Scene = ExtResource("2_xytkg")
 Technical_Expression = ExtResource("2_xytkg")
 Poetic_Expression = ExtResource("3_ajbpl")
-OutsidePatterns = Array[PackedScene]([ExtResource("1_c0qig")])
-InsidePatterns = Array[PackedScene]([])
+OutsidePatterns = Array[PackedScene]([])
+InsidePatterns = Array[PackedScene]([ExtResource("1_c0qig"), ExtResource("2_2laxr")])
