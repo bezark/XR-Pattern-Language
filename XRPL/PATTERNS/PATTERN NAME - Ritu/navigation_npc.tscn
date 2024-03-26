@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dopreygce8ruf"]
 
-[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Ritu/NavigationNPC.gd" id="1_kbuyj"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Ritu/NavigationNPC.gd" id="1_adgsv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8q8se"]
 
@@ -11,7 +11,7 @@ albedo_color = Color(0.737255, 0.0901961, 0.407843, 1)
 
 [node name="NavigationNPC" type="CharacterBody3D"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
-script = ExtResource("1_kbuyj")
+script = ExtResource("1_adgsv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_8q8se")

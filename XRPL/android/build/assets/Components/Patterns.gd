@@ -6,7 +6,7 @@ const BUBBLE = preload("res://Components/bubble.tscn")
 func _ready():
 	for pattern in PD.patterns:
 		var new_bubble = BUBBLE.instantiate()
-		new_bubble.position = Vector3(randf_range(-3.,3.), randf_range(0.,2.), randf_range(-3.,3.))
+		new_bubble.position = Vector3(randf_range(-2.,2.), randf_range(0.,2.), randf_range(-2.,2.))
 		new_bubble.documentation = pattern
 		new_bubble.populate()
 		add_child(new_bubble)

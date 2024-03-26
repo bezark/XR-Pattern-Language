@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://6sulnqkwpx65"]
+
+[node name="OBSTACLES" type="Node3D"]
+transform = Transform3D(0.616486, 0, -0.787366, 0, 1, 0, 0.787366, 0, 0.616486, -2.16247, 0.5, 2.7288)

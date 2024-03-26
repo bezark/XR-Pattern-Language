@@ -381,7 +381,7 @@ transform = Transform3D(0.938215, 0.337149, -0.077993, 0.0187505, 0.17552, 0.984
 shape = SubResource("CapsuleShape3D_om7wv")
 
 [node name="Physical Bone Thumb_Distal_L" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.937245, 0.0284256, -0.347509, 0.0184908, 0.991216, 0.13095, 0.348179, -0.129158, 0.928488, 0.0392807, 0.0600812, -0.0844931)
+transform = Transform3D(0.937245, 0.0284256, -0.347509, 0.0184908, 0.991217, 0.13095, 0.348179, -0.129158, 0.928488, 0.0392807, 0.0600812, -0.0844931)
 bone_name = "Thumb_Distal_L"
 bone_idx = 3
 
@@ -443,7 +443,7 @@ transform = Transform3D(1, 0, 7.45058e-09, 1.49012e-08, 1, 2.98023e-08, 0, -2.98
 shape = SubResource("CapsuleShape3D_nuial")
 
 [node name="Physical Bone Middle_Proximal_L" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.0836168, -0.962976, -0.256294, 0.996367, 0.0849602, 0.00584636, 0.0161449, -0.255851, 0.966581, -0.016529, 0.00942897, -0.0851038)
+transform = Transform3D(0.0836168, -0.962976, -0.256294, 0.996367, 0.0849602, 0.00584635, 0.0161449, -0.255851, 0.966581, -0.016529, 0.00942897, -0.0851038)
 bone_name = "Middle_Proximal_L"
 bone_idx = 11
 
@@ -457,7 +457,7 @@ transform = Transform3D(0.0836157, 0.256293, -0.962976, 0.996367, -0.00584235, 0
 shape = SubResource("CapsuleShape3D_0h44b")
 
 [node name="Physical Bone Middle_Intermediate_L" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.0867693, -0.835671, -0.542332, 0.996183, 0.0779601, 0.0392548, 0.00947611, -0.543668, 0.839247, -0.00548062, 0.00917712, -0.126772)
+transform = Transform3D(0.0867693, -0.835671, -0.542332, 0.996183, 0.0779601, 0.0392548, 0.0094761, -0.543668, 0.839247, -0.00548063, 0.00917712, -0.126772)
 bone_name = "Middle_Intermediate_L"
 bone_idx = 12
 
@@ -471,7 +471,7 @@ transform = Transform3D(0.0868404, 0.542324, -0.83567, 0.996177, -0.0392528, 0.0
 shape = SubResource("CapsuleShape3D_t7tnp")
 
 [node name="Physical Bone Middle_Distal_L" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.0812012, -0.650531, -0.755126, 0.996576, 0.0648172, 0.051326, 0.015556, -0.756708, 0.653567, 0.0125601, 0.00787117, -0.15469)
+transform = Transform3D(0.0812012, -0.650531, -0.755126, 0.996576, 0.0648172, 0.051326, 0.015556, -0.756708, 0.653568, 0.0125601, 0.00787117, -0.15469)
 bone_name = "Middle_Distal_L"
 bone_idx = 13
 
@@ -513,7 +513,7 @@ transform = Transform3D(-0.0363116, 0.544509, -0.837967, 0.984252, -0.125684, -0
 shape = SubResource("CapsuleShape3D_eal76")
 
 [node name="Physical Bone Ring_Distal_L" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.0304371, -0.661178, -0.749611, 0.98335, -0.154228, 0.0961052, -0.179153, -0.734205, 0.654864, 0.0178706, -0.0232379, -0.142238)
+transform = Transform3D(-0.030437, -0.661178, -0.749611, 0.98335, -0.154228, 0.0961052, -0.179153, -0.734205, 0.654864, 0.0178706, -0.0232379, -0.142238)
 bone_name = "Ring_Distal_L"
 bone_idx = 18
 

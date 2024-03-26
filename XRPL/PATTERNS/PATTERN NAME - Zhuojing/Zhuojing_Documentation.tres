@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=4 format=3 uid="uid://xyu6cnqmc805"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://bx88n5raa2bh"]
 
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_3orw5"]
-[ext_resource type="PackedScene" uid="uid://bqabjhnl2np3x" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/Pattern language Poetic.tscn" id="1_fhjjd"]
-[ext_resource type="PackedScene" uid="uid://cewrnset1usxx" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/XR Pattern.tscn" id="2_kppki"]
+[ext_resource type="PackedScene" uid="uid://bqabjhnl2np3x" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/Pattern language Poetic.tscn" id="1_a428c"]
 
 [resource]
 script = ExtResource("1_3orw5")
@@ -11,7 +10,6 @@ Author = ""
 Context = ""
 Problem = ""
 Solution = ""
-Technical_Expression = ExtResource("2_kppki")
-Poetic_Expression = ExtResource("1_fhjjd")
+Technical_Expression = ExtResource("1_a428c")
 OutsidePatterns = Array[PackedScene]([])
 InsidePatterns = Array[PackedScene]([])

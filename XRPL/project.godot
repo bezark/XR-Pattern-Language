@@ -15,6 +15,10 @@ run/main_scene="res://Components/main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 GlobalNavigation="*res://Components/global_navigation.tscn"
