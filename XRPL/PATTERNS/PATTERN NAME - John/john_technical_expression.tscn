@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://r3x6nvux515n"]
 
 [ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics.tscn" id="2_v1tsm"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_ry6qw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_74an5"]
 sky_top_color = Color(0.619608, 0.156863, 0.870588, 1)
@@ -32,5 +32,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="XROrigin3D" parent="." instance=ExtResource("2_v1tsm")]
+[node name="XROrigin3D" parent="." instance=ExtResource("2_ry6qw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.609619, 1.9269)

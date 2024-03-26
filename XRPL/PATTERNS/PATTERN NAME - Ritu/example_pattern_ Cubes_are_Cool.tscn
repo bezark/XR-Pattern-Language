@@ -16,7 +16,8 @@ tonemap_mode = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hsmg"]
 albedo_color = Color(0.184314, 0.368627, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ue3e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_toy5n"]
+albedo_color = Color(1, 0.0901961, 1, 1)
 
 [sub_resource type="Animation" id="Animation_u5ah0"]
 resource_name = "Cube falling"
@@ -54,7 +55,7 @@ material = SubResource("StandardMaterial3D_8hsmg")
 
 [node name="white box" type="CSGBox3D" parent="."]
 transform = Transform3D(0.949305, 0.314357, 0, -0.314357, 0.949305, 0, 0, 0, 1, 0.744875, 1.57451, 0)
-material = SubResource("StandardMaterial3D_8ue3e")
+material = SubResource("StandardMaterial3D_toy5n")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.987441, 0.157986, 0, -0.157986, 0.987441, 0, 1.49876, 3.4951)

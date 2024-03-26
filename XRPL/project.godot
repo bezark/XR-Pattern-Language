@@ -17,8 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-XrSimulator="*res://addons/xr-simulator/XRSimulator.tscn"
 GlobalNavigation="*res://Components/global_navigation.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/floatable_body/plugin.cfg")
 
 [rendering]
 

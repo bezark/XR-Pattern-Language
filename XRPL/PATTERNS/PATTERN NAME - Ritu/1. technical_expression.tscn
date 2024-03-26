@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://r3x6nvux515n"]
+
+[ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="1_3usrg"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_gyyl8"]
+vertices = PackedVector3Array(-0.509155, 0.5, 1.98943, -0.759155, 0.5, 1.23943, -2.25916, 0.5, 0.739434, 3.74084, 0.5, 1.73943, 2.99084, 0.5, -0.760566, 1.74084, 0.5, -0.760566, 1.49084, 0.5, 1.73943, 1.74084, 0.5, 2.23943, 3.74084, 0.5, 1.73943, 3.74084, 0.5, -4.01057, 3.49084, 0.5, -1.26057, 3.74084, 0.5, 1.73943, 3.49084, 0.5, -1.26057, 2.99084, 0.5, -0.760566, -2.25916, 0.5, -0.760566, 1.24084, 0.5, -1.26057, 1.49084, 0.5, -4.01057, -4.00916, 0.5, -4.01057, -4.00916, 0.5, -4.01057, -4.00916, 0.5, 3.98943, -2.25916, 0.5, 0.739434, -2.25916, 0.5, -0.760566, 1.24084, 0.5, 2.73943, 1.74084, 0.5, 2.23943, 1.49084, 0.5, 1.73943, -0.509155, 0.5, 1.98943, -4.00916, 0.5, 3.98943, 1.24084, 0.5, 3.98943, -0.509155, 0.5, 1.98943, -2.25916, 0.5, 0.739434, 1.24084, 0.5, 3.98943, 1.24084, 0.5, 2.73943, -0.509155, 0.5, 1.98943)
+polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 3), PackedInt32Array(3, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(10, 9, 8), PackedInt32Array(11, 13, 12), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(21, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 26), PackedInt32Array(32, 31, 30)]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjsfo"]
+sky_top_color = Color(0.294118, 0.662745, 0.901961, 1)
+sky_horizon_color = Color(0.606863, 0.764706, 0.880392, 1)
+sky_energy_multiplier = 2.1
+ground_bottom_color = Color(0.133333, 0.396078, 0.619608, 1)
+ground_horizon_color = Color(0.606863, 0.764706, 0.880392, 1)
+
+[sub_resource type="Sky" id="Sky_gk2pu"]
+sky_material = SubResource("ProceduralSkyMaterial_kjsfo")
+
+[sub_resource type="Environment" id="Environment_al67y"]
+background_mode = 2
+sky = SubResource("Sky_gk2pu")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6blbj"]
+albedo_color = Color(0.0117647, 0.341176, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80jel"]
+albedo_color = Color(1, 0.313726, 0.309804, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uj2e5"]
+albedo_color = Color(1, 0.313726, 0.309804, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t26tu"]
+albedo_color = Color(1, 0.313726, 0.309804, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqanc"]
+albedo_color = Color(1, 0.313726, 0.309804, 1)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0586085, 0.189727, 0)
+navigation_mesh = SubResource("NavigationMesh_gyyl8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_al67y")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.832882, -0.27945, 0.477719, 0.237284, 0.599507, 0.764387, -0.500003, 0.749999, -0.43301, 2.24647, 6.97479, -0.652274)
+light_color = Color(0.94902, 0.909804, 0.478431, 1)
+shadow_enabled = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 578.0
+offset_bottom = 36.0
+text = "Click the space bar to navigate which path to take to avoid the obstacles!"
+
+[node name="GRASSGROUND" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_6blbj")
+
+[node name="NavigationNPC" parent="." instance=ExtResource("1_3usrg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21893, 1.1064, 0)
+
+[node name="OBSTACLES" type="Node3D" parent="."]
+transform = Transform3D(0.616486, 0, -0.787366, 0, 1, 0, 0.787366, 0, 0.616486, -2.16247, 0.5, 2.7288)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="OBSTACLES"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, -0.419495, 0)
+use_collision = true
+size = Vector3(2, 0.161011, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="OBSTACLES/CSGBox3D2"]
+transform = Transform3D(-0.744824, 0, 0.66726, 0, 1, 0, -0.66726, 0, -0.744824, -0.270615, 0, -3.52317)
+use_collision = true
+size = Vector3(2, 1, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="OBSTACLES/CSGBox3D2/CSGBox3D3"]
+transform = Transform3D(-0.993266, 0, -0.115856, 0, 1, 0, 0.115856, 0, -0.993266, 2.97104, 0, 1.78373)
+use_collision = true
+size = Vector3(2, 1, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="OBSTACLES/CSGBox3D2/CSGBox3D3/CSGBox3D4"]
+transform = Transform3D(0.382442, 0, -0.92398, 0, 1, 0, 0.92398, 0, 0.382442, 5.69035, 0, -0.165384)
+use_collision = true
+size = Vector3(2, 1, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="OBSTACLES/CSGBox3D2/CSGBox3D3/CSGBox3D4/CSGBox3D5"]
+transform = Transform3D(0.998294, 0, -0.0583828, 0, 1, 0, 0.0583828, 0, 0.998294, 2.64758, -0.089983, 7.68492)
+use_collision = true
+size = Vector3(2, 1, 1)
+
+[node name="GROUNDBORDER" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="GROUNDBORDER"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013092, 0, -4.76752)
+size = Vector3(9.99213, 1, 0.486084)
+material = SubResource("StandardMaterial3D_80jel")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="GROUNDBORDER"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013092, 0, 4.76032)
+size = Vector3(9.99213, 1, 0.486084)
+material = SubResource("StandardMaterial3D_uj2e5")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="GROUNDBORDER"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.72786, 0, 0.0193772)
+size = Vector3(9.07909, 1, 0.486084)
+material = SubResource("StandardMaterial3D_t26tu")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="GROUNDBORDER"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.75405, 0, 0.0193772)
+size = Vector3(9.07909, 1, 0.486084)
+material = SubResource("StandardMaterial3D_jqanc")

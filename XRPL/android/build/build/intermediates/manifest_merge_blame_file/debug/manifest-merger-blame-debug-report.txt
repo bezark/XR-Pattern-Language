@@ -10,145 +10,145 @@
 10        android:targetSdkVersion="33" />
 11
 12    <supports-screens
-12-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:9:5-13:40
+12-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:9:5-13:40
 13        android:largeScreens="true"
-13-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:12:9-36
+13-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:12:9-36
 14        android:normalScreens="true"
-14-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:11:9-37
+14-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:11:9-37
 15        android:smallScreens="true"
-15-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:10:9-36
+15-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:10:9-36
 16        android:xlargeScreens="true" />
-16-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:13:9-37
+16-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:13:9-37
 17
 18    <uses-feature
-18-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:15:5-17:35
+18-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:15:5-17:35
 19        android:glEsVersion="0x00030000"
-19-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:16:9-41
+19-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:16:9-41
 20        android:required="true" />
-20-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:17:9-32
+20-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:17:9-32
 21
 22    <uses-permission android:name="com.oculus.permission.HAND_TRACKING" />
-22-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:11:5-75
-22-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:11:22-72
+22-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:11:5-75
+22-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:11:22-72
 23
 24    <uses-feature
-24-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:12:5-111
+24-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:12:5-111
 25        android:name="oculus.software.handtracking"
-25-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:12:40-83
+25-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:12:40-83
 26        android:required="false" />
-26-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:12:84-108
+26-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:12:84-108
 27    <uses-feature
-27-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:13:5-113
+27-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:13:5-113
 28        android:name="com.oculus.feature.PASSTHROUGH"
-28-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:13:40-85
+28-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:13:40-85
 29        android:required="false" />
-29-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:13:86-110
+29-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:13:86-110
 30    <uses-feature
-30-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:7:5-10:31
+30-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:7:5-10:31
 31        android:name="android.hardware.vr.headtracking"
-31-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:8:9-56
+31-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:8:9-56
 32        android:required="true"
-32-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:9:9-32
+32-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:9:9-32
 33        android:version="1" />
-33-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:10:9-28
+33-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:10:9-28
 34
 35    <application
-35-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:19:5-53:19
+35-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:19:5-53:19
 36        android:allowBackup="false"
-36-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:21:9-36
+36-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:21:9-36
 37        android:appCategory="game"
-37-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:23:9-35
+37-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:23:9-35
 38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-38-->[androidx.core:core:1.2.0] C:\Users\johnb\.gradle\caches\transforms-3\9bcb1a65f5938aad264f4d73e9a06f28\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+38-->[androidx.core:core:1.2.0] C:\Users\jbezark\.gradle\caches\transforms-3\9bcb1a65f5938aad264f4d73e9a06f28\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
 39        android:debuggable="true"
 40        android:extractNativeLibs="false"
 41        android:hasFragileUserData="false"
-41-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:25:9-43
+41-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:25:9-43
 42        android:icon="@mipmap/icon"
-42-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:22:9-36
+42-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:22:9-36
 43        android:isGame="true"
-43-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:24:9-30
+43-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:24:9-30
 44        android:label="@string/godot_project_name_string"
-44-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:20:9-58
+44-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:20:9-58
 45        android:requestLegacyExternalStorage="false" >
-45-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:26:9-53
+45-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:26:9-53
 46        <meta-data
-46-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:25:9-125
+46-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:25:9-125
 47            android:name="com.oculus.supportedDevices"
-47-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:25:41-83
+47-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:25:41-83
 48            android:value="quest2|quest3|questpro" />
-48-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:25:84-122
+48-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:25:84-122
 49        <meta-data
-49-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:26:9-112
+49-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:26:9-112
 50            android:name="com.oculus.handtracking.frequency"
-50-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:26:41-89
+50-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:26:41-89
 51            android:value="LOW" />
-51-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:26:90-109
+51-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:26:90-109
 52        <meta-data
-52-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:27:9-111
+52-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:27:9-111
 53            android:name="com.oculus.handtracking.version"
-53-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:27:41-87
+53-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:27:41-87
 54            android:value="V2.0" />
-54-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:27:88-108
+54-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:27:88-108
 55
 56        <activity
-56-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:34:9-51:20
+56-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:34:9-51:20
 57            android:name="com.godot.game.GodotApp"
-57-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:35:13-37
+57-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:35:13-37
 58            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-58-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:42:13-141
+58-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:42:13-141
 59            android:excludeFromRecents="false"
-59-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:39:13-47
+59-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:39:13-47
 60            android:exported="true"
-60-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:40:13-36
+60-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:40:13-36
 61            android:label="@string/godot_project_name_string"
-61-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:36:13-62
+61-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:36:13-62
 62            android:launchMode="singleInstancePerTask"
-62-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:38:13-55
+62-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:38:13-55
 63            android:resizeableActivity="true"
-63-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:43:13-47
+63-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:43:13-47
 64            android:screenOrientation="landscape"
-64-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:41:13-50
+64-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:41:13-50
 65            android:theme="@style/GodotAppSplashTheme" >
-65-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:37:13-55
+65-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:37:13-55
 66            <intent-filter>
-66-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:46:13-50:29
+66-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:46:13-50:29
 67                <action android:name="android.intent.action.MAIN" />
-67-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:17-69
-67-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:25-66
+67-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:17-69
+67-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:25-66
 68
 69                <category android:name="android.intent.category.DEFAULT" />
-69-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:48:17-76
-69-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:48:27-73
+69-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:48:17-76
+69-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:48:27-73
 70                <category android:name="android.intent.category.LAUNCHER" />
-70-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:17-77
-70-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:27-74
+70-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:17-77
+70-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:27-74
 71            </intent-filter>
 72            <intent-filter>
-72-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:36:5-47:21
+72-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:36:5-47:21
 73                <action android:name="android.intent.action.MAIN" />
-73-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:17-69
-73-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:25-66
+73-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:17-69
+73-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:47:25-66
 74
 75                <category android:name="android.intent.category.LAUNCHER" />
-75-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:17-77
-75-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:27-74
+75-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:17-77
+75-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\AndroidManifest.xml:49:27-74
 76
 77                <!--
 78                    Enable access to OpenXR on Oculus mobile devices, no-op on other Android
 79					platforms.
 80                -->
 81                <category android:name="com.oculus.intent.category.VR" />
-81-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:42:6-63
-81-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:42:16-60
+81-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:42:6-63
+81-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:42:16-60
 82
 83                <!--
 84                    OpenXR category tag to indicate the activity starts in an immersive OpenXR mode.
 85					See https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#android-runtime-category.
 86                -->
 87                <category android:name="org.khronos.openxr.intent.category.IMMERSIVE_HMD" />
-87-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:46:6-82
-87-->C:\Users\johnb\Nextcloud2\2Work\Teaching\SVA\DesignMedia\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:46:16-79
+87-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:46:6-82
+87-->C:\Users\jbezark\Desktop\XR-Pattern-Language\XRPL\android\build\src\debug\AndroidManifest.xml:46:16-79
 88            </intent-filter>
 89        </activity>
 90        <!-- Records the version of the Godot editor used for building -->
@@ -156,57 +156,57 @@
 92            android:name="org.godotengine.editor.version"
 93            android:value="4.2.1.stable" /> <!-- Records the version of the Godot library -->
 94        <meta-data
-94-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:14:9-16:44
+94-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:14:9-16:44
 95            android:name="org.godotengine.library.version"
-95-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:15:13-59
+95-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:15:13-59
 96            android:value="4.2.1.stable" />
-96-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:16:13-41
+96-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:16:13-41
 97
 98        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-98-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:9-80
-98-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:18-77
+98-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:9-80
+98-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:18-77
 99
 100        <activity
-100-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:20:9-24:75
+100-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:20:9-24:75
 101            android:name="org.godotengine.godot.utils.ProcessPhoenix"
-101-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:21:13-70
+101-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:21:13-70
 102            android:exported="false"
-102-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:22:13-37
+102-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:22:13-37
 103            android:process=":phoenix"
-103-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:23:13-39
+103-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:23:13-39
 104            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-104-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:24:13-72
+104-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:24:13-72
 105
 106        <provider
-106-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:26:9-34:20
+106-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:26:9-34:20
 107            android:name="androidx.core.content.FileProvider"
-107-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:27:13-62
+107-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:27:13-62
 108            android:authorities="com.example.xrpl.fileprovider"
-108-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:28:13-64
+108-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:28:13-64
 109            android:exported="false"
-109-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:29:13-37
+109-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:29:13-37
 110            android:grantUriPermissions="true" >
-110-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:30:13-47
+110-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:30:13-47
 111            <meta-data
-111-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:31:13-33:64
+111-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:31:13-33:64
 112                android:name="android.support.FILE_PROVIDER_PATHS"
-112-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:32:17-67
+112-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:32:17-67
 113                android:resource="@xml/godot_provider_paths" />
-113-->[godot-lib.template_debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:33:17-61
+113-->[godot-lib.template_debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\9a2d4eb6c6396b495fa445404429297b\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:33:17-61
 114        </provider>
 115
 116        <meta-data
-116-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:13:9-15:83
+116-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:13:9-15:83
 117            android:name="org.godotengine.plugin.v2.GodotOpenXRMeta"
-117-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:14:13-69
+117-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:14:13-69
 118            android:value="org.godotengine.openxr.vendors.meta.GodotOpenXRMeta" />
-118-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:15:13-80
+118-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:15:13-80
 119        <meta-data
-119-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:19:9-21:36
+119-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:19:9-21:36
 120            android:name="com.oculus.vr.focusaware"
-120-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:20:13-52
+120-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:20:13-52
 121            android:value="true" />
-121-->[godotopenxrmeta-debug.aar] C:\Users\johnb\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:21:13-33
+121-->[godotopenxrmeta-debug.aar] C:\Users\jbezark\.gradle\caches\transforms-3\81bb5fc6a14ac27e7081681024a88ac1\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:21:13-33
 122    </application>
 123
 124</manifest>

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dopreygce8ruf"]
+
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Ritu/NavigationNPC.gd" id="1_kbuyj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8q8se"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gutny"]
+albedo_color = Color(0.737255, 0.0901961, 0.407843, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_72c8r"]
+
+[node name="NavigationNPC" type="CharacterBody3D"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+script = ExtResource("1_kbuyj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_8q8se")
+surface_material_override/0 = SubResource("StandardMaterial3D_gutny")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_72c8r")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="Neck" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-100, -5.01437e-06, 7.16126e-06, 0, 81.9152, 57.3577, -8.74228e-06, 57.3577, -81.9152, 0, 3.495, -4.7)
+fov = 31.0

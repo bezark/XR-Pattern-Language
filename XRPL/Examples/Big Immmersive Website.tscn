@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://v1ofql15bqav"]
+
+[ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="1_rk54d"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_t4qjr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmy4c"]
+albedo_texture = ExtResource("1_rk54d")
+
+[sub_resource type="QuadMesh" id="QuadMesh_u0ugv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3ohj"]
+albedo_texture = ExtResource("1_rk54d")
+
+[node name="BigImmmersiveWebsite" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 2.16772, -2.3606)
+visible = false
+material_override = SubResource("StandardMaterial3D_lmy4c")
+mesh = SubResource("QuadMesh_u0ugv")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_t4qjr")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+material_override = SubResource("StandardMaterial3D_b3ohj")
+flip_faces = true
+radius = 4.06162
+height = 6.90946
+sides = 64
