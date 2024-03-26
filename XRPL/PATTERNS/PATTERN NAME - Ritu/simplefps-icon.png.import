@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1xu5n3sanlr6"
-path="res://.godot/imported/simplefps-icon.png-a02f5630f23431b972b09315cd902cef.ctex"
+path="res://.godot/imported/simplefps-icon.png-72e8ff0766b8a8a678ba9f43f5c0ef4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://simplefps-icon.png"
-dest_files=["res://.godot/imported/simplefps-icon.png-a02f5630f23431b972b09315cd902cef.ctex"]
+source_file="res://PATTERNS/PATTERN NAME - Ritu/simplefps-icon.png"
+dest_files=["res://.godot/imported/simplefps-icon.png-72e8ff0766b8a8a678ba9f43f5c0ef4d.ctex"]
 
 [params]
 

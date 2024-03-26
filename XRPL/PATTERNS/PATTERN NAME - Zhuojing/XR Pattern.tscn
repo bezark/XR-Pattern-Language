@@ -107,14 +107,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76823, 0.0511513)
 shape = SubResource("SphereShape3D_5wf40")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228622, 1.14603, 9.25909)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.437758, 1.1561, 9.18709)
 size = Vector3(0.218811, 0.187744, 0.344238)
 
 [node name="Area3D" type="Area3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119975, 0.017688, 4.32917)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0381907, 0.0861616)
 shape = SubResource("SphereShape3D_jh5xr")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_d3rei")]

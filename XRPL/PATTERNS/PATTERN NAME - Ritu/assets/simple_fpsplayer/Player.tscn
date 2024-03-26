@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgpjxoygnvyy4"]
 
-[ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
-[ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Ritu/assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Ritu/assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 
