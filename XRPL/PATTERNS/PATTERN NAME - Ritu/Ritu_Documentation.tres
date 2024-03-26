@@ -1,13 +1,19 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=2 format=3 uid="uid://bfoeobknopgq6"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=5 format=3 uid="uid://bfoeobknopgq6"]
 
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_0pqnu"]
+[ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="1_c0qig"]
+[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Ritu/1. technical_expression.tscn" id="2_xytkg"]
+[ext_resource type="PackedScene" uid="uid://dgejo472wkhyh" path="res://PATTERNS/PATTERN NAME - Ritu/2. poetic_expression.tscn" id="3_ajbpl"]
 
 [resource]
 script = ExtResource("1_0pqnu")
-PatternName = ""
-Author = ""
+PatternName = "Tracking Trails"
+Author = "Ritu Sathwara"
 Context = ""
-OutsidePatterns = Array[PackedScene]([])
 Problem = ""
 Solution = ""
+Pattern_Scene = ExtResource("2_xytkg")
+Technical_Expression = ExtResource("2_xytkg")
+Poetic_Expression = ExtResource("3_ajbpl")
+OutsidePatterns = Array[PackedScene]([ExtResource("1_c0qig")])
 InsidePatterns = Array[PackedScene]([])

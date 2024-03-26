@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b1snysx43fw6k"]
 
-[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_khsxp"]
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Ritu/example_pattern_ Cubes_are_Cool.tscn" id="1_khsxp"]
 
 [node name="Poetic Expression" type="Node3D"]
 
