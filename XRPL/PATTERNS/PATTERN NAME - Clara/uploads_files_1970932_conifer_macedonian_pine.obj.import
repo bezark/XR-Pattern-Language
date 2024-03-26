@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bmnwqniywam0c"
-path="res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-a4a8f5a070e835cc46b4b273a341e958.mesh"
+path="res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-7b5d49950b62eb9f0f8f8efd1426c362.mesh"
 
 [deps]
 
-files=["res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-a4a8f5a070e835cc46b4b273a341e958.mesh"]
+files=["res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-7b5d49950b62eb9f0f8f8efd1426c362.mesh"]
 
-source_file="res://PATTERNS/PATTERN NAME - Clara/uploads_files_1970932_conifer_macedonian_pine.obj"
-dest_files=["res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-a4a8f5a070e835cc46b4b273a341e958.mesh", "res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-a4a8f5a070e835cc46b4b273a341e958.mesh"]
+source_file="res://PATTERNS/PATTERN NAME - CLARA/uploads_files_1970932_conifer_macedonian_pine.obj"
+dest_files=["res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-7b5d49950b62eb9f0f8f8efd1426c362.mesh", "res://.godot/imported/uploads_files_1970932_conifer_macedonian_pine.obj-7b5d49950b62eb9f0f8f8efd1426c362.mesh"]
 
 [params]
 
