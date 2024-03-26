@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://jr6oq8cxb3yi"
-path="res://.godot/imported/ABCGravity-Expanded-Trial copy.otf-14f7def77b4233d8a4eb6a266c67cd8d.fontdata"
+path="res://.godot/imported/ABCGravity-Expanded-Trial copy.otf-c83c308e58d0ab230fd44f2aeff38ebf.fontdata"
 
 [deps]
 
-source_file="res://PATTERNS/PATTERN NAME - Clara/stuffs/ABCGravity-Expanded-Trial copy.otf"
-dest_files=["res://.godot/imported/ABCGravity-Expanded-Trial copy.otf-14f7def77b4233d8a4eb6a266c67cd8d.fontdata"]
+source_file="res://PATTERNS/PATTERN NAME - CLARA/stuffs/ABCGravity-Expanded-Trial copy.otf"
+dest_files=["res://.godot/imported/ABCGravity-Expanded-Trial copy.otf-c83c308e58d0ab230fd44f2aeff38ebf.fontdata"]
 
 [params]
 
