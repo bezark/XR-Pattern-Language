@@ -47,14 +47,11 @@ albedo_color = Color(0.992157, 0.278431, 0.580392, 1)
 [node name="NavigationRegion3D" type="NavigationRegion3D"]
 navigation_mesh = SubResource("NavigationMesh_na2nf")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_al67y")
-
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 817.0
-offset_bottom = 50.0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 798.0
+offset_bottom = 33.0
 text = "Look at these lovebirds! See how many times they get together and break up by clicking the space bar!"
 editable = false
 deselect_on_focus_loss_enabled = false
@@ -63,8 +60,12 @@ middle_mouse_paste_enabled = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.832882, -0.27945, 0.477719, 0.237284, 0.599507, 0.764387, -0.500003, 0.749999, -0.43301, 2.24647, 6.97479, -0.652274)
-light_color = Color(0.94902, 0.909804, 0.478431, 1)
+light_color = Color(0.823529, 0.917647, 0.870588, 1)
+light_indirect_energy = 1.516
 shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_al67y")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, -1.86265e-09, 0, -1.86265e-09, 1, -2.79397e-09, 0, 8.3819e-09, 1, -1.90735e-06, -0.5, 9.53674e-07)
@@ -74,13 +75,13 @@ size = Vector3(10, 1, 10)
 material = SubResource("StandardMaterial3D_xso1h")
 
 [node name="soulmate1" parent="." instance=ExtResource("1_xomkg")]
-transform = Transform3D(1, 0, 0, -1.86265e-09, 1, -2.79397e-09, 0, -9.31323e-10, 1, -1.21893, 1.1064, 2.38419e-07)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21893, 3.43412, 2.38419e-07)
 
 [node name="soulmate2" parent="." instance=ExtResource("1_xomkg")]
-transform = Transform3D(1, 1.86265e-09, 0, -1.86265e-09, 1, -2.79397e-09, 0, 1.58325e-08, 1, 1.0888, 0.67583, -3.20232)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.089, 3.077, -3.202)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.477849, 0.878442, 0, -0.878442, 0.477849, 0, 7.31873, 4.11513)
+transform = Transform3D(1, 0, 0, 0, 0.80367, 0.595075, 0, -0.595075, 0.80367, 0, 7.31873, 7.63358)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(0.616486, 1.86265e-09, -0.787366, -1.49012e-07, 1, 5.58794e-08, 0.787366, 5.86733e-08, 0.616486, -2.16247, 0.500001, 2.7288)
