@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1snysx43fw6k"]
+[gd_scene load_steps=24 format=3 uid="uid://b1snysx43fw6k"]
 
 [ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="1_7ufen"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_peeue"]
 [ext_resource type="Texture2D" uid="uid://b67my3qqufbjr" path="res://PATTERNS/PATTERN NAME - Bella/Group 8.jpg" id="3_ahu28"]
 [ext_resource type="Texture2D" uid="uid://cgx2fpvoxa33p" path="res://PATTERNS/PATTERN NAME - Bella/grass-texture-background_64049-124 (1).jpg" id="4_f0knw"]
+[ext_resource type="PackedScene" uid="uid://de7o4al1meba0" path="res://PATTERNS/PATTERN NAME - Bella/Duck.tscn" id="5_25q68"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmy4c"]
 albedo_texture = ExtResource("1_7ufen")
@@ -16,20 +17,207 @@ albedo_texture = ExtResource("3_ahu28")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ous2w"]
 albedo_texture = ExtResource("4_f0knw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oe6r1"]
-albedo_color = Color(0.968627, 0.403922, 0, 1)
+[sub_resource type="Animation" id="Animation_u3qab"]
+resource_name = "new_animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 4.2, 6.3, 10),
+"transitions": PackedFloat32Array(3.24901, 3.24901, 3.24901, 3.24901, 3.24901),
+"update": 0,
+"values": [Vector3(-0.366084, -0.69924, 0), Vector3(0.354176, -0.69924, 0), Vector3(0.131949, -0.69924, -0.800984), Vector3(0.131949, -0.69924, 0.642637), Vector3(0.131949, -0.69924, -0.909028)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9, 4.2, 6.3, 10),
+"transitions": PackedFloat32Array(2.14355, 2.14355, 2.14355, 2.14355, 2.14355),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.52338, 0), Vector3(0, -2.98128, 0), Vector3(0, -0.224414, 0), Vector3(0, -2.88149, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xinww"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.366084, -0.69924, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thwjm"]
+_data = {
+"RESET": SubResource("Animation_xinww"),
+"new_animation": SubResource("Animation_u3qab")
+}
+
+[sub_resource type="Animation" id="Animation_pd2k6"]
+resource_name = "new_animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.6, 6.5, 10),
+"transitions": PackedFloat32Array(1.51572, 1.51572, 1.51572, 1.51572),
+"update": 0,
+"values": [Vector3(-1.34872, -0.759504, -0.0285528), Vector3(-1.34872, -0.759504, -1.16117), Vector3(-0.391494, -0.759504, -1.3123), Vector3(0.777292, -0.759504, -0.444634)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.6, 6.5, 10),
+"transitions": PackedFloat32Array(1.51572, 1.51572, 1.51572, 1.51572),
+"update": 0,
+"values": [Vector3(0, -2.273, 0), Vector3(0, 2.84771, 0), Vector3(0, 1.05989, 0), Vector3(0, -0.0685399, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tybby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.34872, -0.759504, -0.0285528)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -2.273, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pp0o6"]
+_data = {
+"RESET": SubResource("Animation_tybby"),
+"new_animation": SubResource("Animation_pd2k6")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_doodt"]
+albedo_color = Color(0.913725, 0.643137, 0.427451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hw8p4"]
+albedo_color = Color(0, 0.976471, 0.713726, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvgs3"]
+albedo_color = Color(0.713726, 0.54902, 0.964706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aslrc"]
+albedo_color = Color(0.384314, 0.654902, 0.298039, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvo3i"]
+albedo_color = Color(1, 1, 0.137255, 1)
+
+[sub_resource type="Animation" id="Animation_1ya6k"]
+resource_name = "new_animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.9, 5.9, 8.9),
+"transitions": PackedFloat32Array(1.6245, 1.6245, 1.6245, 1.6245),
+"update": 0,
+"values": [Vector3(-0.35758, -0.129894, 0.894792), Vector3(-0.35758, -0.325634, -1.36557), Vector3(-1.17574, 0.160945, -0.879847), Vector3(-1.17574, 0.434238, 0.0406303)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6, 4.1, 6.8, 9.7),
+"transitions": PackedFloat32Array(1.86607, 1.86607, 1.86607, 1.86607, 1.86607),
+"update": 0,
+"values": [Vector3(-0.185071, -1.5689, -3.1394), Vector3(0.775608, -1.56819, -3.13722), Vector3(0.775608, 2.76945, -3.13722), Vector3(0.925593, -0.538166, -0.954298), Vector3(0.448238, 0.960684, 0.963981)]
+}
+
+[sub_resource type="Animation" id="Animation_iomth"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.35758, -0.129894, 0.894792)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.185071, -1.5689, -3.1394)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_abl4g"]
+_data = {
+"RESET": SubResource("Animation_iomth"),
+"new_animation": SubResource("Animation_1ya6k")
+}
 
 [node name="Poetic Expression" type="Node3D"]
 
 [node name="Technical Expression2" type="Node3D" parent="."]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Technical Expression2"]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 1.4363, 0)
-light_color = Color(0.988235, 0.952941, 0.968627, 1)
-light_energy = 0.764
-light_angular_distance = 74.09
-shadow_enabled = true
-directional_shadow_split_2 = 0.296
 
 [node name="BigImmmersiveWebsite" type="Node3D" parent="Technical Expression2"]
 
@@ -43,7 +231,7 @@ mesh = SubResource("QuadMesh_u0ugv")
 
 [node name="XRCamera3D2" type="XRCamera3D" parent="Technical Expression2/BigImmmersiveWebsite/XROrigin3D"]
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Technical Expression2/BigImmmersiveWebsite/XROrigin3D/XRCamera3D2"]
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Technical Expression2/BigImmmersiveWebsite"]
 transform = Transform3D(1, -3.48787e-16, -3.48787e-16, -3.48787e-16, -1, 8.74228e-08, -3.48787e-16, -8.74228e-08, -1, 0, 1.08202, 0)
 material_override = SubResource("StandardMaterial3D_orshe")
 flip_faces = true
@@ -56,21 +244,77 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6435, -0.789242, 5.11029)
 material_override = SubResource("StandardMaterial3D_ous2w")
 size = Vector3(70, 0.068, 70)
 
-[node name="Node3D" type="Node3D" parent="Technical Expression2"]
-transform = Transform3D(0.139661, -0.00295944, 0.127503, 0.0547242, 0.00755277, -0.325399, -6.36702e-18, 0.209693, 0.0264988, 0.892225, 0.0431828, 0.511017)
+[node name="Duck5" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(-0.560942, 0, -0.827855, 0, 1, 0, 0.827855, 0, -0.560942, -9.65813, -0.499609, 1.87213)
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Technical Expression2/Node3D"]
-transform = Transform3D(3.10358, 1.21609, -1.0183e-08, -0.0657654, 0.167839, 3.32845, 0.52042, -1.32816, 0.077256, -1.35403, -0.158771, -0.155355)
-radius = 0.455121
-rings = 30
-material = SubResource("StandardMaterial3D_oe6r1")
+[node name="Duck6" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(0.503397, 0, -0.864055, 0, 1, 0, 0.864055, 0, 0.503397, 0.727354, -0.858953, -6.96398)
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="Technical Expression2/Node3D"]
-transform = Transform3D(-1.2045, 0.883263, 1.18796, 1.10868, 0.335002, 1.00211, 0.139391, 0.370134, -0.849536, -2.01205, -1.11932, -0.330359)
-radius = 0.430798
-rings = 30
+[node name="Duck7" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(0.225121, 0, 0.974331, 0, 1, 0, -0.974331, 0, 0.225121, 2.23339, -0.812908, -4.96299)
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="Technical Expression2/Node3D"]
-transform = Transform3D(1, 2.52342e-09, -1.23279e-07, -9.82592e-10, 1, -1.25812e-08, 1.39111e-08, -1.48849e-09, 1, 0, 0, 0)
-radius = 0.430798
-rings = 30
+[node name="Duck8" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(-0.898641, 0, 0.438685, 0, 1, 0, -0.438685, 0, -0.898641, -5.00605, -0.840092, 4.14311)
+
+[node name="Duck3" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(-0.932884, 0, 0.360176, 0, 1, 0, -0.360176, 0, -0.932884, -2.98511, -0.746491, -4.96299)
+
+[node name="Duck4" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(-0.72855, 0, -0.684992, 0, 1, 0, 0.684992, 0, -0.72855, 0.274356, -0.809055, 4.94299)
+
+[node name="Duck2" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.366084, -0.69924, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Duck2"]
+libraries = {
+"": SubResource("AnimationLibrary_thwjm")
+}
+
+[node name="Duck" parent="." instance=ExtResource("5_25q68")]
+transform = Transform3D(-0.322949, 0, -0.381712, 0, 0.5, 0, 0.381712, 0, -0.322949, -1.34872, -0.759504, -0.0285528)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Duck"]
+libraries = {
+"": SubResource("AnimationLibrary_pp0o6")
+}
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Flower" type="CSGSphere3D" parent="Node3D"]
+transform = Transform3D(-0.00069012, -0.0552035, -0.294876, -0.000647686, -0.294876, 0.055205, -0.299999, 0.000763617, 0.00055915, -0.35758, -0.129894, 0.894792)
+radial_segments = 50
+rings = 10
+material = SubResource("StandardMaterial3D_doodt")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Node3D/Flower"]
+transform = Transform3D(1, -4.73294e-10, 0, 1.94157e-10, 1, 0, 0, 0, 0.25, -0.0423789, 0.624596, 0)
+radius = 0.662379
+radial_segments = 20
+material = SubResource("StandardMaterial3D_hw8p4")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Node3D/Flower/CSGSphere3D2"]
+transform = Transform3D(1, -4.73294e-10, 0, 1.94157e-10, 1, 0, 0, 0, 0.25, -0.00867891, -1.39301, 0)
+radius = 0.662379
+radial_segments = 20
+material = SubResource("StandardMaterial3D_jvgs3")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/Flower"]
+transform = Transform3D(0.9, -3.39035e-09, -4.68157e-10, -2.74052e-09, 0.9, -2.01302e-08, 1.52883e-09, 7.40536e-08, 0.45, 0.857276, -0.0178221, -0.000157475)
+radius = 0.662379
+radial_segments = 20
+material = SubResource("StandardMaterial3D_aslrc")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/Flower/CSGSphere3D"]
+transform = Transform3D(1, -7.57362e-10, 3.72627e-11, -3.36603e-10, 1, -3.53056e-09, -1.11533e-09, -6.85443e-08, 0.5, -2.0014, 0.041539, 0)
+radius = 0.662379
+radial_segments = 20
+material = SubResource("StandardMaterial3D_bvo3i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D"]
+root_node = NodePath("../Flower")
+libraries = {
+"": SubResource("AnimationLibrary_abl4g")
+}
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.996697, 0, -0.0812079, 0, 1, 0, 0.0812079, 0, 0.996697, -1.41747, 0.84975, -0.688842)
