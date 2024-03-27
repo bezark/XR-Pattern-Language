@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://btfr0r68c6051"]
 
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gim4n"]
-[ext_resource type="PackedScene" uid="uid://ckxlpgknfcxno" path="res://PATTERNS/PATTERN NAME - CLARA/Clara technical_expression2.tscn" id="1_y63em"]
+[ext_resource type="PackedScene" uid="uid://cdu1nyicwas8v" path="res://PATTERNS/PATTERN NAME - CLARA/Clara technical_expression.tscn" id="6_2fv6r"]
 
 [resource]
 script = ExtResource("1_gim4n")
@@ -10,4 +10,4 @@ Author = "Clara Levin"
 Context = "The idea for my pattern is that it will function as a plugin that users could add to their VR experience to help them combat the effects of derealization in the headset. After each hour the Spectator cube will pop up on the bottom left side of the screen. It will remind the user of how much time has elapsed since they began using the headset, how many total hours have been logged, and how many breaks they have taken in total. Finally, the last face of the cube will allow the user to log a break if they are ready."
 Problem = "Through my own personal experience and some brief research I have found that it is extremely common for derealization to occur after using a VR headset. This is characterized by feeling disconnected from your reality and even experience symptoms of anxiety. This is all due to spending an extensive amount of time inside a virtual space. The long term effects of this are unknown but they could be helpful to keep tabs on in the meantime. "
 Solution = "Spectator can be an effective way to combat derealization because the log feature can motivate users to want to use it more and be mindful of how much time they spend in the virtual world. "
-Technical_Expression = ExtResource("1_y63em")
+Technical_Expression = ExtResource("6_2fv6r")

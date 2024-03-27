@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpx11r6hwtlph"]
+[gd_scene load_steps=3 format=3 uid="uid://daniun0g3sv2"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyu38"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ry13v"]
 albedo_color = Color(0.407843, 0.737255, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_52kb8"]
-material = SubResource("StandardMaterial3D_lyu38")
+[sub_resource type="BoxMesh" id="BoxMesh_vwojs"]
+material = SubResource("StandardMaterial3D_ry13v")
 size = Vector3(0.2, 0.2, 0.5)
 
 [node name="detail2" type="MeshInstance3D"]
 transform = Transform3D(2.05494, 0.000108512, 3.1089e-05, -0.000596255, 0.373817, -0.0011568, -0.000118961, 0.000794834, 0.544047, 0.372919, 0.0877745, 0.398305)
-mesh = SubResource("BoxMesh_52kb8")
+mesh = SubResource("BoxMesh_vwojs")
 skeleton = NodePath("")

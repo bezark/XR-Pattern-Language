@@ -33,4 +33,4 @@ func _on_breakarea_area_entered(area):
 
 
 func _on_next_area_entered(area):
-	$"../AnimationPlayer".play("spin")
+	$"../spin".play("spin")
