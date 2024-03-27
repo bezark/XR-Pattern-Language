@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://r3x6nvux515n"]
+
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_rqken"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dyx3y"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2qjeg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vuoid"]
+
+[node name="Technical Expression" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+mesh = SubResource("PlaneMesh_dyx3y")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00664616, 7.56998, 24.5698)
+size = Vector3(50, 15, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(-0.000872656, 0, 1, 0, 1, 0, -1, 0, -0.000872656, 24.6023, -0.041543, -21.4635)
+size = Vector3(43.5546, 15, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(-0.00455527, 0, -0.99999, 0, 1, 0, 0.99999, 0, -0.00455527, -24.4579, -0.0364723, -24.6304)
+size = Vector3(50, 15, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(-0.999997, 0, 0.0026005, 0, 1, 0, -0.0026005, 0, -0.999997, 0.0558405, 0.00507069, -49.6033)
+size = Vector3(50, 15, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91331, 0)
+mesh = SubResource("CapsuleMesh_2qjeg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.94853, -0.299309)
+shape = SubResource("CapsuleShape3D_vuoid")
+
+[node name="XROrigin3D" parent="CharacterBody3D" instance=ExtResource("1_rqken")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00837815, 1.94228, 0.0051825)
