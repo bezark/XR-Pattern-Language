@@ -1,10 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://b8noeceodts0c"]
+[gd_scene load_steps=34 format=3 uid="uid://ckxlpgknfcxno"]
 
-[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Clara/Hour Pop Up.gd" id="1_hqrpd"]
-[ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - CLARA/ABCFavorit-Book-Trial.otf" id="2_rf7y2"]
-[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - CLARA/details.tscn" id="3_ci7ty"]
-[ext_resource type="PackedScene" uid="uid://7nmqomy3hekl" path="res://PATTERNS/PATTERN NAME - CLARA/savemessage.tscn" id="5_p2fx2"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="5_wgkkq"]
+[ext_resource type="FontFile" uid="uid://bapqg08hbfwbr" path="res://PATTERNS/PATTERN NAME - CLARA/ABCFavorit-Book-Trial.otf" id="1_mdo7v"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Clara/Hour Pop Up.gd" id="2_5rii3"]
+[ext_resource type="PackedScene" uid="uid://bpx11r6hwtlph" path="res://PATTERNS/PATTERN NAME - CLARA/details.tscn" id="3_m00m5"]
+[ext_resource type="PackedScene" uid="uid://7nmqomy3hekl" path="res://PATTERNS/PATTERN NAME - CLARA/savemessage.tscn" id="4_xyuws"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="5_7ou7o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o2io0"]
 sky_top_color = Color(0.278431, 0.415686, 0.823529, 1)
@@ -68,7 +68,7 @@ albedo_color = Color(0.407843, 0.737255, 1, 1)
 [sub_resource type="TextMesh" id="TextMesh_3tc7u"]
 material = SubResource("StandardMaterial3D_2wyij")
 text = ">"
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 8
 depth = 0.02
 
@@ -98,7 +98,7 @@ albedo_color = Color(0.407843, 0.737255, 1, 1)
 [sub_resource type="TextMesh" id="TextMesh_hmddr"]
 material = SubResource("StandardMaterial3D_dsh6x")
 text = "Spectator!"
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 18
 depth = 0.0
 
@@ -111,7 +111,7 @@ text = "17 Total Hours
 logged on 
 [game] since
 03/03/24."
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 12
 horizontal_alignment = 0
 depth = 0.0
@@ -123,7 +123,7 @@ albedo_color = Color(0.407843, 0.737255, 1, 1)
 material = SubResource("StandardMaterial3D_omb0e")
 text = "1 hour elapsed
 playing [game]!"
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 12
 horizontal_alignment = 0
 depth = 0.0
@@ -138,7 +138,7 @@ logged thanks
 to Spectator!
 
 Congrats :)"
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 12
 horizontal_alignment = 0
 line_spacing = 2.08165e-12
@@ -152,7 +152,7 @@ material = SubResource("StandardMaterial3D_c41sm")
 text = "Go back
 to reality.
 "
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 12
 horizontal_alignment = 0
 depth = 0.0
@@ -163,7 +163,7 @@ albedo_color = Color(0.407843, 0.737255, 1, 1)
 [sub_resource type="TextMesh" id="TextMesh_on880"]
 material = SubResource("StandardMaterial3D_thxpc")
 text = "Log a break!"
-font = ExtResource("2_rf7y2")
+font = ExtResource("1_mdo7v")
 font_size = 12
 horizontal_alignment = 0
 depth = 0.03
@@ -197,7 +197,7 @@ libraries = {
 }
 
 [node name="turn cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.58402, 1.31768, -0.173744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.7143, 1.31768, -0.173744)
 mesh = SubResource("TextMesh_3tc7u")
 
 [node name="next" type="Area3D" parent="turn cube"]
@@ -207,8 +207,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00477074, -0.00920677, -0.
 shape = SubResource("BoxShape3D_1ggim")
 
 [node name="Hour Pop Up" type="Node3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.6943, 1.27333, -0.0664722)
-script = ExtResource("1_hqrpd")
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 3.60402, 1.27333, -0.0664722)
+script = ExtResource("2_5rii3")
 
 [node name="X" type="MeshInstance3D" parent="Hour Pop Up"]
 transform = Transform3D(-6.70962e-08, 0, 1, 0, 1, 0, -1, 0, -9.21219e-09, 0.523832, 0.475444, -0.524696)
@@ -257,7 +257,7 @@ transform = Transform3D(-4.46161e-09, 0.109814, 6.94625e-11, -0.102066, -4.80327
 mesh = SubResource("PrismMesh_264oq")
 skeleton = NodePath("../../..")
 
-[node name="underline" parent="Hour Pop Up/buttonface4-2" instance=ExtResource("3_ci7ty")]
+[node name="underline" parent="Hour Pop Up/buttonface4-2" instance=ExtResource("3_m00m5")]
 transform = Transform3D(3.74229, 4.63274e-05, 3.11439e-05, -0.00108585, 0.159595, -0.00115858, -0.000216571, 0.000339341, 0.544883, 0.376228, -0.124625, -0.121306)
 
 [node name="breakarea" type="Area3D" parent="Hour Pop Up/buttonface4-2"]
@@ -266,25 +266,24 @@ transform = Transform3D(3.74229, 4.63274e-05, 3.11439e-05, -0.00108585, 0.159595
 transform = Transform3D(1, 0, -1.61036e-16, 0, 1, 0, -4.34541e-13, 0, 1, 0.422382, -0.0391841, -0.0520846)
 shape = SubResource("BoxShape3D_6svq7")
 
-[node name="detail2" parent="Hour Pop Up" instance=ExtResource("3_ci7ty")]
+[node name="detail2" parent="Hour Pop Up" instance=ExtResource("3_m00m5")]
 transform = Transform3D(2.05494, 0.000108512, 3.1089e-05, -0.000596255, 0.373817, -0.0011568, -0.000118909, 0.000794834, 0.544047, 0.350607, 0.00236464, 0.385932)
 
-[node name="detail4" parent="Hour Pop Up" instance=ExtResource("3_ci7ty")]
+[node name="detail4" parent="Hour Pop Up" instance=ExtResource("3_m00m5")]
 transform = Transform3D(-0.00011895, 0.000795221, 0.399999, -0.000596272, 0.373999, -0.000850511, -2.055, -0.000108564, -2.29221e-05, -0.434606, -0.188319, -0.352845)
 
-[node name="detail5" parent="Hour Pop Up" instance=ExtResource("3_ci7ty")]
+[node name="detail5" parent="Hour Pop Up" instance=ExtResource("3_m00m5")]
 transform = Transform3D(-0.00011895, 0.000795221, 0.399999, -0.000596272, 0.373999, -0.000850511, -2.055, -0.000108564, -2.29221e-05, -0.434996, -0.128709, 0.348)
 
-[node name="detail3" parent="Hour Pop Up" instance=ExtResource("3_ci7ty")]
+[node name="detail3" parent="Hour Pop Up" instance=ExtResource("3_m00m5")]
 transform = Transform3D(2.055, 0.000108564, 1.14417e-05, -0.000596272, 0.373999, -0.000425255, -0.000118962, 0.000795221, 0.2, 0.334345, 0.294095, -0.51148)
 visible = false
 
-[node name="message" parent="Hour Pop Up" instance=ExtResource("5_p2fx2")]
+[node name="message" parent="Hour Pop Up" instance=ExtResource("4_xyuws")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.000610352, -0.645304, 0.523375)
 visible = false
 
-[node name="XROrigin3D" parent="." instance=ExtResource("5_wgkkq")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+[node name="XROrigin3D" parent="." instance=ExtResource("5_7ou7o")]
 
 [connection signal="area_entered" from="turn cube/next" to="Hour Pop Up" method="_on_next_area_entered"]
 [connection signal="area_entered" from="Hour Pop Up/X/Area3D" to="Hour Pop Up" method="_on_area_3d_area_entered"]
