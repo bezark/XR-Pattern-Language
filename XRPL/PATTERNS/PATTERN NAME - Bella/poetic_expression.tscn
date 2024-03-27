@@ -17,6 +17,34 @@ albedo_texture = ExtResource("3_ahu28")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ous2w"]
 albedo_texture = ExtResource("4_f0knw")
 
+[sub_resource type="Animation" id="Animation_xinww"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.366084, -0.69924, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_u3qab"]
 resource_name = "new_animation"
 length = 10.0
@@ -46,7 +74,13 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 1.52338, 0), Vector3(0, -2.98128, 0), Vector3(0, -0.224414, 0), Vector3(0, -2.88149, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_xinww"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thwjm"]
+_data = {
+"RESET": SubResource("Animation_xinww"),
+"new_animation": SubResource("Animation_u3qab")
+}
+
+[sub_resource type="Animation" id="Animation_tybby"]
 length = 0.001
 loop_mode = 1
 tracks/0/type = "value"
@@ -59,7 +93,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.366084, -0.69924, 0)]
+"values": [Vector3(-1.34872, -0.759504, -0.0285528)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -71,13 +105,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_thwjm"]
-_data = {
-"RESET": SubResource("Animation_xinww"),
-"new_animation": SubResource("Animation_u3qab")
+"values": [Vector3(0, -2.273, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_pd2k6"]
@@ -109,34 +137,6 @@ tracks/1/keys = {
 "values": [Vector3(0, -2.273, 0), Vector3(0, 2.84771, 0), Vector3(0, 1.05989, 0), Vector3(0, -0.0685399, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_tybby"]
-length = 0.001
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.34872, -0.759504, -0.0285528)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -2.273, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pp0o6"]
 _data = {
 "RESET": SubResource("Animation_tybby"),
@@ -157,6 +157,34 @@ albedo_color = Color(0.384314, 0.654902, 0.298039, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvo3i"]
 albedo_color = Color(1, 1, 0.137255, 1)
+
+[sub_resource type="Animation" id="Animation_iomth"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.35758, -0.129894, 0.894792)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.185071, -1.5689, -3.1394)]
+}
 
 [sub_resource type="Animation" id="Animation_1ya6k"]
 resource_name = "new_animation"
@@ -185,34 +213,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1.86607, 1.86607, 1.86607, 1.86607, 1.86607),
 "update": 0,
 "values": [Vector3(-0.185071, -1.5689, -3.1394), Vector3(0.775608, -1.56819, -3.13722), Vector3(0.775608, 2.76945, -3.13722), Vector3(0.925593, -0.538166, -0.954298), Vector3(0.448238, 0.960684, 0.963981)]
-}
-
-[sub_resource type="Animation" id="Animation_iomth"]
-length = 0.001
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.35758, -0.129894, 0.894792)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.185071, -1.5689, -3.1394)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_abl4g"]
@@ -278,7 +278,7 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="Duck" parent="." instance=ExtResource("5_25q68")]
-transform = Transform3D(-0.322949, 0, -0.381712, 0, 0.5, 0, 0.381712, 0, -0.322949, -1.34872, -0.759504, -0.0285528)
+transform = Transform3D(-0.322951, 0, -0.38171, 0, 0.5, 0, 0.38171, 0, -0.322951, -1.34872, -0.759504, -0.0285528)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Duck"]
 libraries = {
@@ -289,7 +289,7 @@ autoplay = "new_animation"
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="Flower" type="CSGSphere3D" parent="Node3D"]
-transform = Transform3D(-0.00069012, -0.0552035, -0.294876, -0.000647686, -0.294876, 0.055205, -0.299999, 0.000763617, 0.00055915, -0.35758, -0.129894, 0.894792)
+transform = Transform3D(-0.000689945, -0.0552034, -0.294876, -0.000646562, -0.294876, 0.0552048, -0.299999, 0.000762479, 0.000559185, -0.35758, -0.129894, 0.894792)
 radial_segments = 50
 rings = 10
 material = SubResource("StandardMaterial3D_doodt")

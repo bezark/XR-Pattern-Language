@@ -23,6 +23,10 @@ buses/default_bus_layout=""
 
 GlobalNavigation="*res://Components/global_navigation.tscn"
 
+[display]
+
+window/size/always_on_top=true
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/floatable_body/plugin.cfg")

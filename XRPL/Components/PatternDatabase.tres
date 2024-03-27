@@ -1,10 +1,7 @@
-[gd_resource type="Resource" script_class="PatternDatabase" load_steps=5 format=3 uid="uid://dac8y5m2nnbxp"]
+[gd_resource type="Resource" script_class="PatternDatabase" load_steps=2 format=3 uid="uid://di5cxd7jup6p0"]
 
-[ext_resource type="Resource" uid="uid://c6laxmd168ssn" path="res://PATTERNS/PATTERN NAME - Bella/Bella_Documentation.tres" id="1_5vruy"]
 [ext_resource type="Script" path="res://Components/Pattern_Database.gd" id="1_e813d"]
-[ext_resource type="Resource" uid="uid://bx88n5raa2bh" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing_Documentation.tres" id="3_gsfm4"]
-[ext_resource type="Resource" uid="uid://bygby2x7pkog5" path="res://PATTERNS/PATTERN NAME - Yoon/Yoon_Documentation.tres" id="10_45an4"]
 
 [resource]
 script = ExtResource("1_e813d")
-patterns = Array[Resource("res://Components/PatternInfo.gd")]([ExtResource("10_45an4"), ExtResource("1_5vruy"), ExtResource("3_gsfm4")])
+patterns = Array[Resource("res://Components/PatternInfo.gd")]([])
