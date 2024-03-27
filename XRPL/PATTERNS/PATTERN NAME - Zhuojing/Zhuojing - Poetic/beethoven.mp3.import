@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd2qnjusutdfp"
+path="res://.godot/imported/beethoven.mp3-6e8bb41a23f32631b30803f0363df337.mp3str"
+
+[deps]
+
+source_file="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/beethoven.mp3"
+dest_files=["res://.godot/imported/beethoven.mp3-6e8bb41a23f32631b30803f0363df337.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

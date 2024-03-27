@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://bygby2x7pkog5"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=2 format=3 uid="uid://bygby2x7pkog5"]
 
-[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.tscn" id="1_31vh8"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gi2rh"]
 
 [resource]
@@ -10,6 +9,5 @@ Author = ""
 Context = ""
 Problem = ""
 Solution = ""
-Technical_Expression = ExtResource("1_31vh8")
 OutsidePatterns = Array[PackedScene]([])
 InsidePatterns = Array[PackedScene]([])

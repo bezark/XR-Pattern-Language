@@ -30,12 +30,12 @@ func _on_box_area_3d_area_entered(area):
 
 # Music And Light play together
 func _on_capsule_area_3d_area_entered(area):
-	spot_light_3d.blink()
+	spot_light_3d.show() #Unfortunately there is no default blink function. You could write a blink function with a timer though.
 	audio_stream_player_3d.play()
 	print("light blink,Music Play")
 	
 
 func _on_tube_area_3d_area_entered(area):
 	spot_light_3d.hide()
-	audio_stream_player_3d.Stop()
+	audio_stream_player_3d.stop()
 	print("light off,Music stop")

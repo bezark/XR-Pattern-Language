@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cewrnset1usxx"]
 
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/XR Pattern.gd" id="1_4rmky"]
-[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/art_studio/scene.gltf" id="3_3t2wi"]
+[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/art_studio/scene.gltf" id="3_3t2wi"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_d3rei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_750al"]
@@ -76,6 +76,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37985, 0.0156851, -1.8853)
 [node name="SpotLight3D" type="SpotLight3D" parent="SpotLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0836194, 0.0463967, -2.07327)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.944019, -1.82055, -1.37708)
+
 [node name="Torus" type="CSGMesh3D" parent="."]
 transform = Transform3D(-0.1, -8.74228e-09, 3.82137e-16, -1.5246e-24, -4.37114e-09, -0.1, 8.74228e-09, -0.1, 4.37114e-09, 0.102759, 1.10492, 9.16859)
 mesh = SubResource("TorusMesh_h7b8v")
@@ -107,7 +110,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76823, 0.0511513)
 shape = SubResource("SphereShape3D_5wf40")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155309, 1.14603, 9.25909)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155309, 1.14603, 7.7335)
+visible = false
 size = Vector3(0.218811, 0.187744, 0.344238)
 
 [node name="Area3D" type="Area3D" parent="CSGBox3D"]
@@ -118,7 +122,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0381907, 0.0861616)
 shape = SubResource("SphereShape3D_jh5xr")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_d3rei")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22758, 0.186093, 8.87563)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22758, -0.257225, 9.86029)
 
 [connection signal="area_entered" from="Torus/TorusArea3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="Sphere/Light On/sphereArea3D" to="." method="_on_sphere_area_3d_area_entered"]

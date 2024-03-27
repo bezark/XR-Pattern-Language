@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://oo7yshj8epnc"]
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=2 format=3 uid="uid://oo7yshj8epnc"]
 
-[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Jocelyn_poetic_expression.tscn" id="1_7iwnx"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gigdt"]
 
 [resource]
@@ -10,6 +9,5 @@ Author = ""
 Context = ""
 Problem = ""
 Solution = ""
-Poetic_Expression = ExtResource("1_7iwnx")
 OutsidePatterns = Array[PackedScene]([])
 InsidePatterns = Array[PackedScene]([])

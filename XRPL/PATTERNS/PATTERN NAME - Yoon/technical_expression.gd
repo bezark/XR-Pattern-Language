@@ -15,4 +15,4 @@ func _on_timer_timeout():
 	var newpoop=$Poop.duplicate()
 	newpoop.position=$XROrigin3D/XRCamera3D.position
 	add_child(newpoop)
-	newpoop.position.z=randf_range(0,0.5)
+	newpoop.position.y=randf_range(0,0.5)
