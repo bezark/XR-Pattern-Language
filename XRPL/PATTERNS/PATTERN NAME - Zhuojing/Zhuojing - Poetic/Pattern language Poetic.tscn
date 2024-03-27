@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/poetic XR Pattern.gd" id="1_1qqjr"]
 [ext_resource type="AudioStream" uid="uid://bd2qnjusutdfp" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/beethoven.mp3" id="2_7yvdk"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_xatlt"]
-[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/art_studio/scene.gltf" id="4_hsdkv"]
+[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/art_studio/scene.gltf" id="4_hsdkv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_750al"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
