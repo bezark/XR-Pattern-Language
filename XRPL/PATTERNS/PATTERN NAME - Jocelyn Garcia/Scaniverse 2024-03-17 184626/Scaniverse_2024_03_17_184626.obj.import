@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bxtbqce4s3xhg"
+path="res://.godot/imported/Scaniverse_2024_03_17_184626.obj-dbbfd08f0bde3932da3fb9f128bd090a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Scaniverse_2024_03_17_184626.obj-dbbfd08f0bde3932da3fb9f128bd090a.mesh"]
+
+source_file="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/Scaniverse_2024_03_17_184626.obj"
+dest_files=["res://.godot/imported/Scaniverse_2024_03_17_184626.obj-dbbfd08f0bde3932da3fb9f128bd090a.mesh", "res://.godot/imported/Scaniverse_2024_03_17_184626.obj-dbbfd08f0bde3932da3fb9f128bd090a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
