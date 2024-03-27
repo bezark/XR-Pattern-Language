@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://byoyitvl3nrlb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o28o3"]
+radius = 0.513155
+
+[node name="CSGBox3D" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58173, 1.12223, 0.0402088)
+size = Vector3(0.557648, 0.296509, 0.589599)
+
+[node name="Area3D" type="Area3D" parent="." groups=["finger"]]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0376196, -0.014046, 0.00704515)
+shape = SubResource("SphereShape3D_o28o3")

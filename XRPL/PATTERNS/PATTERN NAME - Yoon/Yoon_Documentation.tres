@@ -1,15 +1,14 @@
 [gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://bygby2x7pkog5"]
 
-[ext_resource type="PackedScene" uid="uid://r3x6nvux515n" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.tscn" id="1_aodx7"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gi2rh"]
+[ext_resource type="PackedScene" uid="uid://ban2l7xn3np65" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression2.tscn" id="1_kivtd"]
 
 [resource]
 script = ExtResource("1_gi2rh")
 PatternName = "Get you S***t Together"
-Author = ""
-Context = ""
-Problem = ""
-Solution = ""
-Technical_Expression = ExtResource("1_aodx7")
-OutsidePatterns = Array[PackedScene]([])
-InsidePatterns = Array[PackedScene]([])
+Author = "Yoon"
+Context = "a"
+Problem = "b"
+Solution = "b"
+Technical_Expression = ExtResource("1_kivtd")
+Poetic_Expression = ExtResource("1_kivtd")

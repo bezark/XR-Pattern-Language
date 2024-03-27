@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 @export var documentation : PatternInfo
-@export var wander_speed = 0.01
+@export var wander_speed = 0.00
 var target_velocity = Vector3(0.1,0.1,0.1)
 
 @onready var pattern_name = $PatternName

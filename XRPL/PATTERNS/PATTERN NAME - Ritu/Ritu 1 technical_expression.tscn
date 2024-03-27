@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://r3x6nvux515n"]
+[gd_scene load_steps=13 format=3 uid="uid://bfgk4qcwiddhh"]
 
-[ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="1_ruafg"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_qaksh"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_8aomp"]
+[ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="2_kwbt0"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_gyyl8"]
 vertices = PackedVector3Array(-4.00916, 0.5, -4.01056, -4.00916, 0.5, -3.51056, -3.00916, 0.5, -3.76056, -4.00916, 0.5, 3.98944, -2.75916, 0.5, 3.98944, -3.75916, 0.5, 2.73944, -0.509157, 0.5, 2.73944, -0.759157, 0.5, 3.98944, 1.24084, 0.5, 3.98944, 1.24084, 0.5, 2.73944, -2.00916, 0.5, 0.989438, -1.00916, 0.5, 1.98944, -0.759157, 0.5, 1.73944, -0.759157, 0.5, -0.760562, -4.00916, 0.5, 3.98944, -3.75916, 0.5, 2.73944, -3.75916, 0.5, 1.73944, -4.00916, 0.5, -1.26056, -1.00916, 0.5, 1.98944, -0.509157, 0.5, 2.73944, 1.24084, 0.5, 2.73944, 1.74084, 0.5, 2.23944, 1.24084, 0.5, 1.98944, -0.759157, 0.5, 1.73944, 1.24084, 0.5, -1.26056, 1.49084, 0.5, -4.01056, -1.50916, 0.5, -4.01056, -1.00916, 0.5, -2.26056, -0.259157, 0.5, -1.26056, -0.759157, 0.5, -0.760562, -1.00916, 0.5, -2.26056, -2.75916, 0.5, -1.26056, -3.00916, 0.5, 0.989438, -2.00916, 0.5, 0.989438, -4.00916, 0.5, -1.26056, -3.75916, 0.5, 1.73944, -3.00916, 0.5, 0.989438, -2.75916, 0.5, -1.26056, -0.759157, 0.5, -0.760562, -0.259157, 0.5, -1.26056, -1.00916, 0.5, -2.26056, 3.74084, 0.5, 1.73944, 2.99084, 0.5, -0.760562, 1.74084, 0.5, -0.760562, 1.24084, 0.5, 1.98944, 1.74084, 0.5, 2.23944, 3.74084, 0.5, 1.73944, 3.74084, 0.5, -4.01056, 3.49084, 0.5, -1.26056, 3.74084, 0.5, 1.73944, 3.49084, 0.5, -1.26056, 2.99084, 0.5, -0.760562)
@@ -113,7 +113,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.754
 size = Vector3(9.07909, 1, 0.486084)
 material = SubResource("StandardMaterial3D_jqanc")
 
-[node name="XROrigin3D" parent="." instance=ExtResource("2_qaksh")]
+[node name="XROrigin3D" parent="." instance=ExtResource("1_8aomp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36394, 5.2025)
 
 [node name="Label3D" type="Label3D" parent="."]
@@ -127,7 +127,7 @@ autowrap_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0477905, -0.0196228, 0)
 shape = SubResource("BoxShape3D_tekmm")
 
-[node name="NavigationNPC" parent="." instance=ExtResource("1_ruafg")]
+[node name="NavigationNPC" parent="." instance=ExtResource("2_kwbt0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21893, 1.1064, 0)
 
 [connection signal="area_entered" from="Label3D/Area3D" to="NavigationNPC" method="_on_area_3d_area_entered"]

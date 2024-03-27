@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b1snysx43fw6k"]
+[gd_scene load_steps=24 format=3 uid="uid://dp6wnrbspb5to"]
 
 [ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="1_7ufen"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_peeue"]

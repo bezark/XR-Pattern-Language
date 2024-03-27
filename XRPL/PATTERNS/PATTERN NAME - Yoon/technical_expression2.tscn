@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://ban2l7xn3np65"]
+
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.gd" id="1_tlkoi"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_hvjjt"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_umjdy"]
+[ext_resource type="Texture2D" uid="uid://cmistuob5iwe8" path="res://PATTERNS/PATTERN NAME - Yoon/teture2.jpg" id="4_v6v6n"]
+[ext_resource type="ArrayMesh" uid="uid://dergcffr5btm" path="res://PATTERNS/PATTERN NAME - Yoon/excrement.obj" id="5_sepe7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nsuox"]
+sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_1yakq"]
+sky_material = SubResource("ProceduralSkyMaterial_nsuox")
+
+[sub_resource type="Environment" id="Environment_p3obx"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+sky = SubResource("Sky_1yakq")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iayrp"]
+albedo_texture = ExtResource("4_v6v6n")
+
+[node name="Technical Expression" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.189109)
+script = ExtResource("1_tlkoi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p3obx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0971946, 0.54092, 1.73857)
+
+[node name="LeftHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+hand_skeleton = NodePath("Lefty")
+
+[node name="Lefty" parent="XROrigin3D/LeftHandTracker" instance=ExtResource("2_hvjjt")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="RightHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+hand = 1
+hand_skeleton = NodePath("Righty")
+
+[node name="Righty" parent="XROrigin3D/RightHandTracker" instance=ExtResource("3_umjdy")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="XROrigin3D/Left"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="XROrigin3D/Right"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Poop" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23868, 0, 0, 0, 0.23868, 0, 0, 0, 0.23868, 0.0061872, 0.293276, -0.216037)
+material_override = SubResource("StandardMaterial3D_iayrp")
+mesh = ExtResource("5_sepe7")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

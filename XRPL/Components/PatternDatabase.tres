@@ -8,4 +8,4 @@
 
 [resource]
 script = ExtResource("1_e813d")
-patterns = Array[Resource("res://Components/PatternInfo.gd")]([ExtResource("1_y40eh"), ExtResource("2_wafsg"), ExtResource("3_2alra"), ExtResource("4_qinup")])
+patterns = Array[Resource("res://Components/PatternInfo.gd")]([ExtResource("3_2alra"), ExtResource("4_qinup"), ExtResource("2_wafsg"), ExtResource("1_y40eh")])
