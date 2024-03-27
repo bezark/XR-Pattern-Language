@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dgejo472wkhyh"]
+[gd_scene load_steps=20 format=3 uid="uid://dgejo472wkhyh"]
 
 [ext_resource type="Texture2D" uid="uid://btgc6l7y2tgpj" path="res://PATTERNS/PATTERN NAME - Ritu/Screenshot 2024-03-26 032337.png" id="1_17eoa"]
 [ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="1_xomkg"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_w5jhq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_yj6ny"]
 vertices = PackedVector3Array(-4.00916, 0.5, 3.98943, 1.74084, 0.5, 3.98943, 1.49084, 0.5, 2.48943, 1.49084, 0.5, 2.48943, 3.74084, 0.5, 1.48943, 3.74084, 0.5, -4.01057, -4.00916, 0.5, -4.01057, -4.00916, 0.5, 3.98943)
@@ -55,20 +56,11 @@ albedo_color = Color(0.764706, 0.298039, 0.658824, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yilbw"]
 albedo_color = Color(0.764706, 0.298039, 0.658824, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_87wme"]
+size = Vector3(1.96692, 0.671814, 1)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D"]
 navigation_mesh = SubResource("NavigationMesh_yj6ny")
-
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = -2.0
-offset_top = -4.0
-offset_right = 798.0
-offset_bottom = 33.0
-theme_override_colors/background_color = Color(0.243137, 0, 0, 1)
-theme_override_colors/font_color = Color(0.905882, 0.929412, 0.980392, 1)
-text = "Look at these lovebirds! See how many times they get together and break up by clicking the space bar!"
-deselect_on_focus_loss_enabled = false
-virtual_keyboard_enabled = false
-middle_mouse_paste_enabled = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866308, -0.3676, 0.338203, 0.126021, 0.494323, 0.860095, -0.483352, 0.787728, -0.38191, 2.24647, 6.97479, -0.652274)
@@ -146,4 +138,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.754
 size = Vector3(9.07909, 1, 0.486084)
 material = SubResource("StandardMaterial3D_yilbw")
 
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.4612, 3.62407)
+modulate = Color(1, 0.384314, 0.458824, 1)
+text = "Look at these lovebirds! See how many times they get together and break up by tapping here!"
+autowrap_mode = 2
+
+[node name="Area3D" type="Area3D" parent="Label3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Label3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0477905, -0.0196228, 0)
+shape = SubResource("BoxShape3D_87wme")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("3_w5jhq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.757928, 5.16764)
+
 [connection signal="child_entered_tree" from="WorldEnvironment" to="LOVEBIRD 1" method="_on_world_environment_child_entered_tree"]
+[connection signal="area_entered" from="Label3D/Area3D" to="LOVEBIRD 1" method="_on_area_3d_area_entered"]
+[connection signal="area_entered" from="Label3D/Area3D" to="LOVEBIRD 2" method="_on_area_3d_area_entered"]

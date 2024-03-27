@@ -20,3 +20,10 @@ func _physics_process(delta: float) -> void:
 
 func _on_world_environment_child_entered_tree(node):
 	pass # Replace with function body.
+
+
+func _on_area_3d_area_entered(area):
+	var random_position := Vector3.ZERO
+	random_position.x = randf_range(-5.0, 5.0)
+	random_position.z = randf_range(-5.0, 5.0)
+	navigation_agent_3d.set_target_position(random_position)
