@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://jrb38m1010xs" path="res://PATTERNS/PATTERN NAME - Douglas/Douglas P scene.tscn" id="1_7bgth"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_ahpnm"]
-[ext_resource type="PackedScene" uid="uid://dnhc34xk42d0t" path="res://PATTERNS/PATTERN NAME - Douglas/Douglas T scene.tscn" id="2_o0sf8"]
+[ext_resource type="PackedScene" uid="uid://jrb38m1010xs" path="res://PATTERNS/PATTERN NAME - Douglas/Douglas Arrow scene.tscn" id="2_v4rer"]
 
 [resource]
 script = ExtResource("1_ahpnm")
@@ -11,7 +11,7 @@ Author = "Douglas Xie"
 Context = "Getting around in metropolitan areas, especially in New York City, is always a struggle via public transportation, targeting the elderly as well as some people who have no sense of direction. Getting to certain places is always a hassle. At the same time, in a fast-paced city, people don't want to waste too much time on public transportation. Of course, more and more people are choosing low-carbon transportation when they rent a bicycle to get to their destination. It is much more intuitive and efficient to tell them where to go visually than to tell them which intersection to go to by voice. Or in everyday life, in shopping malls you need to combine the topography of the map and ask the staff to get to the area you want to explore. It takes some time for the brain to process the information and make relative choices. Especially in countries, mostly developing countries, where the infrastructure is not well developed, tourists have to take into account language communication problems and the complexity of maps to process the information. Often it is very difficult to get to a niche attraction or restaurant."
 Problem = "Overall a friendlier and more efficient guidance system. By providing simple and easy to use directions to inform people how to choose and decide which direction to take in certain complex scenarios, it ensures that people can get to their destinations quickly and clearly. It solves people's anxiety and confusion. There are many specific scenarios that can be illustrated, such as an office building with a variety of different studios. The first step in selecting a studio is to look up the map information, the second step is to reach the arrival floor and follow the directional signs to the approximate area, and the third step is to check if the destination is correct. At least from a personal experience point of view, I don't want to spend too much time looking for directions. Not to mention in a country where the infrastructure is not well developed. In countries with a large population base, building areas are often dense and complex. People can only reach their destinations by trial and error and by taking their time. This is where my pain point comes in. Whether I'm driving or walking I can easily lose track of where I'm going."
 Solution = "A simple but friendly guide with directions in close proximity e.g. pointer. In the distance there is a character to guide you, giving a general sense of distance in space."
-Technical_Expression = ExtResource("2_o0sf8")
+Technical_Expression = ExtResource("2_v4rer")
 Poetic_Expression = ExtResource("1_7bgth")
 OutsidePatterns = Array[PackedScene]([])
 InsidePatterns = Array[PackedScene]([])
