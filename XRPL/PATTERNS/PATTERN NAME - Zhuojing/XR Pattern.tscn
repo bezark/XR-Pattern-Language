@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cewrnset1usxx"]
 
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/XR Pattern.gd" id="1_4rmky"]
-[ext_resource type="PackedScene" uid="uid://bvgxo2kfaflxy" path="res://PATTERNS/PATTERN NAME - Zhuojing/art_studio/scene.gltf" id="3_3t2wi"]
+[ext_resource type="PackedScene" uid="uid://c26cmgevyb66d" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/art_studio/scene.gltf" id="3_3t2wi"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_d3rei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_750al"]
@@ -59,7 +59,6 @@ environment = SubResource("Environment_gddmy")
 
 [node name="Studio Model" parent="." instance=ExtResource("3_3t2wi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.231685, -0.0149903, 6.1317)
-metadata/_edit_lock_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97509, 0)

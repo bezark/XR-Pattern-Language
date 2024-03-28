@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ban2l7xn3np65"]
+[gd_scene load_steps=11 format=3 uid="uid://ban2l7xn3np65"]
 
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.gd" id="1_tlkoi"]
 [ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_hvjjt"]
 [ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_umjdy"]
+[ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_n3bn1"]
 [ext_resource type="Texture2D" uid="uid://cmistuob5iwe8" path="res://PATTERNS/PATTERN NAME - Yoon/teture2.jpg" id="4_v6v6n"]
 [ext_resource type="ArrayMesh" uid="uid://dergcffr5btm" path="res://PATTERNS/PATTERN NAME - Yoon/excrement.obj" id="5_sepe7"]
 
@@ -69,6 +70,9 @@ tracker = &"right_hand"
 [node name="CSGBox3D2" type="CSGBox3D" parent="XROrigin3D/Right"]
 visible = false
 size = Vector3(0.25, 0.25, 0.25)
+
+[node name="StaticBubble" parent="XROrigin3D" instance=ExtResource("4_n3bn1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.940706, 0.656169)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

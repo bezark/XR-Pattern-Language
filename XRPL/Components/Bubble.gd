@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 @export var documentation : PatternInfo
-@export var wander_speed = 0.00
+@export var wander_speed = 0.01
 var target_velocity = Vector3(0.1,0.1,0.1)
 
 @onready var pattern_name = $PatternName
@@ -20,8 +20,11 @@ func _ready():
 	populate()
 
 func populate():
-	if is_node_ready():
+	if is_node_ready()and documentation.PatternName:
 		pattern_name.text = documentation.PatternName
+
+func text_override(words):
+	pattern_name.text = words
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -71,7 +74,5 @@ func enter_bubble():
 			scene_to_trigger = documentation.Technical_Expression
 		"Poetic":
 			scene_to_trigger = documentation.Poetic_Expression
-		"Pattern":
-			scene_to_trigger = documentation.Pattern_Scene
 	GlobalNavigation.currentPattern = documentation
 	get_tree().change_scene_to_packed(scene_to_trigger)

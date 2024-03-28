@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://oo7yshj8epnc"]
 
-[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/Jocelyn_poetic_expression.tscn" id="1_fpkiq"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_gigdt"]
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/Jocelyn_poetic_expression.tscn" id="1_qkop6"]
 
 [resource]
 script = ExtResource("1_gigdt")
@@ -10,5 +10,4 @@ Author = "Jocelyn Garcia"
 Context = "Exploring door models"
 Problem = ""
 Solution = ""
-Technical_Expression = ExtResource("1_fpkiq")
-Poetic_Expression = ExtResource("1_fpkiq")
+Technical_Expression = ExtResource("1_qkop6")

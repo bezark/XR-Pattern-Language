@@ -1,28 +1,26 @@
-[gd_scene load_steps=13 format=3 uid="uid://jrb38m1010xs"]
+[gd_scene load_steps=17 format=3 uid="uid://jrb38m1010xs"]
 
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_dpxh6"]
+[ext_resource type="Texture2D" uid="uid://dcj053stww7gr" path="res://PATTERNS/PATTERN NAME - Douglas/th.jpg" id="2_73qk7"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nnyhr"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_hj2y8"]
-sky_material = SubResource("ProceduralSkyMaterial_nnyhr")
-
-[sub_resource type="Environment" id="Environment_kwwwk"]
-background_mode = 1
-background_color = Color(0, 0, 0, 0)
-sky = SubResource("Sky_hj2y8")
-tonemap_mode = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrra0"]
-albedo_color = Color(0.235294, 0.235294, 0.235294, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tid3t"]
+albedo_texture = ExtResource("2_73qk7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_niks4"]
 transparency = 1
 albedo_color = Color(0.188235, 1, 1, 0)
 
-[sub_resource type="Animation" id="Animation_2sv7x"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dq2pt"]
+albedo_color = Color(1, 1, 0.0235294, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrra0"]
+albedo_color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08rja"]
+transparency = 1
+albedo_color = Color(0.188235, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_yvw5c"]
 resource_name = "01"
 length = 4.0
 loop_mode = 1
@@ -39,7 +37,7 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, -1.72748), Vector3(0.5, 0, -1.727), Vector3(0, 0, -1.727)]
 }
 
-[sub_resource type="Animation" id="Animation_ngqpg"]
+[sub_resource type="Animation" id="Animation_atk31"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -54,10 +52,10 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, -1.72748)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1qai"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_07jm3"]
 _data = {
-"01": SubResource("Animation_2sv7x"),
-"RESET": SubResource("Animation_ngqpg")
+"01": SubResource("Animation_yvw5c"),
+"RESET": SubResource("Animation_atk31")
 }
 
 [sub_resource type="Animation" id="Animation_ubdko"]
@@ -98,51 +96,159 @@ _data = {
 "new_animation": SubResource("Animation_ppo72")
 }
 
-[node name="DouglasPScene" type="Node3D"]
+[sub_resource type="Animation" id="Animation_2sv7x"]
+resource_name = "01"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.669804, 0.0659072, -2.93823), Vector3(0.747898, 0.0659072, -2.93823)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.188235, 1, 1, 0), Color(0.188235, 1, 1, 0.603922)]
+}
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_kwwwk")
+[sub_resource type="Animation" id="Animation_ngqpg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.669804, 0.0659072, -2.93823)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.188235, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1qai"]
+_data = {
+"01": SubResource("Animation_2sv7x"),
+"RESET": SubResource("Animation_ngqpg")
+}
+
+[node name="DouglasPScene" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.12943, 35.3191)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 3.52052, -2.49578)
+transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 0.913905, 0)
 shadow_enabled = true
 
-[node name="XROrigin3D" parent="." instance=ExtResource("1_dpxh6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52052, -2.49578)
+[node name="Backgroud" type="Node3D" parent="."]
 
-[node name="groud" type="Node3D" parent="."]
+[node name="Node" type="Node" parent="Backgroud"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="groud"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669804, -0.081465, -18.1951)
-material_override = SubResource("StandardMaterial3D_yrra0")
-size = Vector3(31.2159, 0.211917, 35.9948)
+[node name="Groud" type="CSGBox3D" parent="Backgroud/Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669804, 0.0659072, -2.93823)
+material_override = SubResource("StandardMaterial3D_tid3t")
+size = Vector3(49.0147, 0.239752, 86.4091)
 material = SubResource("StandardMaterial3D_niks4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="groud"]
+[node name="wall1" type="CSGBox3D" parent="Backgroud/Node"]
+transform = Transform3D(0.00472986, 0, -0.999989, 0, 1, 0, 0.999989, 0, 0.00472986, -17.4424, 1.8536, -0.108065)
+size = Vector3(38, 9.75281, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="wall2" type="CSGBox3D" parent="Backgroud/Node"]
+transform = Transform3D(-0.0178538, 0, 0.999841, 0, 1, 0, -0.999841, 0, -0.0178538, 14.686, 2.49604, 15.2707)
+size = Vector3(35.756, 9.75281, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="wall3" type="CSGBox3D" parent="Backgroud/Node"]
+transform = Transform3D(-0.999362, 0, -0.0357019, 0, 1, 0, 0.0357019, 0, -0.999362, 13.3188, 2.11568, 0.577861)
+size = Vector3(21, 10, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="wall4" type="CSGBox3D" parent="Backgroud/Node/wall3"]
+transform = Transform3D(-0.999356, 0, -0.0357021, 0, 1, 0, 0.0357021, 0, -0.999356, -1.31545, 0.815681, 16.4038)
+size = Vector3(19, 10, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="wall3" type="CSGBox3D" parent="Backgroud/Node/wall3"]
+transform = Transform3D(-0.999356, 0, -0.0357021, 0, 1, 0, 0.0357021, 0, -0.999356, -5.31225, -0.284319, 4.91229)
+size = Vector3(9.7, 10, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="wall4" type="CSGBox3D" parent="Backgroud/Node"]
+transform = Transform3D(0.997451, 0, 0.0713582, 0, 1, 0, -0.0713582, 0, 0.997451, 2.98021, 1.23136, -19.7382)
+size = Vector3(43, 10, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="wall5" type="CSGBox3D" parent="Backgroud/Node"]
+transform = Transform3D(0.997451, 0, 0.0713582, 0, 1, 0, -0.0713582, 0, 0.997451, -13.4457, 2.23136, 14.9361)
+size = Vector3(8.1, 10, 1)
+material = SubResource("StandardMaterial3D_dq2pt")
+
+[node name="Sign and Characters" type="Node3D" parent="Backgroud"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.75804, -13.1136)
+
+[node name="DouglasPScene" type="Node3D" parent="Backgroud/Sign and Characters"]
+
+[node name="groud" type="Node3D" parent="Backgroud/Sign and Characters/DouglasPScene"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Backgroud/Sign and Characters/DouglasPScene/groud"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669804, -0.081465, -18.1951)
+visible = false
+material_override = SubResource("StandardMaterial3D_yrra0")
+size = Vector3(31.2159, 0.211917, 35.9948)
+material = SubResource("StandardMaterial3D_08rja")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Backgroud/Sign and Characters/DouglasPScene/groud"]
 root_node = NodePath("../CSGBox3D")
 libraries = {
-"": SubResource("AnimationLibrary_m1qai")
+"": SubResource("AnimationLibrary_07jm3")
 }
 autoplay = "01"
 
-[node name="Characters" type="Node3D" parent="."]
+[node name="Characters" type="Node3D" parent="Backgroud/Sign and Characters/DouglasPScene"]
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="Characters"]
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="Backgroud/Sign and Characters/DouglasPScene/Characters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0028801, 3.64404, -19.0335)
 radius = 1.946
 radial_segments = 4
 rings = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Characters/CSGSphere3D4"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Backgroud/Sign and Characters/DouglasPScene/Characters/CSGSphere3D4"]
 libraries = {
 "": SubResource("AnimationLibrary_3dmcu")
 }
 autoplay = "new_animation"
 
-[node name="Signs" type="Node3D" parent="."]
+[node name="Signs" type="Node3D" parent="Backgroud/Sign and Characters/DouglasPScene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0756907, 0.87595, -8.4507)
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Signs"]
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Backgroud/Sign and Characters/DouglasPScene/Signs"]
 transform = Transform3D(4, 0, 0, 0, -1.74846e-07, 4, 0, -4, -1.74846e-07, 0, 0, -1.72748)
 lod_bias = 0.001
 snap = 1e-06
@@ -151,7 +257,7 @@ height = 0.309
 sides = 24
 cone = true
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Signs/CSGCylinder3D2"]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Backgroud/Sign and Characters/DouglasPScene/Signs/CSGCylinder3D2"]
 transform = Transform3D(9.55343e-16, -2.18557e-08, -0.5, 4.37114e-08, -0.5, 2.18557e-08, -0.5, -4.37114e-08, 9.55343e-16, 0, -0.331699, -1.49012e-08)
 lod_bias = 0.001
 snap = 1e-06
@@ -159,8 +265,17 @@ radius = 0.085
 height = 0.748182
 sides = 24
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Signs"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Backgroud/Sign and Characters/DouglasPScene/Signs"]
 root_node = NodePath("../CSGBox3D")
+libraries = {
+"": SubResource("AnimationLibrary_07jm3")
+}
+autoplay = "01"
+
+[node name="XROrigin3D" parent="." instance=ExtResource("1_dpxh6")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Backgroud/Node/Groud")
 libraries = {
 "": SubResource("AnimationLibrary_m1qai")
 }

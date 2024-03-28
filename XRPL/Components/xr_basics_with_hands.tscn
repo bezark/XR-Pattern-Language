@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cf1314vkwgdby"]
+[gd_scene load_steps=5 format=3 uid="uid://cf1314vkwgdby"]
 
+[ext_resource type="Script" path="res://Components/XROriginWatcher.gd" id="1_hi2ls"]
 [ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="1_ofm2b"]
 [ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="2_87q82"]
+[ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_5enu2"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
+script = ExtResource("1_hi2ls")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -38,3 +41,6 @@ tracker = &"right_hand"
 [node name="CSGBox3D2" type="CSGBox3D" parent="Right"]
 visible = false
 size = Vector3(0.25, 0.25, 0.25)
+
+[node name="HomeBubble" parent="." instance=ExtResource("4_5enu2")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.59488, 0.256217)

@@ -1,0 +1,167 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1igt781wqslj"]
+
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_iaoe2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nnyhr"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hj2y8"]
+sky_material = SubResource("ProceduralSkyMaterial_nnyhr")
+
+[sub_resource type="Environment" id="Environment_kwwwk"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+sky = SubResource("Sky_hj2y8")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrra0"]
+albedo_color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_niks4"]
+transparency = 1
+albedo_color = Color(0.188235, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_2sv7x"]
+resource_name = "01"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Signs/CSGCylinder3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1.72748), Vector3(0.5, 0, -1.727), Vector3(0, 0, -1.727)]
+}
+
+[sub_resource type="Animation" id="Animation_ngqpg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Signs/CSGCylinder3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.72748)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1qai"]
+_data = {
+"01": SubResource("Animation_2sv7x"),
+"RESET": SubResource("Animation_ngqpg")
+}
+
+[sub_resource type="Animation" id="Animation_ubdko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0028801, 3.64404, -19.0335)]
+}
+
+[sub_resource type="Animation" id="Animation_ppo72"]
+resource_name = "new_animation"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0028801, 3.64404, -19.0335), Vector3(-0.003, 5.6, -19.033), Vector3(-0.003, 3.64, -19.033), Vector3(-0.003, 5.64, -19.033)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3dmcu"]
+_data = {
+"RESET": SubResource("Animation_ubdko"),
+"new_animation": SubResource("Animation_ppo72")
+}
+
+[node name="DouglasPScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kwwwk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 3.52052, -2.49578)
+shadow_enabled = true
+
+[node name="XROrigin3D" parent="." instance=ExtResource("1_iaoe2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52052, -2.49578)
+
+[node name="groud" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="groud"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669804, -0.081465, -18.1951)
+material_override = SubResource("StandardMaterial3D_yrra0")
+size = Vector3(31.2159, 0.211917, 35.9948)
+material = SubResource("StandardMaterial3D_niks4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="groud"]
+root_node = NodePath("../CSGBox3D")
+libraries = {
+"": SubResource("AnimationLibrary_m1qai")
+}
+autoplay = "01"
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="Characters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0028801, 3.64404, -19.0335)
+radius = 1.946
+radial_segments = 4
+rings = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Characters/CSGSphere3D4"]
+libraries = {
+"": SubResource("AnimationLibrary_3dmcu")
+}
+autoplay = "new_animation"
+
+[node name="Signs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0756907, 0.87595, -8.4507)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Signs"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, 4, 0, -4, -1.74846e-07, 0, 0, -1.72748)
+lod_bias = 0.001
+snap = 1e-06
+radius = 0.152
+height = 0.309
+sides = 24
+cone = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Signs/CSGCylinder3D2"]
+transform = Transform3D(9.55343e-16, -2.18557e-08, -0.5, 4.37114e-08, -0.5, 2.18557e-08, -0.5, -4.37114e-08, 9.55343e-16, 0, -0.331699, -1.49012e-08)
+lod_bias = 0.001
+snap = 1e-06
+radius = 0.085
+height = 0.748182
+sides = 24
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Signs"]
+root_node = NodePath("../CSGBox3D")
+libraries = {
+"": SubResource("AnimationLibrary_m1qai")
+}
+autoplay = "01"
