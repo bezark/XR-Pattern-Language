@@ -22,7 +22,7 @@ script = ExtResource("1_ib5ux")
 layout_mode = 0
 offset_right = 1162.0
 offset_bottom = 655.0
-color = Color(0.980392, 0.980392, 0.980392, 1)
+color = Color(0.788235, 0.788235, 0.788235, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
