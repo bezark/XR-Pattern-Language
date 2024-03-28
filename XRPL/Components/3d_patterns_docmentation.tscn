@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv7c8h8sljems"]
+
+[ext_resource type="Script" path="res://Components/3d_patterns_docmentation.gd" id="1_ynvrc"]
+[ext_resource type="FontFile" uid="uid://dtwyw53bcweg3" path="res://PATTERNS/PATTERN NAME - CLARA/stuffs/ABCFavorit-Book-Trial copy.otf" id="3_avemb"]
+
+[sub_resource type="TextMesh" id="TextMesh_h75hb"]
+text = "Responsive VR Menu for Children"
+font_size = 32
+
+[sub_resource type="TextMesh" id="TextMesh_aw42n"]
+text = "Bella Hwang"
+font_size = 24
+
+[sub_resource type="TextMesh" id="TextMesh_3uw0a"]
+text = "Context
+"
+
+[sub_resource type="TextMesh" id="TextMesh_wttsv"]
+text = "Problem"
+
+[sub_resource type="TextMesh" id="TextMesh_jh8o6"]
+text = "Solution
+"
+
+[node name="3DPatternsDocmentation" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636377, 0)
+script = ExtResource("1_ynvrc")
+
+[node name="Pattern" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.899748, -1.32096)
+mesh = SubResource("TextMesh_h75hb")
+
+[node name="Author" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.476862, -1.32096)
+mesh = SubResource("TextMesh_aw42n")
+
+[node name="CPS" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.484239, 0, 0.244883)
+
+[node name="Context" type="MeshInstance3D" parent="CPS"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.26496, -0.163149, 0.481948)
+mesh = SubResource("TextMesh_3uw0a")
+skeleton = NodePath("../..")
+
+[node name="Text" type="Label3D" parent="CPS/Context"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.233557, 0)
+pixel_size = 0.0005
+texture_filter = 1
+modulate = Color(0.521569, 0.505882, 0.560784, 1)
+text = "The Responsive VR Menu, meticulously designed with the younger audience in mind, is expressly tailored to cater to their unique preferences and needs, ensuring it is brimming with content that not only captivates their imagination but also provides substantial entertainment value. This cutting-edge menu system features an exceptionally user-friendly interface, which significantly simplifies the process of navigation across various functionalities, thereby making the selection of diverse options a seamless and effortless endeavor for children. Among its many innovative features, one particularly notable functionality enables children to interact directly with a variety of animated animal characters, such as dogs, utilizing voice commands. This interaction introduces an additional layer of engagement and fun, enhancing their overall experience in the virtual realm.The virtual environment within which this VR menu operates is teeming with life and vibrancy, showcasing a background that is abundantly rich in animated animals. This creates a thoroughly playful and inviting atmosphere, encouraging children to explore and interact within this digital landscape. Furthermore, this VR menu is ingeniously designed to adapt its scale dynamically, conforming to the stature of each individual child user. This ensures that the interface is consistently optimized to the perfect size, facilitating the best possible interaction and usability. Such meticulous attention to detail in the design process guarantees that children are provided with an experience that is not only tailored specifically to their needs but also offers an immersive VR experience that fosters exploration, learning, and fun in a manner that is both natural and intuitively appealing to them, thus setting a new standard in interactive digital experiences for young audiences."
+font = ExtResource("3_avemb")
+font_size = 96
+outline_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 4000.0
+
+[node name="Problem" type="MeshInstance3D" parent="CPS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0487337, -0.163149, -0.587819)
+mesh = SubResource("TextMesh_wttsv")
+skeleton = NodePath("../..")
+
+[node name="Text" type="Label3D" parent="CPS/Problem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.233557, 0)
+pixel_size = 0.0005
+texture_filter = 1
+modulate = Color(0.521569, 0.505882, 0.560784, 1)
+text = "The Responsive VR Menu, meticulously designed with the younger audience in mind, is expressly tailored to cater to their unique preferences and needs, ensuring it is brimming with content that not only captivates their imagination but also provides substantial entertainment value. This cutting-edge menu system features an exceptionally user-friendly interface, which significantly simplifies the process of navigation across various functionalities, thereby making the selection of diverse options a seamless and effortless endeavor for children. Among its many innovative features, one particularly notable functionality enables children to interact directly with a variety of animated animal characters, such as dogs, utilizing voice commands. This interaction introduces an additional layer of engagement and fun, enhancing their overall experience in the virtual realm.The virtual environment within which this VR menu operates is teeming with life and vibrancy, showcasing a background that is abundantly rich in animated animals. This creates a thoroughly playful and inviting atmosphere, encouraging children to explore and interact within this digital landscape. Furthermore, this VR menu is ingeniously designed to adapt its scale dynamically, conforming to the stature of each individual child user. This ensures that the interface is consistently optimized to the perfect size, facilitating the best possible interaction and usability. Such meticulous attention to detail in the design process guarantees that children are provided with an experience that is not only tailored specifically to their needs but also offers an immersive VR experience that fosters exploration, learning, and fun in a manner that is both natural and intuitively appealing to them, thus setting a new standard in interactive digital experiences for young audiences."
+font = ExtResource("3_avemb")
+font_size = 96
+outline_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 4000.0
+
+[node name="Solution" type="MeshInstance3D" parent="CPS"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 1.24376, -0.163149, 0.61646)
+mesh = SubResource("TextMesh_jh8o6")
+skeleton = NodePath("../..")
+
+[node name="Text" type="Label3D" parent="CPS/Solution"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.233557, 0)
+pixel_size = 0.0005
+texture_filter = 1
+modulate = Color(0.521569, 0.505882, 0.560784, 1)
+text = "The Responsive VR Menu, meticulously designed with the younger audience in mind, is expressly tailored to cater to their unique preferences and needs, ensuring it is brimming with content that not only captivates their imagination but also provides substantial entertainment value. This cutting-edge menu system features an exceptionally user-friendly interface, which significantly simplifies the process of navigation across various functionalities, thereby making the selection of diverse options a seamless and effortless endeavor for children. Among its many innovative features, one particularly notable functionality enables children to interact directly with a variety of animated animal characters, such as dogs, utilizing voice commands. This interaction introduces an additional layer of engagement and fun, enhancing their overall experience in the virtual realm.The virtual environment within which this VR menu operates is teeming with life and vibrancy, showcasing a background that is abundantly rich in animated animals. This creates a thoroughly playful and inviting atmosphere, encouraging children to explore and interact within this digital landscape. Furthermore, this VR menu is ingeniously designed to adapt its scale dynamically, conforming to the stature of each individual child user. This ensures that the interface is consistently optimized to the perfect size, facilitating the best possible interaction and usability. Such meticulous attention to detail in the design process guarantees that children are provided with an experience that is not only tailored specifically to their needs but also offers an immersive VR experience that fosters exploration, learning, and fun in a manner that is both natural and intuitively appealing to them, thus setting a new standard in interactive digital experiences for young audiences."
+font = ExtResource("3_avemb")
+font_size = 96
+outline_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 4000.0

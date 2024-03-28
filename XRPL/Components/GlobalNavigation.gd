@@ -1,6 +1,6 @@
 extends Node3D
 
-var currentPattern : PatternInfo : set = set_pattern
+@export var currentPattern : PatternInfo : set = set_pattern
 
 const BUBBLE = preload("res://Components/bubble.tscn")
 
@@ -18,6 +18,11 @@ func set_pattern(new_pattern):
 	#poetic_bubble.text_override("Poetic Expression")
 
 @onready var local_bubbles = $LocalBubbles
+
+func populate_docs(docs):
+	docs.populate(currentPattern)
+
+
 
 func recenter(pos):
 	print(pos)

@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://4sfk4gv6lmtm"]
+[gd_scene load_steps=11 format=3 uid="uid://4sfk4gv6lmtm"]
 
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_5cfqa"]
+[ext_resource type="Script" path="res://Components/XROriginWatcher.gd" id="1_106jb"]
 [ext_resource type="Script" path="res://Components/Patterns.gd" id="2_51axs"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_osju1"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_jidew"]
 [ext_resource type="Resource" uid="uid://di5cxd7jup6p0" path="res://Components/PatternDatabase.tres" id="3_wo6jm"]
+[ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_fhwxv"]
+[ext_resource type="PackedScene" uid="uid://byoyitvl3nrlb" path="res://Components/testhand.tscn" id="5_6th55"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hsklc"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -27,8 +31,51 @@ environment = SubResource("Environment_fm7e2")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="XROrigin3D" parent="." instance=ExtResource("2_5cfqa")]
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0113685, 0, 0.000809193)
+script = ExtResource("1_106jb")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="LeftHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+hand_skeleton = NodePath("Lefty")
+
+[node name="Lefty" parent="XROrigin3D/LeftHandTracker" instance=ExtResource("2_osju1")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="RightHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+hand = 1
+hand_skeleton = NodePath("Righty")
+
+[node name="Righty" parent="XROrigin3D/RightHandTracker" instance=ExtResource("3_jidew")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="XROrigin3D/Left"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="XROrigin3D/Right"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="HomeBubble" parent="XROrigin3D" instance=ExtResource("4_fhwxv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.59488, 0.256217)
+
+[node name="CSGBox3D" parent="XROrigin3D" instance=ExtResource("5_6th55")]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0649718, 1.12223, -1.75181)
+visible = false
 
 [node name="Patterns" type="Node3D" parent="."]
 script = ExtResource("2_51axs")

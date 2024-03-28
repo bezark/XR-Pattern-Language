@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://d1igt781wqslj"]
+[gd_scene load_steps=14 format=3 uid="uid://d1igt781wqslj"]
 
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_mls7o"]
+[ext_resource type="PackedScene" uid="uid://dv7c8h8sljems" path="res://Components/3d_patterns_docmentation.tscn" id="2_oiyfa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nnyhr"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -108,12 +109,13 @@ transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -
 shadow_enabled = true
 
 [node name="XROrigin3D" parent="." instance=ExtResource("1_mls7o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52052, -2.49578)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.43105, 3.52052, -2.49578)
 
 [node name="groud" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="groud"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669804, -0.081465, -18.1951)
+visible = false
 material_override = SubResource("StandardMaterial3D_yrra0")
 size = Vector3(31.2159, 0.211917, 35.9948)
 material = SubResource("StandardMaterial3D_niks4")
@@ -165,3 +167,7 @@ libraries = {
 "": SubResource("AnimationLibrary_m1qai")
 }
 autoplay = "01"
+
+[node name="3DPatternsDocmentation" parent="." instance=ExtResource("2_oiyfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.88711, -5.48985)
+visible = false

@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4n4kbwf34cvp"]
+
+[ext_resource type="Script" path="res://Components/PoeticBubble.gd" id="1_3hjre"]
+[ext_resource type="Material" uid="uid://bxwlnecpex83i" path="res://Components/bubble.tres" id="2_b2gsq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u75o7"]
+radius = 0.404632
+
+[sub_resource type="SphereMesh" id="SphereMesh_p0fha"]
+material = ExtResource("2_b2gsq")
+radius = 0.4
+height = 0.8
+
+[sub_resource type="Animation" id="Animation_1w6w2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_k1bch"]
+resource_name = "grow"
+length = 3.0
+step = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.78, 1.875),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(20, 20, 20), Vector3(1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.785),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enter_bubble"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tsc55"]
+_data = {
+"RESET": SubResource("Animation_1w6w2"),
+"grow": SubResource("Animation_k1bch")
+}
+
+[node name="PoeticBubble" type="CharacterBody3D" groups=["bubble"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_3hjre")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_u75o7")
+
+[node name="Bubble" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_p0fha")
+
+[node name="PatternName" type="Label3D" parent="."]
+billboard = 2
+text = "Poetic
+Expression"
+outline_size = 0
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_u75o7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tsc55")
+}
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

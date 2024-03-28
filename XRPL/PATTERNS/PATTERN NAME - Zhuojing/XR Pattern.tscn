@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://cewrnset1usxx"]
+[gd_scene load_steps=19 format=3 uid="uid://cewrnset1usxx"]
 
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Zhuojing/XR Pattern.gd" id="1_4rmky"]
 [ext_resource type="PackedScene" uid="uid://c26cmgevyb66d" path="res://PATTERNS/PATTERN NAME - Zhuojing/Zhuojing - Poetic/art_studio/scene.gltf" id="3_3t2wi"]
 [ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_d3rei"]
+[ext_resource type="PackedScene" uid="uid://dv7c8h8sljems" path="res://Components/3d_patterns_docmentation.tscn" id="4_mnntd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_750al"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -58,7 +59,7 @@ script = ExtResource("1_4rmky")
 environment = SubResource("Environment_gddmy")
 
 [node name="Studio Model" parent="." instance=ExtResource("3_3t2wi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.231685, -0.0149903, 6.1317)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.231685, -0.0149903, 8.61698)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97509, 0)
@@ -122,6 +123,10 @@ shape = SubResource("SphereShape3D_jh5xr")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_d3rei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22758, -0.257225, 9.86029)
+
+[node name="3DPatternsDocmentation" parent="." instance=ExtResource("4_mnntd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87789, 9.27288)
+visible = false
 
 [connection signal="area_entered" from="Torus/TorusArea3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="Sphere/Light On/sphereArea3D" to="." method="_on_sphere_area_3d_area_entered"]

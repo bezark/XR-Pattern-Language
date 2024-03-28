@@ -1,9 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdpl5w47g7vai"]
+[gd_scene load_steps=14 format=3 uid="uid://bdpl5w47g7vai"]
 
 [ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="1_76vbm"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_3l5pr"]
+[ext_resource type="Script" path="res://Components/XROriginWatcher.gd" id="2_st3l6"]
 [ext_resource type="Texture2D" uid="uid://b67my3qqufbjr" path="res://PATTERNS/PATTERN NAME - Bella/Group 8.jpg" id="3_dpdl0"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="3_xoj7w"]
 [ext_resource type="Texture2D" uid="uid://cgx2fpvoxa33p" path="res://PATTERNS/PATTERN NAME - Bella/grass-texture-background_64049-124 (1).jpg" id="4_gt3dp"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="4_oorjo"]
+[ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="5_nvfr2"]
+[ext_resource type="PackedScene" uid="uid://dv7c8h8sljems" path="res://Components/3d_patterns_docmentation.tscn" id="5_wa8ov"]
+[ext_resource type="PackedScene" uid="uid://byoyitvl3nrlb" path="res://Components/testhand.tscn" id="6_fqk5l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmy4c"]
 albedo_texture = ExtResource("1_76vbm")
@@ -26,9 +31,54 @@ visible = false
 material_override = SubResource("StandardMaterial3D_lmy4c")
 mesh = SubResource("QuadMesh_u0ugv")
 
-[node name="XROrigin3D" parent="BigImmmersiveWebsite" instance=ExtResource("2_3l5pr")]
+[node name="XROrigin3D" type="XROrigin3D" parent="BigImmmersiveWebsite"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.192211, 0, 1.33567)
+script = ExtResource("2_st3l6")
 
-[node name="XRCamera3D2" type="XRCamera3D" parent="BigImmmersiveWebsite/XROrigin3D"]
+[node name="XRCamera3D" type="XRCamera3D" parent="BigImmmersiveWebsite/XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="LeftHandTracker" type="OpenXRHand" parent="BigImmmersiveWebsite/XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+hand_skeleton = NodePath("Lefty")
+
+[node name="Lefty" parent="BigImmmersiveWebsite/XROrigin3D/LeftHandTracker" instance=ExtResource("3_xoj7w")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="RightHandTracker" type="OpenXRHand" parent="BigImmmersiveWebsite/XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+hand = 1
+hand_skeleton = NodePath("Righty")
+
+[node name="Righty" parent="BigImmmersiveWebsite/XROrigin3D/RightHandTracker" instance=ExtResource("4_oorjo")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
+
+[node name="Left" type="XRController3D" parent="BigImmmersiveWebsite/XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BigImmmersiveWebsite/XROrigin3D/Left"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Right" type="XRController3D" parent="BigImmmersiveWebsite/XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="BigImmmersiveWebsite/XROrigin3D/Right"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="HomeBubble" parent="BigImmmersiveWebsite/XROrigin3D" instance=ExtResource("5_nvfr2")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.59488, 0.256217)
+
+[node name="CSGBox3D" parent="BigImmmersiveWebsite/XROrigin3D" instance=ExtResource("6_fqk5l")]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0649718, 1.12223, -1.75181)
+visible = false
+
+[node name="3DPatternsDocmentation" parent="BigImmmersiveWebsite/XROrigin3D" instance=ExtResource("5_wa8ov")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 1.98372, -1.25744)
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="BigImmmersiveWebsite"]
 transform = Transform3D(1, -3.48787e-16, -3.48787e-16, -3.48787e-16, -1, 8.74228e-08, -3.48787e-16, -8.74228e-08, -1, 0, 1.08202, 0)

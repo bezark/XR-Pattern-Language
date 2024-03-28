@@ -10,8 +10,6 @@ Author = ""
 Context = ""
 Problem = ""
 Solution = ""
-OutsidePatterns = Array[PackedScene]([])
-InsidePatterns = Array[PackedScene]([])
 
 [node name="PatternDocumentation" type="Control"]
 layout_mode = 3
