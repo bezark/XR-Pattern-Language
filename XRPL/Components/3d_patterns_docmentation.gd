@@ -19,5 +19,7 @@ func populate(pattern_info):
 	if pattern_info.Poetic_Expression:
 		var bubby = POETIC_BUBBLE.instantiate()
 		bubby.poetic = pattern_info.Poetic_Expression
+		bubby.position = $PoeticMarker.position
 		add_child(bubby)
-	
+		#bubby.position.y -= 2
+		#bubby.position = $PoeticMarker.position

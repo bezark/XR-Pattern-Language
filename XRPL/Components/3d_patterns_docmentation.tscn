@@ -93,3 +93,6 @@ horizontal_alignment = 0
 vertical_alignment = 0
 autowrap_mode = 2
 width = 4000.0
+
+[node name="PoeticMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19927, -1.0716, 1.16885)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btgc6l7y2tgpj" path="res://PATTERNS/PATTERN NAME - Ritu/Screenshot 2024-03-26 032337.png" id="1_jqgmw"]
 [ext_resource type="PackedScene" uid="uid://dopreygce8ruf" path="res://PATTERNS/PATTERN NAME - Ritu/navigation_npc.tscn" id="2_egs6a"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="3_50wql"]
+[ext_resource type="PackedScene" uid="uid://c50ac5v4pwmsh" path="res://Components/poetic_xr_basics_with_hands.tscn" id="3_rq15r"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_yj6ny"]
 vertices = PackedVector3Array(-4.00916, 0.5, 3.98943, 1.74084, 0.5, 3.98943, 1.49084, 0.5, 2.48943, 1.49084, 0.5, 2.48943, 3.74084, 0.5, 1.48943, 3.74084, 0.5, -4.01057, -4.00916, 0.5, -4.01057, -4.00916, 0.5, 3.98943)
@@ -150,8 +150,8 @@ autowrap_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0477905, -0.0196228, 0)
 shape = SubResource("BoxShape3D_87wme")
 
-[node name="XROrigin3D" parent="." instance=ExtResource("3_50wql")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.757928, 5.16764)
+[node name="XROrigin3D" parent="." instance=ExtResource("3_rq15r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.58886)
 
 [connection signal="child_entered_tree" from="WorldEnvironment" to="LOVEBIRD 1" method="_on_world_environment_child_entered_tree"]
 [connection signal="area_entered" from="Label3D/Area3D" to="LOVEBIRD 1" method="_on_area_3d_area_entered"]

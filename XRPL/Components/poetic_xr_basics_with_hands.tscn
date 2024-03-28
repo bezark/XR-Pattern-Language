@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://c50ac5v4pwmsh"]
+
+[ext_resource type="Script" path="res://Components/XROriginWatcher.gd" id="1_2gb0i"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_hqjt2"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_lcgvi"]
+[ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_jpc4v"]
+[ext_resource type="PackedScene" uid="uid://byoyitvl3nrlb" path="res://Components/testhand.tscn" id="5_7k5sp"]
+
+[node name="XROrigin3D" type="XROrigin3D"]
+script = ExtResource("1_2gb0i")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="LeftHandTracker" type="OpenXRHand" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+hand_skeleton = NodePath("Lefty")
+
+[node name="Lefty" parent="LeftHandTracker" instance=ExtResource("2_hqjt2")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="RightHandTracker" type="OpenXRHand" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+hand = 1
+hand_skeleton = NodePath("Righty")
+
+[node name="Righty" parent="RightHandTracker" instance=ExtResource("3_lcgvi")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
+
+[node name="Left" type="XRController3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Left"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Right" type="XRController3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Right"]
+visible = false
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="HomeBubble" parent="." instance=ExtResource("4_jpc4v")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.193278, 1.73987, 0.432512)
+
+[node name="CSGBox3D" parent="." instance=ExtResource("5_7k5sp")]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0649718, 1.12223, -1.75181)
+visible = false

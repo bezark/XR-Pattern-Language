@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://05w4jdy6b5qs"]
+
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Kevin/example_pattern_ Cubes_are_Cool.tscn" id="1_a77kr"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_haajh"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_6sugt"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Kevin/DrawingController.gd" id="4_inn1a"]
+
+[sub_resource type="Curve3D" id="Curve3D_ueiaw"]
+
+[node name="Technical Expression" type="Node3D"]
+
+[node name="Example Pattern Cubes are Cool" parent="." instance=ExtResource("1_a77kr")]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59155)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="LeftHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+hand_skeleton = NodePath("Lefty")
+
+[node name="Lefty" parent="XROrigin3D/LeftHandTracker" instance=ExtResource("2_haajh")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="RightHandTracker" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+hand = 1
+hand_skeleton = NodePath("Righty")
+
+[node name="Righty" parent="XROrigin3D/RightHandTracker" instance=ExtResource("3_6sugt")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="XROrigin3D/Left"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.999411, 1, -1.09933)
+tracker = &"right_hand"
+script = ExtResource("4_inn1a")
+
+[node name="Path3D" type="Path3D" parent="XROrigin3D/Right"]
+curve = SubResource("Curve3D_ueiaw")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="XROrigin3D/Right/Path3D"]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Right/Path3D/PathFollow3D"]
+radius = 0.103154
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="XROrigin3D/Right"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[connection signal="button_pressed" from="XROrigin3D/Right" to="XROrigin3D/Right" method="_on_button_pressed"]

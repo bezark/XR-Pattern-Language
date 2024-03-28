@@ -1,8 +1,8 @@
 [gd_scene load_steps=24 format=3 uid="uid://dp6wnrbspb5to"]
 
 [ext_resource type="Texture2D" uid="uid://dwald3mi2u84c" path="res://Examples/Pasted image.png" id="1_7ufen"]
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="2_peeue"]
 [ext_resource type="Texture2D" uid="uid://b67my3qqufbjr" path="res://PATTERNS/PATTERN NAME - Bella/Group 8.jpg" id="3_ahu28"]
+[ext_resource type="PackedScene" uid="uid://c50ac5v4pwmsh" path="res://Components/poetic_xr_basics_with_hands.tscn" id="3_lv1ra"]
 [ext_resource type="Texture2D" uid="uid://cgx2fpvoxa33p" path="res://PATTERNS/PATTERN NAME - Bella/grass-texture-background_64049-124 (1).jpg" id="4_f0knw"]
 [ext_resource type="PackedScene" uid="uid://de7o4al1meba0" path="res://PATTERNS/PATTERN NAME - Bella/Duck.tscn" id="5_25q68"]
 
@@ -233,10 +233,6 @@ visible = false
 material_override = SubResource("StandardMaterial3D_lmy4c")
 mesh = SubResource("QuadMesh_u0ugv")
 
-[node name="XROrigin3D" parent="Technical Expression2/BigImmmersiveWebsite" instance=ExtResource("2_peeue")]
-
-[node name="XRCamera3D2" type="XRCamera3D" parent="Technical Expression2/BigImmmersiveWebsite/XROrigin3D"]
-
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Technical Expression2/BigImmmersiveWebsite"]
 transform = Transform3D(1, -3.48787e-16, -3.48787e-16, -3.48787e-16, -1, 8.74228e-08, -3.48787e-16, -8.74228e-08, -1, 0, 1.08202, 0)
 material_override = SubResource("StandardMaterial3D_orshe")
@@ -244,6 +240,9 @@ flip_faces = true
 radius = 2.00544
 height = 3.861
 sides = 38
+
+[node name="XROrigin3D" parent="Technical Expression2/BigImmmersiveWebsite" instance=ExtResource("3_lv1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27444, 1.13581)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Technical Expression2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6435, -0.789242, 5.11029)

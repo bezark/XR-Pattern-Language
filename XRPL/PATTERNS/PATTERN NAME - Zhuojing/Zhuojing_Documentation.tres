@@ -13,5 +13,3 @@ Problem = "The main problem is that current XR applications typically use a gene
 Solution = "Develop and implement flexible user interface interactions in XR scenarios that allow users to personalize them according to their needs and preferences. In this way, XR applications can better meet the individual needs of all users."
 Technical_Expression = ExtResource("2_1idbn")
 Poetic_Expression = ExtResource("1_pxn4e")
-OutsidePatterns = Array[PackedScene]([])
-InsidePatterns = Array[PackedScene]([])

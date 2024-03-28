@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://r3x6nvux515n"]
+[gd_scene load_steps=6 format=3 uid="uid://g7g1kr00pylr"]
 
-[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Zhuojing/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
+[ext_resource type="PackedScene" uid="uid://wkxwo7cgrljd" path="res://PATTERNS/PATTERN NAME - Kevin/example_pattern_ Cubes_are_Cool.tscn" id="1_jmkaj"]
 [ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_40oo1"]
 [ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_haf03"]
 [ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Kevin/DrawingController.gd" id="4_t5vg3"]

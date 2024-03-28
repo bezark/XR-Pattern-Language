@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://jrb38m1010xs"]
 
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_dpxh6"]
+[ext_resource type="PackedScene" uid="uid://c50ac5v4pwmsh" path="res://Components/poetic_xr_basics_with_hands.tscn" id="2_6qvbl"]
 [ext_resource type="Texture2D" uid="uid://dcj053stww7gr" path="res://PATTERNS/PATTERN NAME - Douglas/th.jpg" id="2_73qk7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tid3t"]
@@ -272,11 +272,12 @@ libraries = {
 }
 autoplay = "01"
 
-[node name="XROrigin3D" parent="." instance=ExtResource("1_dpxh6")]
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Backgroud/Node/Groud")
 libraries = {
 "": SubResource("AnimationLibrary_m1qai")
 }
 autoplay = "01"
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_6qvbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.79799, 0)
