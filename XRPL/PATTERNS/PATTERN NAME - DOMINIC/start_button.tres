@@ -1,18 +1,18 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cggnk3vdy07ox"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dmgusx3tn3rdt"]
 
-[ext_resource type="Texture2D" uid="uid://o00ojju2wdgn" path="res://ui buttons/start_hov.png" id="1_xehum"]
-[ext_resource type="Texture2D" uid="uid://cgv4t8jnwqxbr" path="res://ui buttons/start_reg.png" id="2_lcf5e"]
-[ext_resource type="Texture2D" uid="uid://bcqnppg1j2cc4" path="res://ui buttons/start_press.png" id="3_24khe"]
+[ext_resource type="Texture2D" uid="uid://xydrie7bav66" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 2.png" id="1_5woi2"]
+[ext_resource type="Texture2D" uid="uid://mfct5vvuoxrs" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 1.png" id="2_vktvl"]
+[ext_resource type="Texture2D" uid="uid://c6btg7sackyrs" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 3.png" id="3_12hj8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n18mw"]
-texture = ExtResource("1_xehum")
+texture = ExtResource("1_5woi2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rh1nd"]
-texture = ExtResource("2_lcf5e")
+texture = ExtResource("2_vktvl")
 texture_margin_top = 140.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ojdtw"]
-texture = ExtResource("3_24khe")
+texture = ExtResource("3_12hj8")
 
 [resource]
 Button/styles/hover = SubResource("StyleBoxTexture_n18mw")

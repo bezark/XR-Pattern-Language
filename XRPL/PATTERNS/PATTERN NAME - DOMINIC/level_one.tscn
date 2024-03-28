@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b6e31nkm3i6yv"]
 
-[ext_resource type="PackedScene" uid="uid://6diceiir62cm" path="res://ui buttons/level1_0327.glb" id="1_kq3d3"]
+[ext_resource type="PackedScene" uid="uid://ibb01cxdy4s" path="res://PATTERNS/PATTERN NAME - DOMINIC/level1_0327.glb" id="1_kq3d3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_usv5y"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

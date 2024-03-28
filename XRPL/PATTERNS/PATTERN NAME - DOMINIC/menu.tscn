@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cda5ga5yg3muh"]
+[gd_scene load_steps=7 format=3 uid="uid://cda5ga5yg3muh"]
 
-[ext_resource type="Texture2D" uid="uid://cpk4laue47ypr" path="res://images/0042.png" id="1_55bpb"]
-[ext_resource type="Script" path="res://menu.gd" id="1_ib5ux"]
-[ext_resource type="Texture2D" uid="uid://cll4f07ih836u" path="res://images/HNI_0098.JPG" id="2_0tpmb"]
-[ext_resource type="Theme" uid="uid://cggnk3vdy07ox" path="res://start_button.tres" id="3_g0k8k"]
-[ext_resource type="Theme" uid="uid://c4yubuefo1j6j" path="res://guide_button.tres" id="4_miehe"]
-[ext_resource type="Theme" uid="uid://dgdskl1wyrtw" path="res://quit_button.tres" id="5_vhqve"]
+[ext_resource type="Texture2D" uid="uid://c8kvqdfo5jtyv" path="res://PATTERNS/PATTERN NAME - DOMINIC/level1_0327_s-l1200.jpg" id="1_55bpb"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - DOMINIC/menu.gd" id="1_ib5ux"]
+[ext_resource type="Texture2D" uid="uid://bbveq8545j1ap" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 24menumains.png" id="2_r18kd"]
+[ext_resource type="Theme" uid="uid://dmgusx3tn3rdt" path="res://PATTERNS/PATTERN NAME - DOMINIC/start_button.tres" id="4_miehe"]
+[ext_resource type="Theme" uid="uid://dfcpyhvxvinnr" path="res://PATTERNS/PATTERN NAME - DOMINIC/quit_button.tres" id="5_vhqve"]
 
 [sub_resource type="Theme" id="Theme_3s76c"]
 
@@ -25,20 +24,20 @@ offset_bottom = 655.0
 color = Color(0.788235, 0.788235, 0.788235, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
-offset_left = 1.0
-offset_top = 178.0
-offset_right = 641.0
-offset_bottom = 658.0
-texture = ExtResource("2_0tpmb")
+offset_left = -163.0
+offset_top = -7.0
+offset_right = 1639.0
+offset_bottom = 939.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_r18kd")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 467.0
-offset_top = -77.0
-offset_right = 1177.0
-offset_bottom = 1008.0
+offset_left = 728.0
+offset_right = 1438.0
+offset_bottom = 1085.0
+scale = Vector2(0.627113, 0.609583)
 texture = ExtResource("1_55bpb")
 expand_mode = 1
 
@@ -54,18 +53,21 @@ mouse_default_cursor_shape = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_top = 2.0
-offset_right = 394.0
-offset_bottom = 142.0
+offset_left = 47.0
+offset_top = 330.0
+offset_right = 441.0
+offset_bottom = 470.0
+scale = Vector2(0.44, 0.44)
 mouse_default_cursor_shape = 3
 theme = SubResource("Theme_3s76c")
 
 [node name="start" type="Button" parent="MarginContainer"]
 layout_mode = 2
-theme = ExtResource("3_g0k8k")
+theme = ExtResource("4_miehe")
 alignment = 0
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 356.0
 offset_right = 750.0
@@ -74,15 +76,18 @@ mouse_default_cursor_shape = 3
 theme = SubResource("Theme_3s76c")
 
 [node name="guide" type="Button" parent="MarginContainer2"]
+visible = false
 layout_mode = 2
 theme = ExtResource("4_miehe")
 alignment = 0
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 753.0
-offset_right = 1147.0
-offset_bottom = 140.0
+offset_left = 50.0
+offset_top = 397.0
+offset_right = 444.0
+offset_bottom = 537.0
+scale = Vector2(0.44, 0.44)
 mouse_default_cursor_shape = 3
 theme = SubResource("Theme_3s76c")
 
@@ -90,6 +95,14 @@ theme = SubResource("Theme_3s76c")
 layout_mode = 2
 theme = ExtResource("5_vhqve")
 alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 33.0
+offset_right = 831.0
+offset_bottom = 73.0
+scale = Vector2(7.28, 7.28)
 
 [connection signal="pressed" from="MarginContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer2/guide" to="." method="_on_guide_pressed"]

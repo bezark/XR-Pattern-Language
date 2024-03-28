@@ -1,21 +1,21 @@
 [gd_scene load_steps=12 format=3 uid="uid://doccdt2aw1q4l"]
 
-[ext_resource type="Script" path="res://guide.gd" id="1_o1kne"]
-[ext_resource type="Texture2D" uid="uid://cgovecyqcyqjs" path="res://ui buttons/Artboard 21guide.png" id="1_usurb"]
-[ext_resource type="Texture2D" uid="uid://tvhqitxqyjrg" path="res://images/mechamecha02.png" id="2_ejua3"]
-[ext_resource type="Texture2D" uid="uid://dlsxvkt1hnhsn" path="res://ui buttons/Artboard 9guide2.png" id="3_eojaq"]
-[ext_resource type="Texture2D" uid="uid://lshib1juoe5i" path="res://ui buttons/back_button__HOVER.png" id="5_ab7bj"]
-[ext_resource type="Texture2D" uid="uid://blixdhb5pac3" path="res://ui buttons/back_button.png" id="6_3pj56"]
-[ext_resource type="Texture2D" uid="uid://bquwwse0iinib" path="res://ui buttons/back_button_PRESSED.png" id="7_2lb2w"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - DOMINIC/guide.gd" id="1_o1kne"]
+[ext_resource type="Texture2D" uid="uid://5fxsnayvhxdp" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 21guides_new.png" id="2_1qbe0"]
+[ext_resource type="Texture2D" uid="uid://thw0qdf63tb5" path="res://PATTERNS/PATTERN NAME - DOMINIC/level1_0327_VendingMachine_BC.png" id="2_ejua3"]
+[ext_resource type="Texture2D" uid="uid://bu3kkeg3c3ee" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 9next.png" id="3_eojaq"]
+[ext_resource type="Texture2D" uid="uid://dkyagu3kcuikx" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 22menumains.png" id="3_oyh61"]
+[ext_resource type="Texture2D" uid="uid://cc36i1ovqh2sb" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 10next.png" id="6_her4s"]
+[ext_resource type="Texture2D" uid="uid://cptqq5gvbx4er" path="res://PATTERNS/PATTERN NAME - DOMINIC/Artboard 11next.png" id="8_4kkww"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ha3v"]
-texture = ExtResource("5_ab7bj")
+texture = ExtResource("6_her4s")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knyik"]
-texture = ExtResource("6_3pj56")
+texture = ExtResource("3_eojaq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7aghm"]
-texture = ExtResource("7_2lb2w")
+texture = ExtResource("8_4kkww")
 
 [sub_resource type="Theme" id="Theme_acova"]
 Button/styles/hover = SubResource("StyleBoxTexture_5ha3v")
@@ -44,37 +44,36 @@ offset_left = 89.0
 offset_top = 135.0
 offset_right = 745.0
 offset_bottom = 484.0
-texture = ExtResource("1_usurb")
+texture = ExtResource("2_1qbe0")
+expand_mode = 1
+
+[node name="beta" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 191.0
+offset_right = 1004.0
+offset_bottom = 307.0
+rotation = -0.436332
+texture = ExtResource("3_oyh61")
 expand_mode = 1
 
 [node name="mecha" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 789.0
-offset_top = -75.0
-offset_right = 1266.0
-offset_bottom = 773.0
+offset_left = 770.0
+offset_top = -49.0
+offset_right = 1247.0
+offset_bottom = 799.0
 texture = ExtResource("2_ejua3")
-expand_mode = 1
-metadata/_edit_lock_ = true
-
-[node name="guide" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 24.0
-offset_right = 290.0
-offset_bottom = 138.0
-texture = ExtResource("3_eojaq")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 898.0
-offset_right = 1153.0
-offset_bottom = 109.0
-
-[node name="back" type="Button" parent="MarginContainer"]
-layout_mode = 2
-theme = SubResource("Theme_acova")
+offset_left = 871.0
+offset_top = 15.0
+offset_right = 1126.0
+offset_bottom = 124.0
+scale = Vector2(0.759995, 0.686006)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -82,4 +81,13 @@ offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 40.0
 
-[connection signal="pressed" from="MarginContainer/back" to="." method="_on_back_pressed"]
+[node name="next" type="Button" parent="."]
+layout_mode = 2
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 273.0
+offset_bottom = 124.0
+theme = SubResource("Theme_acova")
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_back_pressed"]
