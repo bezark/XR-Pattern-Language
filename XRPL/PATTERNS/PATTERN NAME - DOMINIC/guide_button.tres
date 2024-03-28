@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://c4yubuefo1j6j"]
 
-[ext_resource type="Texture2D" uid="uid://b3512loaodkp0" path="res://ui buttons/Artboard 10guide2.png" id="1_cfqrj"]
-[ext_resource type="Texture2D" uid="uid://dlsxvkt1hnhsn" path="res://ui buttons/Artboard 9guide2.png" id="2_ibdxd"]
-[ext_resource type="Texture2D" uid="uid://cvugljvntitdv" path="res://ui buttons/Artboard 11guide2.png" id="3_p0q2g"]
+[ext_resource type="Texture2D" uid="uid://b3512loaodkp0" path="res://PATTERNS/PATTERN NAME - DOMINIC/ui buttons/Artboard 10guide2.png" id="1_cfqrj"]
+[ext_resource type="Texture2D" uid="uid://dlsxvkt1hnhsn" path="res://PATTERNS/PATTERN NAME - DOMINIC/ui buttons/Artboard 9guide2.png" id="2_ibdxd"]
+[ext_resource type="Texture2D" uid="uid://cvugljvntitdv" path="res://PATTERNS/PATTERN NAME - DOMINIC/ui buttons/Artboard 11guide2.png" id="3_p0q2g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_537np"]
 texture = ExtResource("1_cfqrj")

@@ -151,7 +151,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0477905, -0.0196228, 0)
 shape = SubResource("BoxShape3D_87wme")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_rq15r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.58886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4.58886)
 
 [connection signal="child_entered_tree" from="WorldEnvironment" to="LOVEBIRD 1" method="_on_world_environment_child_entered_tree"]
 [connection signal="area_entered" from="Label3D/Area3D" to="LOVEBIRD 1" method="_on_area_3d_area_entered"]

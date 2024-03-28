@@ -65,8 +65,8 @@ func _on_timer_timeout():
 
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("finger"):
+		$AudioStreamPlayer3D.play()
 		$AnimationPlayer.play("grow")
-		
 func enter_bubble():
 	var scene_to_trigger
 	match scene_trigger:

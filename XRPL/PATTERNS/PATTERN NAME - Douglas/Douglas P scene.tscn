@@ -1,7 +1,19 @@
-[gd_scene load_steps=17 format=3 uid="uid://jrb38m1010xs"]
+[gd_scene load_steps=20 format=3 uid="uid://jrb38m1010xs"]
 
 [ext_resource type="PackedScene" uid="uid://c50ac5v4pwmsh" path="res://Components/poetic_xr_basics_with_hands.tscn" id="2_6qvbl"]
 [ext_resource type="Texture2D" uid="uid://dcj053stww7gr" path="res://PATTERNS/PATTERN NAME - Douglas/th.jpg" id="2_73qk7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1miky"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_w650j"]
+sky_material = SubResource("ProceduralSkyMaterial_1miky")
+
+[sub_resource type="Environment" id="Environment_dkgww"]
+background_mode = 2
+sky = SubResource("Sky_w650j")
+tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tid3t"]
 albedo_texture = ExtResource("2_73qk7")
@@ -161,8 +173,11 @@ _data = {
 [node name="DouglasPScene" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.12943, 35.3191)
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dkgww")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 0.913905, 0)
+transform = Transform3D(-0.910832, -0.409559, -0.0514398, 0.269965, -0.685331, 0.676343, -0.312256, 0.602148, 0.734788, 0, 0.913905, 0)
 shadow_enabled = true
 
 [node name="Backgroud" type="Node3D" parent="."]
@@ -280,4 +295,4 @@ libraries = {
 autoplay = "01"
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_6qvbl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.79799, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.23333, 0)

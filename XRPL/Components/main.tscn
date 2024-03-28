@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://4sfk4gv6lmtm"]
+[gd_scene load_steps=18 format=3 uid="uid://4sfk4gv6lmtm"]
 
 [ext_resource type="Script" path="res://Components/XROriginWatcher.gd" id="1_106jb"]
 [ext_resource type="Script" path="res://Components/Patterns.gd" id="2_51axs"]
@@ -7,6 +7,8 @@
 [ext_resource type="Resource" uid="uid://di5cxd7jup6p0" path="res://Components/PatternDatabase.tres" id="3_wo6jm"]
 [ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_fhwxv"]
 [ext_resource type="PackedScene" uid="uid://byoyitvl3nrlb" path="res://Components/testhand.tscn" id="5_6th55"]
+[ext_resource type="FontFile" uid="uid://dtwyw53bcweg3" path="res://PATTERNS/PATTERN NAME - CLARA/stuffs/ABCFavorit-Book-Trial copy.otf" id="8_0whn3"]
+[ext_resource type="AudioStream" uid="uid://8or41bfwy3bd" path="res://Components/reflected-light-147979.mp3" id="9_7xo3o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hsklc"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -22,14 +24,29 @@ background_color = Color(0, 0, 0, 0)
 sky = SubResource("Sky_xwd8t")
 tonemap_mode = 2
 
+[sub_resource type="TextMesh" id="TextMesh_h75hb"]
+text = "Towards an XR Pattern Language"
+font_size = 32
+
+[sub_resource type="TextMesh" id="TextMesh_aw42n"]
+text = "Design Media Spring 2024"
+font_size = 24
+
+[sub_resource type="TextMesh" id="TextMesh_3uw0a"]
+text = "Context
+"
+
+[sub_resource type="TextMesh" id="TextMesh_wttsv"]
+text = "Problem"
+
+[sub_resource type="TextMesh" id="TextMesh_jh8o6"]
+text = "Solution
+"
+
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fm7e2")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0113685, 0, 0.000809193)
@@ -80,3 +97,93 @@ visible = false
 [node name="Patterns" type="Node3D" parent="."]
 script = ExtResource("2_51axs")
 PD = ExtResource("3_wo6jm")
+
+[node name="3DPatternsDocmentation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.33815, 0)
+
+[node name="Pattern" type="MeshInstance3D" parent="3DPatternsDocmentation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.899748, -1.32096)
+mesh = SubResource("TextMesh_h75hb")
+
+[node name="Author" type="MeshInstance3D" parent="3DPatternsDocmentation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.476862, -1.32096)
+mesh = SubResource("TextMesh_aw42n")
+
+[node name="CPS" type="Node3D" parent="3DPatternsDocmentation"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.484239, 0, 0.244883)
+
+[node name="Context" type="MeshInstance3D" parent="3DPatternsDocmentation/CPS"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.26496, -0.163149, 0.481948)
+mesh = SubResource("TextMesh_3uw0a")
+skeleton = NodePath("../..")
+
+[node name="Text" type="Label3D" parent="3DPatternsDocmentation/CPS/Context"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.233557, 0)
+pixel_size = 0.0005
+texture_filter = 1
+text = "Welcome to the Metaverse aka XR aka Extended Reality aka a Pipe Dream aka a Promise aka a Scam aka a Dream Come True aka a Possible Future.
+
+The term metaverse originated in the 1992 science fiction novel Snow Crash as a portmanteau of \"meta\" and \"universe\". In Snow Crash, the metaverse is envisioned as a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality (VR) and augmented reality (AR) headsets.
+
+A Pattern Language, first coined by Christopher Alexander, is an organized and coherent set of patterns, each of which describes a problem and the core of a solution that can be used in many ways within a specific field of expertise.
+
+Design Media is a class taught at SVA which attempts to explore this terrain."
+font = ExtResource("8_0whn3")
+font_size = 96
+outline_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 4000.0
+
+[node name="Problem" type="MeshInstance3D" parent="3DPatternsDocmentation/CPS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0487337, -0.163149, -0.587819)
+mesh = SubResource("TextMesh_wttsv")
+skeleton = NodePath("../..")
+
+[node name="Text" type="Label3D" parent="3DPatternsDocmentation/CPS/Problem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.233557, 0)
+pixel_size = 0.0005
+texture_filter = 1
+text = "Currently the Metaverse is the wild west. Everyone from independent artists to the worlds largest corporations are trying to get in on the action and there are very few ground rules for designing applications that center user experience. In a field without mature design standards, how can we create a unified design language?"
+font = ExtResource("8_0whn3")
+font_size = 96
+outline_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 4000.0
+
+[node name="Solution" type="MeshInstance3D" parent="3DPatternsDocmentation/CPS"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 1.24376, -0.163149, 0.61646)
+mesh = SubResource("TextMesh_jh8o6")
+skeleton = NodePath("../..")
+
+[node name="Text" type="Label3D" parent="3DPatternsDocmentation/CPS/Solution"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.233557, 0)
+pixel_size = 0.0005
+texture_filter = 1
+text = "Create an Extended Reality Pattern Language. That is, create a series of modular and reusable components that offer solutions to some of the problems inherent in working in the medium of Extended Reality.
+
+Each of the bubbles floating around you is one of these patterns created by students of the Design Media class. They each contain their own reflections on a Context, a Problem and a Solution and they all have a working XR prototype of that solution. Some even contain poetic expressions of the solution.
+
+To interact, approach a bubble and pop it."
+font = ExtResource("8_0whn3")
+font_size = 96
+outline_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 4000.0
+
+[node name="PoeticMarker" type="Marker3D" parent="3DPatternsDocmentation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19927, -1.0716, 1.16885)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("9_7xo3o")
+volume_db = -3.0
+autoplay = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59526, 0)
+light_energy = 5.39

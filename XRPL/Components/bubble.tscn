@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dm5heg3sohhir"]
+[gd_scene load_steps=14 format=3 uid="uid://dm5heg3sohhir"]
 
 [ext_resource type="Script" path="res://Components/Bubble.gd" id="1_wwmb2"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="2_751rl"]
 [ext_resource type="Material" uid="uid://bxwlnecpex83i" path="res://Components/bubble.tres" id="2_i3eem"]
+[ext_resource type="AudioStream" uid="uid://ccim02onkanah" path="res://Components/interface-124464.mp3" id="4_n8g35"]
 
 [sub_resource type="Resource" id="Resource_bkphc"]
 script = ExtResource("2_751rl")
@@ -93,9 +94,11 @@ shape = SubResource("SphereShape3D_u75o7")
 mesh = SubResource("SphereMesh_p0fha")
 
 [node name="PatternName" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.530709, 0)
 billboard = 2
-text = "NAME"
+text = " NAMENAMENAME NAME NAMENAME"
 outline_size = 0
+autowrap_mode = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false
@@ -116,6 +119,9 @@ shape = SubResource("SphereShape3D_u75o7")
 libraries = {
 "": SubResource("AnimationLibrary_tsc55")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_n8g35")
 
 [connection signal="timeout" from="WanderTimer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

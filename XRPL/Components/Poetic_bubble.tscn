@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4n4kbwf34cvp"]
+[gd_scene load_steps=9 format=3 uid="uid://c4n4kbwf34cvp"]
 
 [ext_resource type="Script" path="res://Components/PoeticBubble.gd" id="1_3hjre"]
 [ext_resource type="Material" uid="uid://bxwlnecpex83i" path="res://Components/bubble.tres" id="2_b2gsq"]
+[ext_resource type="AudioStream" uid="uid://ccim02onkanah" path="res://Components/interface-124464.mp3" id="3_2ivhe"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u75o7"]
 radius = 0.404632
@@ -88,5 +89,8 @@ shape = SubResource("SphereShape3D_u75o7")
 libraries = {
 "": SubResource("AnimationLibrary_tsc55")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_2ivhe")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
