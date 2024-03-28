@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://jrb38m1010xs"]
+[gd_scene load_steps=13 format=3 uid="uid://d1igt781wqslj"]
 
-[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_3e50b"]
+[ext_resource type="PackedScene" uid="uid://cf1314vkwgdby" path="res://Components/xr_basics_with_hands.tscn" id="1_mls7o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nnyhr"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -107,7 +107,7 @@ environment = SubResource("Environment_kwwwk")
 transform = Transform3D(-0.633381, -0.77384, -3.38256e-08, 0, -4.37114e-08, 1, -0.77384, 0.633381, 2.7686e-08, 0, 3.52052, -2.49578)
 shadow_enabled = true
 
-[node name="XROrigin3D" parent="." instance=ExtResource("1_3e50b")]
+[node name="XROrigin3D" parent="." instance=ExtResource("1_mls7o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52052, -2.49578)
 
 [node name="groud" type="Node3D" parent="."]

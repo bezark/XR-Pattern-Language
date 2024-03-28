@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf1314vkwgdby"]
+[gd_scene load_steps=6 format=3 uid="uid://cf1314vkwgdby"]
 
 [ext_resource type="Script" path="res://Components/XROriginWatcher.gd" id="1_hi2ls"]
 [ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="1_ofm2b"]
 [ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="2_87q82"]
 [ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_5enu2"]
+[ext_resource type="PackedScene" uid="uid://byoyitvl3nrlb" path="res://Components/testhand.tscn" id="5_rjyob"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
 script = ExtResource("1_hi2ls")
@@ -44,3 +45,8 @@ size = Vector3(0.25, 0.25, 0.25)
 
 [node name="HomeBubble" parent="." instance=ExtResource("4_5enu2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.59488, 0.256217)
+
+[node name="CSGBox3D" parent="." instance=ExtResource("5_rjyob")]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0649718, 1.12223, -1.75181)
+visible = false

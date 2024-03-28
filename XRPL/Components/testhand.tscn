@@ -16,3 +16,7 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0376196, -0.014046, 0.00704515)
 shape = SubResource("SphereShape3D_o28o3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.993733, 0.111781, 0, -0.111781, 0.993733, 0, 1.07171, 2.72674)
+current = true

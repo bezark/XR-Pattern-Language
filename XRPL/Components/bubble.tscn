@@ -1,7 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://dm5heg3sohhir"]
+[gd_scene load_steps=13 format=3 uid="uid://dm5heg3sohhir"]
 
 [ext_resource type="Script" path="res://Components/Bubble.gd" id="1_wwmb2"]
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="2_751rl"]
 [ext_resource type="Material" uid="uid://bxwlnecpex83i" path="res://Components/bubble.tres" id="2_i3eem"]
+
+[sub_resource type="Resource" id="Resource_bkphc"]
+script = ExtResource("2_751rl")
+PatternName = ""
+Author = ""
+Context = ""
+Problem = ""
+Solution = ""
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u75o7"]
 radius = 0.25
@@ -75,6 +84,7 @@ _data = {
 [node name="Bubble" type="CharacterBody3D" groups=["bubble"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_wwmb2")
+documentation = SubResource("Resource_bkphc")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_u75o7")

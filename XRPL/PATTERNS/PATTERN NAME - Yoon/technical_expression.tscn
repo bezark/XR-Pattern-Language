@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://r3x6nvux515n"]
+[gd_scene load_steps=11 format=3 uid="uid://r3x6nvux515n"]
 
-[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.gd" id="1_kua77"]
-[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_wcy5t"]
-[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_10h1g"]
-[ext_resource type="ArrayMesh" uid="uid://dergcffr5btm" path="res://PATTERNS/PATTERN NAME - Yoon/excrement.obj" id="3_fsfcw"]
-[ext_resource type="Texture2D" uid="uid://cmistuob5iwe8" path="res://PATTERNS/PATTERN NAME - Yoon/teture2.jpg" id="3_qf1m1"]
+[ext_resource type="Script" path="res://PATTERNS/PATTERN NAME - Yoon/technical_expression.gd" id="1_a3tuf"]
+[ext_resource type="PackedScene" uid="uid://b75yuba7710ex" path="res://Components/TrackedHands/SimpleHands/tracked_hand_left.tscn" id="2_ysij1"]
+[ext_resource type="PackedScene" uid="uid://bhgv7j2mfjn7g" path="res://Components/TrackedHands/SimpleHands/tracked_hand_right.tscn" id="3_ebsv5"]
+[ext_resource type="PackedScene" uid="uid://bo7rjbv3b3kkn" path="res://Components/home_bubble.tscn" id="4_a3wbh"]
+[ext_resource type="Texture2D" uid="uid://cmistuob5iwe8" path="res://PATTERNS/PATTERN NAME - Yoon/teture2.jpg" id="5_s75jj"]
+[ext_resource type="ArrayMesh" uid="uid://dergcffr5btm" path="res://PATTERNS/PATTERN NAME - Yoon/excrement.obj" id="6_51pjy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nsuox"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -21,11 +22,11 @@ sky = SubResource("Sky_1yakq")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iayrp"]
-albedo_texture = ExtResource("3_qf1m1")
+albedo_texture = ExtResource("5_s75jj")
 
 [node name="Technical Expression" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.189109)
-script = ExtResource("1_kua77")
+script = ExtResource("1_a3tuf")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_p3obx")
@@ -43,7 +44,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0971946, 0.54092, 1.73857)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
 hand_skeleton = NodePath("Lefty")
 
-[node name="Lefty" parent="XROrigin3D/LeftHandTracker" instance=ExtResource("2_wcy5t")]
+[node name="Lefty" parent="XROrigin3D/LeftHandTracker" instance=ExtResource("2_ysij1")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 
 [node name="RightHandTracker" type="OpenXRHand" parent="XROrigin3D"]
@@ -51,7 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 hand = 1
 hand_skeleton = NodePath("Righty")
 
-[node name="Righty" parent="XROrigin3D/RightHandTracker" instance=ExtResource("3_10h1g")]
+[node name="Righty" parent="XROrigin3D/RightHandTracker" instance=ExtResource("3_ebsv5")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, -1.27898e-14, 0, 1.27898e-14, 1.2, 0, 0, 0)
 
 [node name="Left" type="XRController3D" parent="XROrigin3D"]
@@ -70,6 +71,9 @@ tracker = &"right_hand"
 visible = false
 size = Vector3(0.25, 0.25, 0.25)
 
+[node name="StaticBubble" parent="XROrigin3D" instance=ExtResource("4_a3wbh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.940706, 0.656169)
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
@@ -77,6 +81,6 @@ autostart = true
 [node name="Poop" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.23868, 0, 0, 0, 0.23868, 0, 0, 0, 0.23868, 0.0061872, 0.293276, -0.216037)
 material_override = SubResource("StandardMaterial3D_iayrp")
-mesh = ExtResource("3_fsfcw")
+mesh = ExtResource("6_51pjy")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

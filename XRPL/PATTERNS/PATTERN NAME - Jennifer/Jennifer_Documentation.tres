@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PatternInfo" load_steps=4 format=3 uid="uid://b25pi1udp1enp"]
 
-[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Jennifer/poetic_expression.tscn" id="1_7mip2"]
+[ext_resource type="PackedScene" uid="uid://sgbvvv6d31h8" path="res://PATTERNS/PATTERN NAME - Jennifer/poetic_expression2.tscn" id="1_m015d"]
 [ext_resource type="PackedScene" uid="uid://dakh3onlfui5b" path="res://PATTERNS/PATTERN NAME - Jennifer/technical_expression.tscn" id="1_uww21"]
 [ext_resource type="Script" path="res://Components/PatternInfo.gd" id="1_yrn0x"]
 
@@ -12,4 +12,4 @@ Context = "Virtual Reality headsets and Virtual reality gaming experiences are i
 Problem = "Virtual Reality headsets bring a new immersive digital experience to users from the comfort of the user’s own space. However, the immersive factors of Virtual Reality headsets present an issue regarding motion sickness. Imbalanced fluid in the ear is what causes motion sickness. Suppose the user makes intense movements in a Virtual Reality environment. In that case, it may confuse the brain into thinking the user is performing intense physical motions in actuality, therefore inducing motion sickness. Motion sickness is a genetic trait about one in three individuals struggle with. It is a hindrance to not only elements of daily lives but also hugely restricts the ability to experience Virtual Reality healthily. Therefore, there is a need for a digital solution that helps users manage and regulate their motion sickness as an accessibility precaution. "
 Solution = "Create a feature that allows the user to visualize the fluid (in their ear) responding to gravity, which will regulate and reduce motion sickness. Motion sickness glasses inspired this concept."
 Technical_Expression = ExtResource("1_uww21")
-Poetic_Expression = ExtResource("1_7mip2")
+Poetic_Expression = ExtResource("1_m015d")

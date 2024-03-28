@@ -6,16 +6,16 @@ const BUBBLE = preload("res://Components/bubble.tscn")
 
 func set_pattern(new_pattern):
 	currentPattern = new_pattern
-	if currentPattern.Poetic_Expression:
-		pass	
-	var child_bubbles = $LocalBubbles.get_children()
-	for bubble in child_bubbles:
-		queue_free()
-	
-	var poetic_bubble = BUBBLE.instantiate()
-	poetic_bubble.scene_trigger = "Poetic"
-	$LocalBubbles.add_child(poetic_bubble)
-	poetic_bubble.text_override("Poetic Expression")
+	#if currentPattern.Poetic_Expression:
+		#pass	
+	#var child_bubbles = $LocalBubbles.get_children()
+	#for bubble in child_bubbles:
+		#queue_free()
+	#
+	#var poetic_bubble = BUBBLE.instantiate()
+	#poetic_bubble.scene_trigger = "Poetic"
+	#$LocalBubbles.add_child(poetic_bubble)
+	#poetic_bubble.text_override("Poetic Expression")
 
 @onready var local_bubbles = $LocalBubbles
 

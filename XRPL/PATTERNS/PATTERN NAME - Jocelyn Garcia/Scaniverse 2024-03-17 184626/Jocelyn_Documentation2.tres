@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PatternInfo" load_steps=3 format=3 uid="uid://dydiv2imasp56"]
+
+[ext_resource type="PackedScene" uid="uid://b1snysx43fw6k" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/Jocelyn_poetic_expression.tscn" id="1_sqgfg"]
+[ext_resource type="Script" path="res://Components/PatternInfo.gd" id="2_7s6d5"]
+
+[resource]
+script = ExtResource("2_7s6d5")
+PatternName = "Door-a the Explore-a"
+Author = "Jocelyn Garcia"
+Context = "Exploring door models"
+Problem = ""
+Solution = ""
+Technical_Expression = ExtResource("1_sqgfg")
