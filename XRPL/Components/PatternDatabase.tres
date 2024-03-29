@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PatternDatabase" load_steps=9 format=3 uid="uid://di5cxd7jup6p0"]
+[gd_resource type="Resource" script_class="PatternDatabase" load_steps=10 format=3 uid="uid://di5cxd7jup6p0"]
 
 [ext_resource type="Script" path="res://Components/Pattern_Database.gd" id="1_e813d"]
 [ext_resource type="Resource" uid="uid://c6laxmd168ssn" path="res://PATTERNS/PATTERN NAME - Bella/Bella_Documentation.tres" id="1_y40eh"]
@@ -7,8 +7,9 @@
 [ext_resource type="Resource" uid="uid://btfr0r68c6051" path="res://PATTERNS/PATTERN NAME - CLARA/Clara_Documentation.tres" id="5_wipke"]
 [ext_resource type="Resource" uid="uid://b25pi1udp1enp" path="res://PATTERNS/PATTERN NAME - Jennifer/Jennifer_Documentation.tres" id="6_emdn8"]
 [ext_resource type="Resource" uid="uid://dydiv2imasp56" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/Jocelyn_Documentation2.tres" id="8_6evgb"]
+[ext_resource type="Resource" uid="uid://bygby2x7pkog5" path="res://PATTERNS/PATTERN NAME - Yoon/Yoon_Documentation.tres" id="8_f7xuu"]
 [ext_resource type="Resource" uid="uid://tm7yayvxrwsw" path="res://PATTERNS/PATTERN NAME - Douglas/Douglas_Documentations.tres" id="8_xyt5u"]
 
 [resource]
 script = ExtResource("1_e813d")
-patterns = Array[Resource("res://Components/PatternInfo.gd")]([ExtResource("8_xyt5u"), ExtResource("1_y40eh"), ExtResource("4_qinup"), ExtResource("8_6evgb"), ExtResource("3_2alra"), ExtResource("5_wipke"), ExtResource("6_emdn8")])
+patterns = Array[Resource("res://Components/PatternInfo.gd")]([ExtResource("8_xyt5u"), ExtResource("1_y40eh"), ExtResource("4_qinup"), ExtResource("8_6evgb"), ExtResource("3_2alra"), ExtResource("5_wipke"), ExtResource("6_emdn8"), ExtResource("8_f7xuu")])

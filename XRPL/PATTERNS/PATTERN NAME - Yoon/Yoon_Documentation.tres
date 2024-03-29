@@ -7,7 +7,7 @@
 script = ExtResource("1_gi2rh")
 PatternName = "Get you S***t Together"
 Author = "Yoon"
-Context = "a"
-Problem = "b"
-Solution = "b"
+Context = ""
+Problem = ""
+Solution = ""
 Technical_Expression = ExtResource("1_lfen5")
