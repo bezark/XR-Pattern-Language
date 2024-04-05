@@ -1,0 +1,168 @@
+[gd_scene load_steps=23 format=3 uid="uid://b1snysx43fw6k"]
+
+[ext_resource type="PackedScene" uid="uid://b3wawb51pylts" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Jocelyn_technicalexpression.tscn" id="1_84xkd"]
+[ext_resource type="Texture2D" uid="uid://da51468bqvlyx" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/old-plank-flooring4_basecolor.png" id="2_56dw8"]
+[ext_resource type="Texture2D" uid="uid://dsr27i2s2xxds" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/colored-concrete-wall_roughness.png" id="3_m4c5e"]
+[ext_resource type="Texture2D" uid="uid://menpuoivkm2j" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Scaniverse 2024-03-17 184626/colored-concrete-wall_height.png" id="4_jx0vi"]
+[ext_resource type="PackedScene" uid="uid://bojs6r20fxtot" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/stairs.glb" id="5_kad4v"]
+[ext_resource type="PackedScene" uid="uid://dfe2028j17rmy" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/wall.glb" id="6_iukub"]
+[ext_resource type="PackedScene" uid="uid://c5xm1pti5sps" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/wallWindow.glb" id="7_tdiu4"]
+[ext_resource type="PackedScene" uid="uid://c4s05e28w3ypj" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/wallCorner.glb" id="8_5kxq2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uhoah"]
+sky_top_color = Color(0.901961, 0.878431, 0.937255, 1)
+sky_horizon_color = Color(0.77549, 0.761858, 0.767564, 1)
+ground_horizon_color = Color(0.77549, 0.761858, 0.767564, 1)
+
+[sub_resource type="Sky" id="Sky_ja21q"]
+sky_material = SubResource("ProceduralSkyMaterial_uhoah")
+
+[sub_resource type="Environment" id="Environment_s7lg2"]
+background_mode = 2
+sky = SubResource("Sky_ja21q")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqeod"]
+albedo_texture = ExtResource("2_56dw8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l31vf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a28sn"]
+albedo_texture = ExtResource("3_m4c5e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgupu"]
+albedo_texture = ExtResource("4_jx0vi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihuqw"]
+albedo_texture = ExtResource("3_m4c5e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj7mb"]
+albedo_texture = ExtResource("3_m4c5e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an6ka"]
+albedo_texture = ExtResource("2_56dw8")
+heightmap_enabled = true
+uv2_scale = Vector3(-10, -10, -10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lvljk"]
+albedo_texture = ExtResource("2_56dw8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilbe6"]
+albedo_texture = ExtResource("2_56dw8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_suawa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkhoe"]
+next_pass = SubResource("ShaderMaterial_suawa")
+
+[node name="Poetic Expression" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0150568, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s7lg2")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636368, 1.86207)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.657661, 1.77747, -2.00915)
+
+[node name="RayCast3D" type="RayCast3D" parent="XROrigin3D/XRCamera3D"]
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
+tracker = &"left_hand"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="XROrigin3D/Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96896, 3.64801, -5.54814)
+radius = 0.05
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+tracker = &"right_hand"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_eqeod")
+mesh = SubResource("PlaneMesh_l31vf")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 25, 0, 0, 0, 100, -49.6343, 12.0978, 0.0691147)
+material_override = SubResource("StandardMaterial3D_a28sn")
+size = Vector3(1, 0.990234, 1)
+material = SubResource("StandardMaterial3D_tgupu")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.9904, 0, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 20, 0, 0, 0, 1, 0.193573, 12.3048, -49.3911)
+top_level = true
+material_override = SubResource("StandardMaterial3D_ihuqw")
+calculate_tangents = false
+size = Vector3(99.3188, 1.23048, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 0.4, 0, 0, 0, 0.01, 54.3807, 0.0159565, 0.494591)
+material_override = SubResource("StandardMaterial3D_tj7mb")
+size = Vector3(90.4197, 2.47955, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.04, 0, -0.01, 0, -4.37114e-10, 49.9721, 0.10118, -0.430065)
+size = Vector3(13.0829, 0.202026, 98.509)
+material = SubResource("StandardMaterial3D_an6ka")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 0.04, 0, 0, 0, 0.01, 13.956, 0.100953, -0.00557831)
+material_override = SubResource("StandardMaterial3D_lvljk")
+size = Vector3(29.1501, 0.202026, 98.509)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 0.04, 0, 0, 0, 0.01, 83.8532, 0.0992012, 4.19997e-05)
+material_override = SubResource("StandardMaterial3D_ilbe6")
+size = Vector3(29.1501, 0.202026, 98.2284)
+material = SubResource("StandardMaterial3D_lkhoe")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(50, 0, 0, 0, 2, 0, 0, 0, 0.5, 49.7904, 0.501804, -0.00548241)
+size = Vector3(1.99391, 0.012207, 2.00232)
+
+[node name="stairs" parent="CSGBox3D" instance=ExtResource("5_kad4v")]
+transform = Transform3D(-0.0720821, 0, 49.9987, 0, 0.44, 0, -0.0999974, 0, -0.0036041, 69.2692, -0.484236, -0.191613)
+
+[node name="wall" parent="CSGBox3D" instance=ExtResource("6_iukub")]
+transform = Transform3D(-3.93402e-06, 0, 1, 0, 0.32, 0, -0.9, 0, -4.37114e-10, 69.3102, 0.0993073, 0.492917)
+
+[node name="wall2" parent="CSGBox3D" instance=ExtResource("6_iukub")]
+transform = Transform3D(-3.93402e-06, 0, 1, 0, 0.292, 0, -0.9, 0, -4.37114e-10, 27.4741, 0.0969517, 0.490441)
+
+[node name="wallWindow" parent="CSGBox3D" instance=ExtResource("7_tdiu4")]
+transform = Transform3D(10, 0, 0, 0, 0.292, 0, 0, 0, 0.3, 0.228863, 0.0973917, 0.498988)
+
+[node name="wallCorner" parent="CSGBox3D" instance=ExtResource("8_5kxq2")]
+transform = Transform3D(25, 0, 0, 0, 0.292, 0, 0, 0, 0.2, 0.627914, 0.106989, -0.304075)
+
+[node name="wall3" parent="CSGBox3D" instance=ExtResource("6_iukub")]
+transform = Transform3D(-1.31134e-07, 0, 20, 0, 0.292, 0, -0.03, 0, -8.74228e-09, 14.1395, 0.110112, -0.469504)
+
+[node name="wall4" parent="CSGBox3D" instance=ExtResource("6_iukub")]
+transform = Transform3D(15, 0, 0, 0, 0.308, 0, 0, 0, 0.01, 0.311825, 0.0986896, 0.173104)
+
+[node name="wall5" parent="CSGBox3D" instance=ExtResource("6_iukub")]
+transform = Transform3D(7.6, 0, 0, 0, 0.3, 0, 0, 0, 0.01, 19.7898, 0.101804, 0.172696)
+
+[node name="wall6" parent="CSGBox3D" instance=ExtResource("6_iukub")]
+transform = Transform3D(-1.96701e-07, 0, 1, 0, 0.308, 0, -0.045, 0, -4.37114e-10, 69.3933, 0.105084, -0.452315)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 25, 0, 0, 0, 1, 0, 12.545, -49.7391)
+size = Vector3(1, 0.976685, 1)
+
+[node name="Node3D3" parent="." instance=ExtResource("1_84xkd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.8691, 20.2599, 17.4096)
+
+[node name="Node3D" parent="." instance=ExtResource("1_84xkd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.0051, 20.2083, -43.8761)
+
+[node name="Node3D2" parent="." instance=ExtResource("1_84xkd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.7474, 19.5507, -43.0884)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4xu0y8d5h8ky"]
+
+[ext_resource type="PackedScene" uid="uid://b3wawb51pylts" path="res://PATTERNS/PATTERN NAME - Jocelyn Garcia/Jocelyn_technicalexpression.tscn" id="1_rpbu3"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3i8ve"]
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_3i8ve")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.322062, 0.382461, 0, 0.764921, 0.644124, -0.5, 0.557827, -0.662441, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Node3D" parent="." instance=ExtResource("1_rpbu3")]
+transform = Transform3D(1, 0, 0, 0, 0.00328124, -0.999995, 0, 0.999995, 0.00328124, 0, 1.08965, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.882336, 2.25209)

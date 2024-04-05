@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 *.apk
+XRPL/PATTERNS/PATTERN NAME - Bella/Bella_Documentation.tres
+*.tres
